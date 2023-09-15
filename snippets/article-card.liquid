@@ -1,0 +1,303 @@
+{% comment %}
+    Renders an article card for a given blog with settings to either show the image or not.
+
+    Accepts:
+    - blog: {Object} Blog object
+    - article: {Object} Article object
+    - media_aspect_ratio: {String} The setting changes the aspect ratio of the article image, if shown
+    - media_height: {String} The setting changes the height of the article image. Overrides media_aspect_ratio.
+    - show_image: {String} The setting either show the article image or not. If it's not included it will show the image by default
+    - show_date: {String} The setting either show the article date or not. If it's not included it will not show the image by default
+    - show_author: {String} The setting either show the article author or not. If it's not included it will not show the author by default
+    - show_badge: {String} The setting either show the blog badge or not.
+    - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+
+    Usage:
+    {% render 'article-card' blog: blog, article: article, show_image: section.settings.show_image %}
+{% endcomment %}
+
+{%- if article and article != empty -%}
+  {%- liquid
+    assign ratio = 1
+    if media_aspect_ratio != nil
+      assign ratio = media_aspect_ratio
+    endif
+  -%}
+  <div class="card-wrapper underline-links-hover">
+    {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
+    <div class="card article-card  
+      card--{{ settings.card_style }}
+      {% if media_height and media_height != 'adapt' %} article-card__image--{{ media_height }}{% endif %}
+      {% if article.image and show_image %} card--media{% else %} card--text{% endif %}
+      {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
+      {% if settings.card_style == 'card' and media_height == nil and article.image == empty or show_image == false %} ratio{% endif %} custom-card"
+      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+    >
+     <div class="card__inner {% if settings.card_style == 'standard' %} color-{{ settings.card_color_scheme }} gradient{% endif %}{% if article.image and show_image or settings.card_style == 'standard' %} ratio{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 124.5 }}%;">
+    <a href="{{ article.url }}" class="full-unstyled-link">    
+  {%- if show_image == true and article.image -%}
+           <div class="article-card__image-wrapper card__media">
+
+       
+             <div class="article-card__image media media--hover-effect" {% if section.settings.media_height == 'adapt' %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}>
+              {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+              <img
+                srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+                  {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {{ article.image.src | image_url }} {{ article.image.src.width }}w"
+                src="{{ article.image.src | image_url: width: 1500 }}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                alt="{{ article.image.src.alt | escape }}"
+                class="motion-reduce article__image"
+                {% unless lazy_load == false %}loading="lazy"{% endunless %}
+                width="{{ article.image.width }}"
+                height="{{ article.image.height }}" style="--aspect-ratio: 3 / 1;"
+              >
+              {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
+            </div>
+           </div>
+    
+        {%- endif -%}
+  </a>
+        <div class="card__content {{ settings.overlay_color_scheme }}">        
+          <div class="card__information">
+            <div class="article-card__info caption-with-letter-spacing h5">
+              {%- if show_author -%}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+	<path d="M25 1C11.8 1 1 11.8 1 25c0 7.1 3.1 13.5 8 17.9v0l0.3 0.3c0.1 0.1 0.1 0.1 0.2 0.1 0.4 0.4 0.9 0.7 1.3 1 0.1 0.1 0.2 0.2 0.4 0.3 0.5 0.3 1 0.7 1.5 1 0.1 0.1 0.2 0.1 0.3 0.1 0.6 0.3 1.1 0.6 1.7 0.9 0 0 0 0 0 0 1.2 0.6 2.6 1.1 3.9 1.5 0 0 0.1 0 0.1 0 0.6 0.2 1.3 0.3 2 0.4 0.1 0 0.1 0 0.2 0 0.6 0.1 1.3 0.2 1.9 0.3 0.1 0 0.2 0 0.2 0C23.7 49 24.3 49 25 49s1.3 0 2-0.1c0.1 0 0.2 0 0.2 0 0.7-0.1 1.3-0.1 1.9-0.3 0.1 0 0.1 0 0.2 0 0.7-0.1 1.3-0.3 2-0.4 0 0 0.1 0 0.1 0 1.4-0.4 2.7-0.9 3.9-1.5 0 0 0 0 0 0 0.6-0.3 1.2-0.6 1.7-0.9 0.1 0 0.2-0.1 0.3-0.1 0.5-0.3 1-0.6 1.5-1 0.1-0.1 0.2-0.2 0.4-0.3 0.5-0.3 0.9-0.7 1.3-1 0.1-0.1 0.1-0.1 0.2-0.1l0.3-0.3v0c4.9-4.4 8-10.8 8-17.9C49 11.8 38.2 1 25 1zM25 25c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8S29.4 25 25 25zM28 27c6.1 0 11 4.9 11 11v4c0 0-0.1 0.1-0.1 0.1 -0.4 0.3-0.8 0.6-1.2 0.9 -0.1 0.1-0.2 0.1-0.3 0.2 -0.4 0.3-0.9 0.6-1.4 0.9 -0.1 0.1-0.2 0.1-0.3 0.1 -0.5 0.3-1 0.5-1.5 0.8 -0.1 0-0.1 0-0.2 0.1 -1.7 0.8-3.4 1.3-5.2 1.6 -0.1 0-0.1 0-0.2 0 -0.6 0.1-1.1 0.2-1.7 0.2 -0.1 0-0.2 0-0.2 0C26.2 47 25.6 47 25 47s-1.2 0-1.8-0.1c-0.1 0-0.2 0-0.2 0 -0.6-0.1-1.1-0.1-1.7-0.2 -0.1 0-0.1 0-0.2 0 -1.8-0.3-3.6-0.9-5.2-1.6 -0.1 0-0.1 0-0.2-0.1 -0.5-0.2-1-0.5-1.5-0.8 -0.1 0-0.2-0.1-0.3-0.1 -0.5-0.3-0.9-0.6-1.4-0.9 -0.1-0.1-0.2-0.1-0.3-0.2 -0.4-0.3-0.8-0.6-1.2-0.9 0 0-0.1-0.1-0.1-0.1V38c0-6.1 4.9-11 11-11H28zM41 40.1V38c0-6.3-4.5-11.5-10.4-12.7C33.3 23.5 35 20.4 35 17c0-5.5-4.5-10-10-10s-10 4.5-10 10c0 3.4 1.7 6.5 4.4 8.3C13.5 26.5 9 31.7 9 38v2.1C5.3 36.1 3 30.8 3 25 3 12.9 12.9 3 25 3s22 9.9 22 22C47 30.8 44.7 36.1 41 40.1z"></path>
+</svg>
+                <span>{{ article.author }}</span>
+              {%- endif -%}
+              {%- if show_date -%}
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M500.364,221.091c-6.982,0-11.636,4.655-11.636,11.636v46.545v69.818v11.636c0,12.8-10.473,23.273-23.273,23.273h-23.273
+			c-19.782,0-34.909,15.127-34.909,34.909v23.273c0,12.8-10.473,23.273-23.273,23.273h-58.182H34.909
+			c-6.982,0-11.636-4.655-11.636-11.636V232.727c0-6.982-4.655-11.636-11.636-11.636S0,225.745,0,232.727v221.091
+			c0,19.782,15.127,34.909,34.909,34.909h290.909H384h15.127c15.127,0,30.255-5.818,40.727-17.455l54.691-54.691
+			c10.473-10.473,17.455-25.6,17.455-40.727v-15.127v-11.636v-69.818v-46.545C512,225.745,507.345,221.091,500.364,221.091z
+			 M429.382,450.327c0-2.327,1.164-4.655,1.164-8.145v-23.273c0-6.982,4.655-11.636,11.636-11.636h23.273
+			c2.327,0,4.655,0,8.145-1.164L429.382,450.327z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M477.091,58.182h-81.455V34.909c0-6.982-4.655-11.636-11.636-11.636s-11.636,4.655-11.636,11.636v23.273H139.636V34.909
+			c0-6.982-4.655-11.636-11.636-11.636s-11.636,4.655-11.636,11.636v23.273H34.909C15.127,58.182,0,73.309,0,93.091v93.091
+			c0,6.982,4.655,11.636,11.636,11.636h488.727c6.982,0,11.636-4.655,11.636-11.636V93.091
+			C512,73.309,496.873,58.182,477.091,58.182z M488.727,174.545H23.273V93.091c0-6.982,4.655-11.636,11.636-11.636h81.455v26.764
+			c-6.982,3.491-11.636,11.636-11.636,19.782c0,12.8,10.473,23.273,23.273,23.273S151.273,140.8,151.273,128
+			c0-8.145-4.655-16.291-11.636-19.782V81.455h232.727v26.764c-6.982,3.491-11.636,11.636-11.636,19.782
+			c0,12.8,10.473,23.273,23.273,23.273S407.273,140.8,407.273,128c0-8.145-4.655-16.291-11.636-19.782V81.455h81.455
+			c6.982,0,11.636,4.655,11.636,11.636V174.545z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<circle cx="209.455" cy="267.636" r="23.273"/>
+	</g>
+</g>
+<g>
+	<g>
+		<circle cx="302.545" cy="267.636" r="23.273"/>
+	</g>
+</g>
+<g>
+	<g>
+		<circle cx="395.636" cy="267.636" r="23.273"/>
+	</g>
+</g>
+<g>
+	<g>
+		<circle cx="116.364" cy="372.364" r="23.273"/>
+	</g>
+</g>
+<g>
+	<g>
+		<circle cx="209.455" cy="372.364" r="23.273"/>
+	</g>
+</g>
+<g>
+	<g>
+		<circle cx="302.545" cy="372.364" r="23.273"/>
+	</g>
+</g>
+</svg>
+              <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
+            {%- endif -%}
+            {%- if show_author -%}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+	<path d="M25 1C11.8 1 1 11.8 1 25c0 7.1 3.1 13.5 8 17.9v0l0.3 0.3c0.1 0.1 0.1 0.1 0.2 0.1 0.4 0.4 0.9 0.7 1.3 1 0.1 0.1 0.2 0.2 0.4 0.3 0.5 0.3 1 0.7 1.5 1 0.1 0.1 0.2 0.1 0.3 0.1 0.6 0.3 1.1 0.6 1.7 0.9 0 0 0 0 0 0 1.2 0.6 2.6 1.1 3.9 1.5 0 0 0.1 0 0.1 0 0.6 0.2 1.3 0.3 2 0.4 0.1 0 0.1 0 0.2 0 0.6 0.1 1.3 0.2 1.9 0.3 0.1 0 0.2 0 0.2 0C23.7 49 24.3 49 25 49s1.3 0 2-0.1c0.1 0 0.2 0 0.2 0 0.7-0.1 1.3-0.1 1.9-0.3 0.1 0 0.1 0 0.2 0 0.7-0.1 1.3-0.3 2-0.4 0 0 0.1 0 0.1 0 1.4-0.4 2.7-0.9 3.9-1.5 0 0 0 0 0 0 0.6-0.3 1.2-0.6 1.7-0.9 0.1 0 0.2-0.1 0.3-0.1 0.5-0.3 1-0.6 1.5-1 0.1-0.1 0.2-0.2 0.4-0.3 0.5-0.3 0.9-0.7 1.3-1 0.1-0.1 0.1-0.1 0.2-0.1l0.3-0.3v0c4.9-4.4 8-10.8 8-17.9C49 11.8 38.2 1 25 1zM25 25c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8S29.4 25 25 25zM28 27c6.1 0 11 4.9 11 11v4c0 0-0.1 0.1-0.1 0.1 -0.4 0.3-0.8 0.6-1.2 0.9 -0.1 0.1-0.2 0.1-0.3 0.2 -0.4 0.3-0.9 0.6-1.4 0.9 -0.1 0.1-0.2 0.1-0.3 0.1 -0.5 0.3-1 0.5-1.5 0.8 -0.1 0-0.1 0-0.2 0.1 -1.7 0.8-3.4 1.3-5.2 1.6 -0.1 0-0.1 0-0.2 0 -0.6 0.1-1.1 0.2-1.7 0.2 -0.1 0-0.2 0-0.2 0C26.2 47 25.6 47 25 47s-1.2 0-1.8-0.1c-0.1 0-0.2 0-0.2 0 -0.6-0.1-1.1-0.1-1.7-0.2 -0.1 0-0.1 0-0.2 0 -1.8-0.3-3.6-0.9-5.2-1.6 -0.1 0-0.1 0-0.2-0.1 -0.5-0.2-1-0.5-1.5-0.8 -0.1 0-0.2-0.1-0.3-0.1 -0.5-0.3-0.9-0.6-1.4-0.9 -0.1-0.1-0.2-0.1-0.3-0.2 -0.4-0.3-0.8-0.6-1.2-0.9 0 0-0.1-0.1-0.1-0.1V38c0-6.1 4.9-11 11-11H28zM41 40.1V38c0-6.3-4.5-11.5-10.4-12.7C33.3 23.5 35 20.4 35 17c0-5.5-4.5-10-10-10s-10 4.5-10 10c0 3.4 1.7 6.5 4.4 8.3C13.5 26.5 9 31.7 9 38v2.1C5.3 36.1 3 30.8 3 25 3 12.9 12.9 3 25 3s22 9.9 22 22C47 30.8 44.7 36.1 41 40.1z"></path>
+</svg>
+                <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
+              {%- endif -%}  
+   <div class="article-card__footer">
+                {%- if article.comments_count > 0 and blog.comments_enabled? -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+	<path d="M54.1 1H15.9C12.7 1 10 3.7 10 6.9V15H5.9C2.7 15 0 17.7 0 20.9V42.1C0 45.3 2.7 48 5.9 48H12v10c0 0.4 0.3 0.8 0.6 0.9C12.8 59 12.9 59 13 59c0.3 0 0.5-0.1 0.7-0.3L23.4 48H44.1c3.3 0 5.9-2.7 5.9-5.9V34h4.1c3.3 0 5.9-2.7 5.9-5.9V6.9C60 3.7 57.3 1 54.1 1zM48 42.1c0 2.2-1.8 3.9-3.9 3.9H23c-0.3 0-0.6 0.1-0.7 0.3L14 55.4V47c0-0.6-0.4-1-1-1H5.9C3.8 46 2 44.2 2 42.1V20.9C2 18.8 3.8 17 5.9 17H11h33.1c0.8 0 1.6 0.2 2.2 0.7C47.3 18.4 48 19.6 48 20.9V33 42.1zM58 28.1c0 2.2-1.8 3.9-3.9 3.9H50V20.9v0c0-2.7-1.8-4.9-4.2-5.7 -0.2-0.1-0.4-0.1-0.6-0.1C44.9 15 44.5 15 44.1 15H12V6.9C12 4.8 13.8 3 15.9 3H54.1C56.2 3 58 4.8 58 6.9V28.1z"></path>
+	<path d="M12 27h14c0.6 0 1-0.4 1-1s-0.4-1-1-1H12c-0.6 0-1 0.4-1 1S11.4 27 12 27z"></path>
+	<path d="M39 31H12c-0.6 0-1 0.4-1 1s0.4 1 1 1h27c0.6 0 1-0.4 1-1S39.6 31 39 31z"></path>
+	<path d="M39 37H12c-0.6 0-1 0.4-1 1s0.4 1 1 1h27c0.6 0 1-0.4 1-1S39.6 37 39 37z"></path>
+</svg>
+                  <span class="circle-divider"><span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
+                {%- endif -%}
+              </div>
+            </div>
+            <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
+              <a href="{{ article.url }}" class="full-unstyled-link">
+                {{ article.title | truncate: 50 | escape }}
+              </a>
+            </h3>
+            {%- if show_excerpt -%}
+              {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+                <p class="article-card__excerpt rte-width">
+                  {%- if article.excerpt.size > 0 -%}
+                    {{ article.excerpt | strip_html | truncatewords: 30 }}
+                  {%- else -%}
+                    {{ article.content | strip_html | truncatewords: 30 }}
+                  {%- endif -%}
+                </p>
+              {%- endif -%}
+             
+            {%- endif -%}
+          </div>
+          {%- if show_badge -%}
+            <div class="card__badge {{ settings.badge_position }}">
+              <span class="circle-divider"><span class="badge color-background-1">{{ 'blogs.article.blog' | t }}</span>
+            </div>
+          {%- endif -%}
+        </div>
+       </div>
+      
+      <div class="card__content">
+        <div class="card__information">
+           <div class="article-card__info caption-with-letter-spacing h5">
+            
+            {%- if show_date -%}
+               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M500.364,221.091c-6.982,0-11.636,4.655-11.636,11.636v46.545v69.818v11.636c0,12.8-10.473,23.273-23.273,23.273h-23.273
+			c-19.782,0-34.909,15.127-34.909,34.909v23.273c0,12.8-10.473,23.273-23.273,23.273h-58.182H34.909
+			c-6.982,0-11.636-4.655-11.636-11.636V232.727c0-6.982-4.655-11.636-11.636-11.636S0,225.745,0,232.727v221.091
+			c0,19.782,15.127,34.909,34.909,34.909h290.909H384h15.127c15.127,0,30.255-5.818,40.727-17.455l54.691-54.691
+			c10.473-10.473,17.455-25.6,17.455-40.727v-15.127v-11.636v-69.818v-46.545C512,225.745,507.345,221.091,500.364,221.091z
+			 M429.382,450.327c0-2.327,1.164-4.655,1.164-8.145v-23.273c0-6.982,4.655-11.636,11.636-11.636h23.273
+			c2.327,0,4.655,0,8.145-1.164L429.382,450.327z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M477.091,58.182h-81.455V34.909c0-6.982-4.655-11.636-11.636-11.636s-11.636,4.655-11.636,11.636v23.273H139.636V34.909
+			c0-6.982-4.655-11.636-11.636-11.636s-11.636,4.655-11.636,11.636v23.273H34.909C15.127,58.182,0,73.309,0,93.091v93.091
+			c0,6.982,4.655,11.636,11.636,11.636h488.727c6.982,0,11.636-4.655,11.636-11.636V93.091
+			C512,73.309,496.873,58.182,477.091,58.182z M488.727,174.545H23.273V93.091c0-6.982,4.655-11.636,11.636-11.636h81.455v26.764
+			c-6.982,3.491-11.636,11.636-11.636,19.782c0,12.8,10.473,23.273,23.273,23.273S151.273,140.8,151.273,128
+			c0-8.145-4.655-16.291-11.636-19.782V81.455h232.727v26.764c-6.982,3.491-11.636,11.636-11.636,19.782
+			c0,12.8,10.473,23.273,23.273,23.273S407.273,140.8,407.273,128c0-8.145-4.655-16.291-11.636-19.782V81.455h81.455
+			c6.982,0,11.636,4.655,11.636,11.636V174.545z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<circle cx="209.455" cy="267.636" r="23.273"/>
+	</g>
+</g>
+<g>
+	<g>
+		<circle cx="302.545" cy="267.636" r="23.273"/>
+	</g>
+</g>
+<g>
+	<g>
+		<circle cx="395.636" cy="267.636" r="23.273"/>
+	</g>
+</g>
+<g>
+	<g>
+		<circle cx="116.364" cy="372.364" r="23.273"/>
+	</g>
+</g>
+<g>
+	<g>
+		<circle cx="209.455" cy="372.364" r="23.273"/>
+	</g>
+</g>
+<g>
+	<g>
+		<circle cx="302.545" cy="372.364" r="23.273"/>
+	</g>
+</g>
+</svg>
+              <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
+            {%- endif -%}
+            {%- if show_author -%}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+	<path d="M25 1C11.8 1 1 11.8 1 25c0 7.1 3.1 13.5 8 17.9v0l0.3 0.3c0.1 0.1 0.1 0.1 0.2 0.1 0.4 0.4 0.9 0.7 1.3 1 0.1 0.1 0.2 0.2 0.4 0.3 0.5 0.3 1 0.7 1.5 1 0.1 0.1 0.2 0.1 0.3 0.1 0.6 0.3 1.1 0.6 1.7 0.9 0 0 0 0 0 0 1.2 0.6 2.6 1.1 3.9 1.5 0 0 0.1 0 0.1 0 0.6 0.2 1.3 0.3 2 0.4 0.1 0 0.1 0 0.2 0 0.6 0.1 1.3 0.2 1.9 0.3 0.1 0 0.2 0 0.2 0C23.7 49 24.3 49 25 49s1.3 0 2-0.1c0.1 0 0.2 0 0.2 0 0.7-0.1 1.3-0.1 1.9-0.3 0.1 0 0.1 0 0.2 0 0.7-0.1 1.3-0.3 2-0.4 0 0 0.1 0 0.1 0 1.4-0.4 2.7-0.9 3.9-1.5 0 0 0 0 0 0 0.6-0.3 1.2-0.6 1.7-0.9 0.1 0 0.2-0.1 0.3-0.1 0.5-0.3 1-0.6 1.5-1 0.1-0.1 0.2-0.2 0.4-0.3 0.5-0.3 0.9-0.7 1.3-1 0.1-0.1 0.1-0.1 0.2-0.1l0.3-0.3v0c4.9-4.4 8-10.8 8-17.9C49 11.8 38.2 1 25 1zM25 25c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8S29.4 25 25 25zM28 27c6.1 0 11 4.9 11 11v4c0 0-0.1 0.1-0.1 0.1 -0.4 0.3-0.8 0.6-1.2 0.9 -0.1 0.1-0.2 0.1-0.3 0.2 -0.4 0.3-0.9 0.6-1.4 0.9 -0.1 0.1-0.2 0.1-0.3 0.1 -0.5 0.3-1 0.5-1.5 0.8 -0.1 0-0.1 0-0.2 0.1 -1.7 0.8-3.4 1.3-5.2 1.6 -0.1 0-0.1 0-0.2 0 -0.6 0.1-1.1 0.2-1.7 0.2 -0.1 0-0.2 0-0.2 0C26.2 47 25.6 47 25 47s-1.2 0-1.8-0.1c-0.1 0-0.2 0-0.2 0 -0.6-0.1-1.1-0.1-1.7-0.2 -0.1 0-0.1 0-0.2 0 -1.8-0.3-3.6-0.9-5.2-1.6 -0.1 0-0.1 0-0.2-0.1 -0.5-0.2-1-0.5-1.5-0.8 -0.1 0-0.2-0.1-0.3-0.1 -0.5-0.3-0.9-0.6-1.4-0.9 -0.1-0.1-0.2-0.1-0.3-0.2 -0.4-0.3-0.8-0.6-1.2-0.9 0 0-0.1-0.1-0.1-0.1V38c0-6.1 4.9-11 11-11H28zM41 40.1V38c0-6.3-4.5-11.5-10.4-12.7C33.3 23.5 35 20.4 35 17c0-5.5-4.5-10-10-10s-10 4.5-10 10c0 3.4 1.7 6.5 4.4 8.3C13.5 26.5 9 31.7 9 38v2.1C5.3 36.1 3 30.8 3 25 3 12.9 12.9 3 25 3s22 9.9 22 22C47 30.8 44.7 36.1 41 40.1z"></path>
+</svg>
+
+
+
+              <span>{{ article.author }}</span>
+            {%- endif -%} 
+   {% if show_tags %}
+              <div class="dt-sc-blog-tags">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+	<path d="m121.5 64.2c-31.7 0-57.3 25.7-57.3 57.3 0 31.7 25.7 57.3 57.3 57.3 31.7 0 57.3-25.7 57.3-57.3 0.1-31.7-25.6-57.3-57.3-57.3zm0 94.3c-20.4 0-37-16.6-37-37s16.6-37 37-37c20.4 0 37 16.6 37 37s-16.5 37-37 37z"></path>
+	<path d="m244.5 29.8c-10.4-11.5-25-17.7-40.7-17.7l-107.3-1.1c-22.9 0-44.8 8.3-60.5 25-16.7 15.7-25 37.6-25 60.5l1 107.4c1 14.6 6.3 29.2 17.7 40.7l256.5 256.4 214.8-214.8-256.5-256.4zm40.7 442l-241.9-241.9c-7.3-7.3-11.5-16.7-11.5-27.1l-1-106.3c0-16.7 7.3-33.4 18.8-45.9 12.5-12.5 29.2-19.8 46.9-19.8l106.3 1c10.4 0 19.8 4.2 27.1 11.5l241.9 241.9-186.6 186.6z"></path>
+</svg>
+                {% for tag in article.tags %}
+                <a class="blog-tags" href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>{% unless forloop.last %}<span class="meta-sep">,</span>{% endunless %}
+                {% endfor %}
+              </div>
+              {% endif %}
+  <div class="article-card__footer">
+              {%- if article.comments_count > 0 and blog.comments_enabled? -%}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+	<path d="M54.1 1H15.9C12.7 1 10 3.7 10 6.9V15H5.9C2.7 15 0 17.7 0 20.9V42.1C0 45.3 2.7 48 5.9 48H12v10c0 0.4 0.3 0.8 0.6 0.9C12.8 59 12.9 59 13 59c0.3 0 0.5-0.1 0.7-0.3L23.4 48H44.1c3.3 0 5.9-2.7 5.9-5.9V34h4.1c3.3 0 5.9-2.7 5.9-5.9V6.9C60 3.7 57.3 1 54.1 1zM48 42.1c0 2.2-1.8 3.9-3.9 3.9H23c-0.3 0-0.6 0.1-0.7 0.3L14 55.4V47c0-0.6-0.4-1-1-1H5.9C3.8 46 2 44.2 2 42.1V20.9C2 18.8 3.8 17 5.9 17H11h33.1c0.8 0 1.6 0.2 2.2 0.7C47.3 18.4 48 19.6 48 20.9V33 42.1zM58 28.1c0 2.2-1.8 3.9-3.9 3.9H50V20.9v0c0-2.7-1.8-4.9-4.2-5.7 -0.2-0.1-0.4-0.1-0.6-0.1C44.9 15 44.5 15 44.1 15H12V6.9C12 4.8 13.8 3 15.9 3H54.1C56.2 3 58 4.8 58 6.9V28.1z"></path>
+	<path d="M12 27h14c0.6 0 1-0.4 1-1s-0.4-1-1-1H12c-0.6 0-1 0.4-1 1S11.4 27 12 27z"></path>
+	<path d="M39 31H12c-0.6 0-1 0.4-1 1s0.4 1 1 1h27c0.6 0 1-0.4 1-1S39.6 31 39 31z"></path>
+	<path d="M39 37H12c-0.6 0-1 0.4-1 1s0.4 1 1 1h27c0.6 0 1-0.4 1-1S39.6 37 39 37z"></path>
+</svg>
+                <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+          </div>
+          <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
+            <a href="{{ article.url }}" class="full-unstyled-link">
+              {{ article.title | truncate: 50 | escape }}
+            </a>
+          </h3>   
+          {%- if show_excerpt -%}
+            {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+              <p class="article-card__excerpt rte-width">
+                {%- if article.excerpt.size > 0 -%}
+                  {{ article.excerpt | strip_html | truncatewords: 30 }}
+                {%- else -%}
+                  {{ article.content | strip_html | truncatewords: 30 }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}
+              <a href="{{ article.url }}" class="blog__button button">Read More</a>            
+        </div>
+        {%- if show_badge -%}
+          <div class="card__badge {{ settings.badge_position }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+	<path d="m121.5 64.2c-31.7 0-57.3 25.7-57.3 57.3 0 31.7 25.7 57.3 57.3 57.3 31.7 0 57.3-25.7 57.3-57.3 0.1-31.7-25.6-57.3-57.3-57.3zm0 94.3c-20.4 0-37-16.6-37-37s16.6-37 37-37c20.4 0 37 16.6 37 37s-16.5 37-37 37z"></path>
+	<path d="m244.5 29.8c-10.4-11.5-25-17.7-40.7-17.7l-107.3-1.1c-22.9 0-44.8 8.3-60.5 25-16.7 15.7-25 37.6-25 60.5l1 107.4c1 14.6 6.3 29.2 17.7 40.7l256.5 256.4 214.8-214.8-256.5-256.4zm40.7 442l-241.9-241.9c-7.3-7.3-11.5-16.7-11.5-27.1l-1-106.3c0-16.7 7.3-33.4 18.8-45.9 12.5-12.5 29.2-19.8 46.9-19.8l106.3 1c10.4 0 19.8 4.2 27.1 11.5l241.9 241.9-186.6 186.6z"></path>
+</svg>
+            <span class="badge color-background-1">{{ 'blogs.article.blog' | t }}</span>
+          </div>
+        {%- endif -%}  
+      </div>
+    </div>
+  </div>
+{%- endif -%}

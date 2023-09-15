@@ -1,0 +1,639 @@
+{
+  "sections": {
+    "fa72d8c2-1146-4380-82df-08deef5ccbd7": {
+      "type": "slideshow",
+      "blocks": {
+        "template--15458952937670__fa72d8c2-1146-4380-82df-08deef5ccbd7-16732510158299e285-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_9_1.png",
+            "heading": "Click, Spin, & Snap Your Way to Capturing Memories",
+            "heading_size": "h2",
+            "subheading": "",
+            "text": "With the Looky Lou, kids and babies will FINALLY smile at the camera – every time",
+            "button_label": "Shop now",
+            "link": "shopify:\/\/collections",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "accent-1",
+            "text_alignment_mobile": "left"
+          }
+        }
+      },
+      "block_order": [
+        "template--15458952937670__fa72d8c2-1146-4380-82df-08deef5ccbd7-16732510158299e285-0"
+      ],
+      "settings": {
+        "page_full_width": true,
+        "page_full_width_spacing": false,
+        "slide_height": "adapt_image",
+        "swiper_pagination": false,
+        "swiper_navigation": true,
+        "auto_play": 0,
+        "slider_effect": "slide",
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "e7583c6d-668b-405a-853d-7edfb463848b": {
+      "type": "support-block",
+      "blocks": {
+        "template--15458952937670__e7583c6d-668b-405a-853d-7edfb463848b-1673251047adb9b428-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Isolation_Mode.png",
+            "title": "Exclusive Collections",
+            "heading_size": "h0",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.<\/p>",
+            "link_label": "",
+            "link": "shopify:\/\/collections"
+          }
+        },
+        "template--15458952937670__e7583c6d-668b-405a-853d-7edfb463848b-1673251047adb9b428-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Layer_1_eb916edf-87c2-494c-b0a3-82167dc8d690.png",
+            "title": "Happiness Guaranteed",
+            "heading_size": "h1",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--15458952937670__e7583c6d-668b-405a-853d-7edfb463848b-1673251047adb9b428-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Layer_1_1.png",
+            "title": "Trending Toys",
+            "heading_size": "h1",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15458952937670__e7583c6d-668b-405a-853d-7edfb463848b-1673251047adb9b428-0",
+        "template--15458952937670__e7583c6d-668b-405a-853d-7edfb463848b-1673251047adb9b428-1",
+        "template--15458952937670__e7583c6d-668b-405a-853d-7edfb463848b-1673251047adb9b428-2"
+      ],
+      "settings": {
+        "page_full_width": false,
+        "page_full_width_spacing": true,
+        "title": "",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "accent-1",
+        "block_type": "default-type",
+        "enable_box_shadow": false,
+        "block_style": "grid__item",
+        "column_alignment": "center",
+        "icon_outer_size": "",
+        "icon_size": "130",
+        "image_radius": "0",
+        "block_color_scheme": "inverse",
+        "vertical_position": "veritcal_center",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 88,
+        "swiper_enable": false,
+        "desktop_column": 4,
+        "laptop_column": 3,
+        "tablet_column": 3,
+        "mobile_column": 1,
+        "swiper_pagination": false,
+        "swiper_navigation": false,
+        "auto_play": 0,
+        "custom_class_name": ""
+      }
+    },
+    "74d09de3-61d7-443f-84bf-75ba792df3be": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20948669301055__74d09de3-61d7-443f-84bf-75ba792df3be-heading-1": {
+          "type": "heading",
+          "settings": {
+            "sub_heading": "",
+            "heading": "Meet Lou, Your Photo Album’s New Best Friend.",
+            "enable_title_link": false,
+            "button_link": "",
+            "heading_size": "h1"
+          }
+        },
+        "template--20948669301055__74d09de3-61d7-443f-84bf-75ba792df3be-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--20948669301055__74d09de3-61d7-443f-84bf-75ba792df3be-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "shopify:\/\/products\/looky-lou-rattle-book-bundle"
+          }
+        }
+      },
+      "block_order": [
+        "template--20948669301055__74d09de3-61d7-443f-84bf-75ba792df3be-heading-1",
+        "template--20948669301055__74d09de3-61d7-443f-84bf-75ba792df3be-text-1",
+        "template--20948669301055__74d09de3-61d7-443f-84bf-75ba792df3be-button-1"
+      ],
+      "settings": {
+        "page_full_width": false,
+        "page_full_width_spacing": false,
+        "image": "shopify:\/\/shop_images\/image_29.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class_name": ""
+      }
+    },
+    "020a8d32-9114-433b-b9cd-69ef6e5b1537": {
+      "type": "specifications",
+      "blocks": {
+        "template--15458952937670__020a8d32-9114-433b-b9cd-69ef6e5b1537-1673414272f906fc2e-0": {
+          "type": "text",
+          "settings": {
+            "heading": "Activity Rooms",
+            "heading_size": "h1",
+            "caption": "",
+            "caption_style": "caption-with-letter-spacing",
+            "caption_size": "medium",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<\/p>",
+            "text_style": "body",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--15458952937670__020a8d32-9114-433b-b9cd-69ef6e5b1537-1673414272f906fc2e-1": {
+          "type": "text",
+          "settings": {
+            "heading": "Languages",
+            "heading_size": "h1",
+            "caption": "",
+            "caption_style": "caption-with-letter-spacing",
+            "caption_size": "medium",
+            "text": "<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.<\/p>",
+            "text_style": "body",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--15458952937670__020a8d32-9114-433b-b9cd-69ef6e5b1537-1673414272f906fc2e-2": {
+          "type": "text",
+          "settings": {
+            "heading": "Special Education",
+            "heading_size": "h1",
+            "caption": "",
+            "caption_style": "caption-with-letter-spacing",
+            "caption_size": "medium",
+            "text": "<p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<\/p>",
+            "text_style": "body",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "633f5bc8-2dd3-4358-a26d-a49944c73556": {
+          "type": "text",
+          "settings": {
+            "heading": "Art Classes",
+            "heading_size": "h1",
+            "caption": "",
+            "caption_style": "caption-with-letter-spacing",
+            "caption_size": "medium",
+            "text": "<p>Amet consectetur adipiscing elit, eiusmod tempor incididunt ut labore.<\/p>",
+            "text_style": "body",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15458952937670__020a8d32-9114-433b-b9cd-69ef6e5b1537-1673414272f906fc2e-0",
+        "template--15458952937670__020a8d32-9114-433b-b9cd-69ef6e5b1537-1673414272f906fc2e-1",
+        "template--15458952937670__020a8d32-9114-433b-b9cd-69ef6e5b1537-1673414272f906fc2e-2",
+        "633f5bc8-2dd3-4358-a26d-a49944c73556"
+      ],
+      "settings": {
+        "page_full_width": false,
+        "page_full_width_spacing": false,
+        "sub_heading": "Welcome to",
+        "title": "Titoo's Fun Center",
+        "heading_size": "h1",
+        "subtitle": "",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "text": "",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 68,
+        "padding_bottom": 124,
+        "custom_class_name": ""
+      }
+    },
+    "03e0a54c-e292-4fc2-8de9-0ab73605265d": {
+      "type": "grid-banner",
+      "blocks": {
+        "616c3f34-e4b3-4fef-b419-18fb213b555b": {
+          "type": "text",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/mane-spin_1.png",
+            "show_content": false,
+            "block_title": "Title",
+            "enable_title_link": false,
+            "block_sub_title": "Sub title",
+            "block_description": "Short description",
+            "block_button_text": "",
+            "block_button_link": "",
+            "desktop_contents_alignments": "center"
+          }
+        },
+        "7dd2362a-d996-499e-869f-5f6c3065a38c": {
+          "type": "text",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/looky_clip_1.png",
+            "show_content": false,
+            "block_title": "",
+            "enable_title_link": false,
+            "block_sub_title": "Sub title",
+            "block_description": "Short description",
+            "block_button_text": "",
+            "block_button_link": "",
+            "desktop_contents_alignments": "center"
+          }
+        }
+      },
+      "block_order": [
+        "616c3f34-e4b3-4fef-b419-18fb213b555b",
+        "7dd2362a-d996-499e-869f-5f6c3065a38c"
+      ],
+      "settings": {
+        "page_full_width": true,
+        "page_full_width_spacing": false,
+        "sub_heading": "",
+        "title": "",
+        "heading_size": "h1",
+        "subtitle": "",
+        "text_style": "caption-with-letter-spacing",
+        "text_size": "medium",
+        "column_alignment": "center",
+        "background_style": "primary",
+        "banner_style": "overlay",
+        "grid-column": "2",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "accent-2",
+        "padding_top": 112,
+        "padding_bottom": 24,
+        "custom_class_name": "home-grid-banner-2",
+        "swiper_enable": false,
+        "desktop_column": 2,
+        "tablet_column": 3,
+        "mobile_column": 2,
+        "centered_slide": true,
+        "swiper_pagination": false,
+        "swiper_navigation": false,
+        "auto_play": 0,
+        "mobile_space": 5,
+        "tab_space": 30,
+        "desktop_space": 30
+      }
+    },
+    "e5e93aba-16a0-4fd3-9f94-a49691edffb9": {
+      "type": "featured-collection",
+      "settings": {
+        "page_full_width": false,
+        "page_full_width_spacing": false,
+        "title": "Our Products",
+        "heading_size": "h1",
+        "sub_heading": "Shop to",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "column_alignment": "center",
+        "collection": "frontpage",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_new_tag": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "padding_top": 112,
+        "padding_bottom": 120,
+        "custom_class_name": "",
+        "swiper_enable": false,
+        "desktop_column": 4,
+        "tablet_column": 3,
+        "mobile_column": 1,
+        "centered_slide": false,
+        "swiper_pagination": false,
+        "swiper_navigation": false,
+        "auto_play": 0,
+        "swipe_on_mobile": false,
+        "arrow_on_mobile": false,
+        "columns_mobile": "1"
+      }
+    },
+    "250feea7-6d11-4131-8817-c92a4c157e4f": {
+      "type": "testimonials",
+      "blocks": {
+        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-0": {
+          "type": "text",
+          "settings": {
+            "content-heading": "",
+            "author": "David Joel",
+            "job_title": "Actor",
+            "quote": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<\/p>",
+            "star": "3",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-1": {
+          "type": "text",
+          "settings": {
+            "content-heading": "",
+            "author": "Mary J. McCord",
+            "job_title": "Supervisor",
+            "quote": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<\/p>",
+            "star": "3",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-2": {
+          "type": "text",
+          "settings": {
+            "content-heading": "",
+            "author": "Leroy E. Tyler",
+            "job_title": "Manager",
+            "quote": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<\/p>",
+            "star": "3",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "e19165f5-b913-4465-b3f6-a0ade92362bd": {
+          "type": "text",
+          "settings": {
+            "content-heading": "",
+            "author": "Lisa C. Barry",
+            "job_title": "Accounts",
+            "quote": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<\/p>",
+            "star": "3",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-0",
+        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-1",
+        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-2",
+        "e19165f5-b913-4465-b3f6-a0ade92362bd"
+      ],
+      "settings": {
+        "page_full_width": false,
+        "page_full_width_spacing": true,
+        "title": "Our Client Experience",
+        "heading_size": "h1",
+        "sub_heading": "Testimonials",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "column_alignment": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "padding_top": 116,
+        "padding_bottom": 188,
+        "custom_class_name": "",
+        "desktop_column": 3,
+        "tablet_column": 2,
+        "mobile_column": 1,
+        "centered_slide": true,
+        "swiper_pagination": false,
+        "swiper_navigation": true,
+        "auto_play": 0
+      }
+    },
+    "6f92159b-b7ce-4465-8c7e-eb06f393e1a5": {
+      "type": "featured-blog",
+      "settings": {
+        "page_full_width": false,
+        "page_full_width_spacing": false,
+        "heading": "Our Fun & Exciting Updates",
+        "heading_size": "h1",
+        "sub_heading": "our blog",
+        "column_alignment": "center",
+        "description": "",
+        "description_style": "body",
+        "show_background_image": false,
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_tags": true,
+        "show_view_all": false,
+        "block_banner_style": "grid-style",
+        "content_width": "50\/50",
+        "lap_content_width": "40\/60",
+        "overlay_style_height": 400,
+        "overlay_opacity": "0.5",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 108,
+        "padding_bottom": 140,
+        "custom_class_name": ""
+      }
+    },
+    "57fe2952-32ad-4b4f-b281-7cce5d888f2d": {
+      "type": "brand-logos",
+      "blocks": {
+        "template--15458952937670__57fe2952-32ad-4b4f-b281-7cce5d888f2d-167325124032dbdcde-0": {
+          "type": "column",
+          "settings": {
+            "link": "shopify:\/\/collections"
+          }
+        },
+        "template--15458952937670__57fe2952-32ad-4b4f-b281-7cce5d888f2d-167325124032dbdcde-1": {
+          "type": "column",
+          "settings": {
+            "link": ""
+          }
+        },
+        "template--15458952937670__57fe2952-32ad-4b4f-b281-7cce5d888f2d-167325124032dbdcde-2": {
+          "type": "column",
+          "settings": {
+            "link": ""
+          }
+        },
+        "078ceef6-7de4-4c13-a738-3b0b66a50b37": {
+          "type": "column",
+          "settings": {
+            "link": ""
+          }
+        },
+        "9041a88b-4ae3-4aaf-906f-9da69b4cc968": {
+          "type": "column",
+          "settings": {
+            "link": ""
+          }
+        },
+        "d17cba89-07ac-4ace-a375-b1267e45fc31": {
+          "type": "column",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15458952937670__57fe2952-32ad-4b4f-b281-7cce5d888f2d-167325124032dbdcde-0",
+        "template--15458952937670__57fe2952-32ad-4b4f-b281-7cce5d888f2d-167325124032dbdcde-1",
+        "template--15458952937670__57fe2952-32ad-4b4f-b281-7cce5d888f2d-167325124032dbdcde-2",
+        "078ceef6-7de4-4c13-a738-3b0b66a50b37",
+        "9041a88b-4ae3-4aaf-906f-9da69b4cc968",
+        "d17cba89-07ac-4ace-a375-b1267e45fc31"
+      ],
+      "settings": {
+        "page_full_width": false,
+        "page_full_width_spacing": false,
+        "title": "",
+        "heading_size": "h1",
+        "sub_heading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "column_alignment": "center",
+        "columns_desktop": 6,
+        "background_style": "primary",
+        "color_scheme": "background-1",
+        "block_color_scheme": "background-1",
+        "image_width": "full",
+        "padding_top": 68,
+        "padding_bottom": 68,
+        "swiper_enable": false,
+        "desktop_column": 4,
+        "tablet_column": 3,
+        "mobile_column": 1,
+        "swiper_pagination": false,
+        "swiper_navigation": false,
+        "auto_play": 0,
+        "swipe_on_mobile": true,
+        "columns_mobile": "2"
+      }
+    },
+    "b9b9d58f-18af-4485-b88b-3612515db33e": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-1",
+        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-2",
+        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-3",
+        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-4"
+      ],
+      "settings": {
+        "title": "Collapsible Content",
+        "heading_size": "h1",
+        "sub_heading": "",
+        "description": "",
+        "button_label": "Button label",
+        "button_link": "",
+        "button_style_secondary": false,
+        "column_alignment": "center",
+        "layout": "none",
+        "color_scheme": "accent-1",
+        "container_color_scheme": "accent-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "fa72d8c2-1146-4380-82df-08deef5ccbd7",
+    "e7583c6d-668b-405a-853d-7edfb463848b",
+    "74d09de3-61d7-443f-84bf-75ba792df3be",
+    "020a8d32-9114-433b-b9cd-69ef6e5b1537",
+    "03e0a54c-e292-4fc2-8de9-0ab73605265d",
+    "e5e93aba-16a0-4fd3-9f94-a49691edffb9",
+    "250feea7-6d11-4131-8817-c92a4c157e4f",
+    "6f92159b-b7ce-4465-8c7e-eb06f393e1a5",
+    "57fe2952-32ad-4b4f-b281-7cce5d888f2d",
+    "b9b9d58f-18af-4485-b88b-3612515db33e"
+  ]
+}

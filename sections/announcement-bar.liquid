@@ -1,0 +1,248 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | divided_by: 0.5 }}em;
+    padding-bottom: {{ section.settings.padding_bottom | divided_by: 0.5}}em;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}em;
+      padding-bottom: {{ section.settings.padding_bottom  }}em;
+    }
+  }
+{%- endstyle -%}
+
+{%- for block in section.blocks -%}
+  {%- case block.type -%}
+    {%- when 'announcement' -%}
+      <div class="announcement-bar color-{{ section.settings.color_scheme }}    section-{{ section.id }}-padding" id="announcement" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+      
+          {%- if block.settings.link != blank -%}
+            <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
+          {%- endif -%}
+              <p class="announcement-bar__message h3">
+              {%- if block.settings.text != blank -%}
+                {{ block.settings.text | escape }}
+                {%- endif -%}
+              
+                {%- if block.settings.link != blank -%}
+                  {% render 'icon-arrow' %}
+                {%- endif -%}
+              </p>
+          {%- if block.settings.link != blank -%}
+            </a>
+          {%- endif -%}        
+     {% comment %} <span id="bar-close" class="close close-icon dt-sc-btn">{% render 'icon-close' %}</span> {% endcomment %}
+      </div>
+  {%- endcase -%}
+{%- endfor -%}
+<style>
+#shopify-section-announcement-bar{position: relative;}
+#bar-close {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  margin-top: -7.5px;
+  cursor: pointer;
+}
+  #bar-close { fill: var(--gradient-base-accent-2); transition: var(--duration-default); }
+#bar-close:hover { fill: var(--gradient-base-accent-1); }
+
+.announcement-bar
+  .link--text {
+   {% render 'globalcolor'  , color: section.settings.color_scheme_text  %}
+}
+.announcement-bar
+  .link--text:hover {
+    {% render 'globalcolor' ,color: section.settings.color_scheme_text  %}
+}
+}
+
+</style>
+<script>
+  if(!$.cookie('hideTopBar')) $("#announcement").fadeIn("slow");
+$("#bar-close").click(function() {
+    $.cookie('hideTopBar', 'true', { expires: 1 });
+    $("#announcement").fadeOut("slow");
+    return false;
+});
+</script>
+{% schema %}
+{
+  "name": "t:sections.announcement-bar.name",
+  "max_blocks": 12,
+  "settings": [
+
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "unit": "em",
+      "label": "Section Padding Top",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "unit": "em",
+      "label": "Section Padding bottom",
+      "default": 1
+    },
+
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "primary-color01",
+          "label": "primary color one"
+        },
+        {
+          "value": "primary-color02",
+          "label": "primary color two"
+        },
+        {
+          "value": "primary-color03",
+          "label": "primary color three"
+        },
+        {
+          "value": "primary-color04",
+          "label": "primary color Four"
+        },
+        {
+          "value": "primary-color05",
+          "label": "primary color Five"
+        },
+        {
+          "value": "primary-color06",
+          "label": "primary color Six"
+        },
+        {
+          "value": "primary-color07",
+          "label": "primary color Severn"
+        },
+        {
+          "value": "primary-color08",
+          "label": "primary color Eight"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "accent-1",
+      "label": "Section Backgound Color"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme_text",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "primary-color01",
+          "label": "primary color one"
+        },
+        {
+          "value": "primary-color02",
+          "label": "primary color two"
+        },
+        {
+          "value": "primary-color03",
+          "label": "primary color three"
+        },
+        {
+          "value": "primary-color04",
+          "label": "primary color Four"
+        },
+        {
+          "value": "primary-color05",
+          "label": "primary color Five"
+        },
+        {
+          "value": "primary-color06",
+          "label": "primary color Six"
+        },
+        {
+          "value": "primary-color07",
+          "label": "primary color Severn"
+        },
+        {
+          "value": "primary-color08",
+          "label": "primary color Eight"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "accent-1",
+      "label": "t:sections.all.colors.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "t:sections.announcement-bar.blocks.announcement.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Welcome to our store",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        },
+
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "announcement"
+      }
+    ]
+  }
+}
+{% endschema %}

@@ -1,0 +1,87 @@
+/* custom */
+
+.multicolumn .title-wrapper-with-link h2.title { font-size: 4.8rem; color: var(--gradient-base-accent-2);  margin-bottom: -2.5rem; }
+.map-contact-information .multicolumn-list__item .multicolumn-card .multicolumn-card__info { padding: 0; padding-left: 25px; }
+.multicolumn .map-contact-information .multicolumn-card { padding: 35px 25px 35px 25px; }
+
+.map-contact-information .multicolumn-list .multicolumn-card h3 { color: var(--gradient-base-accent-2); transition: var(--duration-default); }
+.map-contact-information .multicolumn-list .multicolumn-card:hover h3 { color: var(--gradient-base-accent-1); }
+.layout-type .contact-form-section .field #ContactForm-body.field__input { height: 200px; padding: 1rem 2rem; }
+.contact-form-section h2.title { font-size: 3rem; color: var(--gradient-base-accent-2);  text-align: start; margin-bottom: 2rem; }
+.contact.contact-form-section .contact__button { width: 15%; margin: auto; }
+.contact.contact-form-section .contact__button .button { width: 100%; }
+
+
+
+@media screen and (max-width: 1199px){
+
+.contact.contact-form-section .contact__button { width: 30%; margin: auto; }
+}
+
+
+/* custom */
+
+
+
+
+.multicolumn .map-section{
+   overflow: hidden;
+   margin-right: 30px;
+}
+.multicolumn .multicolumn-card .multicolumn-card_icon .fa{
+    font-size: 20px;
+    background: var(--gradient-base-accent-6);
+    color: var(--gradient-background);
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: 0.3s linear; border-radius: var(--text-boxes-radius);
+}
+.multicolumn .multicolumn-card{
+    display: flex;
+    align-items: center;
+    padding: 25px;
+}
+.multicolumn-card__info{
+   padding-left: 2.5rem;
+}
+.multicolumn-card__info h3{
+   font-weight: 600;
+   font-size: 18px;
+   margin-bottom: 0.5rem !important;
+}
+.multicolumn .multicolumn-card{
+   background: transparent !important;
+   border: 1px solid var(--border-color);
+  transition: 0.3s linear;
+}
+
+.multicolumn .multicolumn-list .multicolumn-list__item:hover .multicolumn-card{
+  border: 1px solid var(--gradient-base-accent-1);
+}
+.multicolumn .multicolumn-list .multicolumn-list__item:hover .multicolumn-card_icon .fa{
+    background: var(--gradient-base-accent-1);
+    color: var(--gradient-base-background-1);
+}
+.map-contact-information{
+    display: flex;
+    flex-direction: row;
+}
+.map-contact-information .grid--3-col-desktop .grid__item{
+  width: 100%;
+  max-width: 100%;
+}
+@media screen and (max-width: 991px){
+.map-contact-information{flex-direction: column;}
+.multicolumn .map-section{margin-right: 0;margin-bottom: 30px;}
+}
+@media screen and (max-width: 749px){
+  .map-contact-information{padding: 0 20px;}
+}
+
+@media screen and (max-width: 576px){
+.map-contact-information .multicolumn-list:not(.slider) { padding-left: 0;
+    padding-right: 0; }
+}
