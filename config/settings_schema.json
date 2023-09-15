@@ -266,18 +266,18 @@
         "info": "t:settings_schema.typography.settings.type_header_font.info"
       },
 
-      // {
-      //   "type": "number",
-      //   "id": "heading_scale",
-      //   "label": "Heading font on Desktop",
-      //   "default": 50
-      // },
-      // {
-      //   "type": "number",
-      //   "id": "heading_scale_mobile",
-      //   "label": "Heading font on Mobile",
-      //   "default": 30
-      // },
+      {
+        "type": "number",
+        "id": "heading_scale",
+        "label": "Heading font on Desktop",
+        "default": 50
+      },
+      {
+        "type": "number",
+        "id": "heading_scale_mobile",
+        "label": "Heading font on Mobile",
+        "default": 30
+      },
 
       {
         "type": "textarea",
@@ -301,18 +301,18 @@
         "label": "t:settings_schema.typography.settings.type_body_font.label",
         "info": "t:settings_schema.typography.settings.type_body_font.info"
       },
-      // {
-      //   "type": "number",
-      //   "id": "body_scale",
-      //   "label": "Body font for Desktop",
-      //   "default": 18
-      // },
-      // {
-      //   "type": "number",
-      //   "id": "body_scale_m",
-      //   "label": "Body font for Mobile",
-      //   "default": 16
-      // },
+      {
+        "type": "number",
+        "id": "bodymobilefont",
+        "label": "Body font for Desktop",
+        "default": 18
+      },
+      {
+        "type": "number",
+        "id": "bodymobilefontm",
+        "label": "Body font for Mobile",
+        "default": 16
+      },
       {
         "type": "textarea",
         "id": "custom_font_script_2",
