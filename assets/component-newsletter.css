@@ -29,7 +29,7 @@ footer .footer-block__newsletter .newsletter-form { margin: 0 auto; max-width: 7
 .newsletter-form__field-wrapper .field__input {
   padding-right: 5rem;     height: 7rem;
   border-radius: 10px; border: none;
-  color: var(--gradient-base-accent-2);     background-color: var(--gradient-background);
+  color: var(--gradient-base-accent-2);      background-color: var(--color-primary-six);
 }
 
 .email-signup-banner.banner .banner__content .newsletter-form__field-wrapper .field__input {  border-radius: 10px; border: none; color: var(--gradient-base-accent-2);
@@ -62,20 +62,24 @@ footer .footer-block__newsletter .newsletter-form { margin: 0 auto; max-width: 7
 
 }
 
-.newsletter-form__button { margin:auto 0; width:auto;  z-index: 2; color: var(--gradient-base-background-1); font-size: 1.6rem; position: absolute; right: 10px; top: 5px;
+.newsletter-form__button { margin:auto 0; width:auto;  z-index: 2;
+  
+   background: var(--color-primary-one);
+  color: var(--gradient-base-background-1); font-size: 1.6rem; position: absolute; right: 10px; top: 5px;
     bottom: 5px; padding: 1.3rem 2.5rem 1.3rem 2.5rem; border-radius:10px; height:5rem;
 
 }
 
 .newsletter-form__button:focus-visible {
   box-shadow: 0 0 0 .3rem rgb(var(--color-background)),0 0 0 .4rem rgba(var(--color-foreground));
-  background-color: rgb(var(--color-background));
+
+  background: var(--color-primary-one);
   transition:all 0.3s linear;
 }
 
 .newsletter-form__button:focus, .newsletter-form__button:hover {
 /*   box-shadow: 0 0 0 .3rem rgb(var(--color-background)),0 0 0 .4rem rgba(var(--color-foreground)); */
-  background-color: var(--gradient-base-accent-2);
+background: var(--color-primary-one);
   color: var(--gradient-base-background-1);
 }
 

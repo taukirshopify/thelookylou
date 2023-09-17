@@ -324,13 +324,14 @@ h2.specification__heading {
 .specification_block .specification_image-item-list { width: 80px;  height: 80px; display: flex; align-items: center; justify-content: center;}
 .specification_block .specification__text-item--list{ padding-left: 20px; }
 .specification_block{display: flex; height: 100%; align-items: center; flex-wrap: nowrap; background: var(--gradient-base-background-1); border-radius: var(--text-boxes-radius); 
-  padding: 3rem 4rem; box-shadow: 0 0 10px #d6d6d6; transition: var(--duration-default); }
+  padding: 1.56rem; box-shadow: 0 0 10px #d6d6d6; transition: var(--duration-default); }
 .specification_block:hover { background: var(--gradient-base-accent-1); }
-.specification_block h2.specification__heading{position:relative; margin:0; margin-bottom: 1rem; overflow:hidden; padding-left: 4rem;  transition: var(--duration-default); }
+.specification_block h2.specification__heading{
+   margin:0; margin-bottom: 1rem; overflow:hidden;  transition: var(--duration-default); }
 .specification_block .specification__text p { transition: var(--duration-default); }
 .specification_block:hover .specification__text p,
 .specification_block:hover h2.specification__heading { color: var(--gradient-base-background-1); }
-.specification_block h2.specification__heading:before { content: ""; position: absolute; width: 25px; height: 3px; background-color:var(--gradient-base-accent-1); top: 50%;  -webkit-transform: translateY(-50%); left: 0;
+.specification_block h2.specification__heading:before { content: ""; width: 25px; height: 3px; background-color:var(--gradient-base-accent-1); top: 50%;  -webkit-transform: translateY(-50%); left: 0;
  webkit-transform: translateY(-50%); transform: translateY(-50%); transition: var(--duration-default); }
 .specification_block:hover h2.specification__heading:before { background: var(--gradient-base-background-1); }
 .specification_block p.specification__text{    position: absolute;  margin-left: auto;  margin-right: 0;  right: 0;  top: 0;  font-family: var(--font-additional-family); font-weight: 300; letter-spacing: 0; font-size: 1.8rem; color: var(--gradient-base-accent-1); background: var(--gradient-background); padding: 0 0 0 15px;}

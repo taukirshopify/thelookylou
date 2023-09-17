@@ -82,12 +82,19 @@
   .grid-banner .swiper-button-next, 
 .grid-banner .swiper-button-prev{bottom:0;top:auto}
   
+.specification_block{
+  background: transparent;
+  border: 2px dashed white;  
+  box-shadow:none;
+}
+.specification_block:hover{
+  background: transparent;
+}
 
-  
 {%- endstyle -%}    
   
  
-<div class="grid-banner color-{{ section.settings.color_scheme }} gradient{% if section.settings.title == blank %} no-heading{% endif %} {{ section.settings.custom_class_name }} ">
+<div class="grid-banner    color-{{ section.settings.color_scheme }} gradient{% if section.settings.title == blank %} no-heading{% endif %} {{ section.settings.custom_class_name }} ">
  <div class="styli7 {% if section.settings.page_full_width %} page-full-width {% else %} page-width {% endif %} {% if section.settings.page_full_width_spacing %} page-full-width_spacing {% endif %}">
    <div class="styli section-{{ section.id }}-padding isolate">
 <div class="row"> 
@@ -417,6 +424,38 @@
         {
           "value": "accent-2",
           "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "primary-color01",
+          "label": "primary color one"
+        },
+        {
+          "value": "primary-color02",
+          "label": "primary color two"
+        },
+        {
+          "value": "primary-color03",
+          "label": "primary color three"
+        },
+        {
+          "value": "primary-color04",
+          "label": "primary color Four"
+        },
+        {
+          "value": "primary-color05",
+          "label": "primary color Five"
+        },
+        {
+          "value": "primary-color06",
+          "label": "primary color Six"
+        },
+        {
+          "value": "primary-color07",
+          "label": "primary color Severn"
+        },
+        {
+          "value": "primary-color08",
+          "label": "primary color Eight"
         },
         {
           "value": "background-1",

@@ -180,12 +180,11 @@ ul.dt-nav > li:hover.default > div.sub-menu-block { transform: none;}
   ul.dt-nav > * { margin: 0 1px; }
   ul.dt-nav > li.top-level-link { display: inline-block; padding: 0 5px; position: relative; }
   ul.dt-nav > li.top-level-link > div.sub-menu-block .sub-menu-block{ right: auto; left: 100%;top:10px; }
-  ul.dt-nav > li > a { font-family: var(--font-heading-family); font-size: 1.6rem; letter-spacing:0; text-transform: uppercase;  font-weight: 700;  display: block; padding: 0; margin: 45px 18px 40px 18px; position: relative;  box-sizing: border-box; color: var(--gradient-base-accent-2); 
-    border-radius: var(--DTRadius); transition: all 0.3s linear;}
+
 /*   ul.dt-nav > li:hover > a, ul.dt-nav > li.active > a { background-color: rgb(var(--color-background)); } */
-  ul.dt-nav > li:hover > a, ul.dt-nav li.active > a,
+  /* ul.dt-nav > li:hover > a, ul.dt-nav li.active > a,
   ul.dt-nav > li:hover > a, ul.dt-nav > li.active > a,
-  ul.dt-nav > li.active > a.mega-menu > span:after { color: var(--gradient-base-accent-1); }
+  ul.dt-nav > li.active > a.mega-menu > span:after { color: var(--gradient-base-accent-1); } */
   ul.dt-nav > li.has-mega-menu > div.sub-menu-block{ text-align:start; }
 
   ul.dt-sc-list-inline > li ul.sub-menu-lists {  display:inline-block; list-style-type: none; margin: 0; padding: 0; }

@@ -18,28 +18,7 @@
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="{% if section.settings.page_full_width %} page-full-width {% else %} page-width {% endif %} {% if section.settings.page_full_width_spacing %} page-full-width_spacing {% endif %}section-{{ section.id }}-padding isolate">
 <div class="row">    
-  <div class="video-section content-style-{{ section.settings.content_style -}}">
-      <div class="video-section__content">
-      {%- unless section.settings.title == blank -%}
-      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin content-align--{{ section.settings.column_alignment }}">
-         {%- if section.settings.sub_heading != blank -%}  
-         <h6 class="sub-heading">{{ section.settings.sub_heading | escape }}</h6>
-         {%- endif -%} 
-         {%- if section.settings.title != blank -%}  
-          <h2 class="title {{ section.settings.heading_size }}">
-            {{ section.settings.title | escape }}
-          </h2>
-          {%- endif -%} 
-          {%- if section.settings.description != blank -%}  
-          <p class="description">{{ section.settings.description }}</p>
-          {%- endif -%}   
-          {%- if section.settings.button_label != blank -%}
-            <a {% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %} class="button{% if section.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">{{ section.settings.button_label | escape }}</a>
-          {%- endif -%}
-          </div>
-    {%- endunless -%}
-    </div>
-    </div>
+
     <noscript>
       <div class="video-section__media"
         {% if section.settings.cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
@@ -110,6 +89,8 @@
         {%- endif -%}
       </template>
     </deferred-media>
+
+    
   </div>
 </div>
 </div>

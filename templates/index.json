@@ -83,13 +83,17 @@
       "settings": {
         "page_full_width": false,
         "page_full_width_spacing": true,
+        "heading_scale": 50,
+        "heading_scale_mobile": 30,
+        "fontcolor": "primary-color01",
+        "color-bg": "primary-color01",
         "title": "",
         "heading_size": "h1",
         "columns_desktop": 3,
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "color_scheme": "accent-1",
+        "color_scheme": "primary-color03",
         "block_type": "default-type",
         "enable_box_shadow": false,
         "block_style": "grid__item",
@@ -130,14 +134,14 @@
         "template--20948669301055__74d09de3-61d7-443f-84bf-75ba792df3be-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Meet your family’s new best friend! This adorable lion phone accessory provides a fun and engaging distraction for your little one during picture-taking so they smile right into the camera. Clip Lou to the front, back, or side of your mobile device of choice, spin his built-in rattle mane, and get snapping!<\/p>",
             "text_style": "body"
           }
         },
         "template--20948669301055__74d09de3-61d7-443f-84bf-75ba792df3be-button-1": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Buy Now",
             "button_link": "shopify:\/\/products\/looky-lou-rattle-book-bundle"
           }
         }
@@ -150,6 +154,10 @@
       "settings": {
         "page_full_width": false,
         "page_full_width_spacing": false,
+        "heading_scale": 50,
+        "heading_scale_mobile": 30,
+        "color_scheme_font": "primary-color01",
+        "color_scheme": "primary-color04",
         "image": "shopify:\/\/shop_images\/image_29.png",
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -157,11 +165,86 @@
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
-        "color_scheme": "background-1",
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 52,
+        "padding_bottom": 52,
         "custom_class_name": ""
+      }
+    },
+    "8cb2088c-4294-4167-822a-c508f1552c00": {
+      "type": "image-bannerwithinoverlyimage",
+      "settings": {
+        "page_full_width": true,
+        "page_full_width_spacing": false,
+        "image": "shopify:\/\/shop_images\/Frame_15046.jpg",
+        "image_two": "shopify:\/\/shop_images\/custom_resized_ab4455df-dffd-4f55-9f23-39a5d340c4d6.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "custom_class_name": ""
+      }
+    },
+    "250feea7-6d11-4131-8817-c92a4c157e4f": {
+      "type": "testimonials",
+      "blocks": {
+        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-0": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_1.png",
+            "content-heading": "",
+            "author": "David Joel",
+            "job_title": "Actor",
+            "quote": "<p>“The Looky Lou has brought such joy & wonder to our son. He especially adores the book & consistently pulls it off of the shelf. The packaging was also perfection & will surely make the perfect gift for any expecting parents.”<br\/><\/p>",
+            "star": "5",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-1": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ellipse_1_1.png",
+            "content-heading": "",
+            "author": "Mary J. McCord",
+            "job_title": "",
+            "quote": "<p>\"AMAZING. The product itself is really well made and has a really nice matt e finish to the plastic so you know it's high quality. I originally purchased it for my younger son to take those monthly newborn photos, but my toddler also loves it and likes to play with it. The packaging was also top notch and I even re-used the box b\/c it was such a cute box. I immediately purchased 2 more for baby shower gifts.\"<\/p>",
+            "star": "3",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-0",
+        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-1"
+      ],
+      "settings": {
+        "page_full_width": false,
+        "page_full_width_spacing": true,
+        "title": "Our Client Experience",
+        "heading_size": "h1",
+        "sub_heading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "column_alignment": "center",
+        "content_alignment": "center",
+        "color_scheme": "primary-color04",
+        "color-tran": "#e0a151",
+        "after_image": "shopify:\/\/shop_images\/Group.png",
+        "padding_top": 76,
+        "padding_bottom": 156,
+        "custom_class_name": "",
+        "desktop_column": 2,
+        "tablet_column": 2,
+        "mobile_column": 1,
+        "centered_slide": false,
+        "swiper_pagination": false,
+        "swiper_navigation": false,
+        "auto_play": 0
       }
     },
     "020a8d32-9114-433b-b9cd-69ef6e5b1537": {
@@ -170,12 +253,13 @@
         "template--15458952937670__020a8d32-9114-433b-b9cd-69ef6e5b1537-1673414272f906fc2e-0": {
           "type": "text",
           "settings": {
-            "heading": "Activity Rooms",
-            "heading_size": "h1",
+            "block-image": "shopify:\/\/shop_images\/Burst1_1.svg",
+            "heading": "clip",
+            "heading_size": "h2",
             "caption": "",
-            "caption_style": "caption-with-letter-spacing",
-            "caption_size": "medium",
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<\/p>",
+            "caption_style": "subtitle",
+            "caption_size": "small",
+            "text": "<p>Clip Lou toyour phone<\/p>",
             "text_style": "body",
             "button_label": "",
             "button_link": ""
@@ -184,26 +268,13 @@
         "template--15458952937670__020a8d32-9114-433b-b9cd-69ef6e5b1537-1673414272f906fc2e-1": {
           "type": "text",
           "settings": {
-            "heading": "Languages",
-            "heading_size": "h1",
+            "block-image": "shopify:\/\/shop_images\/Burst2_1.svg",
+            "heading": "Spin",
+            "heading_size": "h2",
             "caption": "",
             "caption_style": "caption-with-letter-spacing",
-            "caption_size": "medium",
-            "text": "<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.<\/p>",
-            "text_style": "body",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "template--15458952937670__020a8d32-9114-433b-b9cd-69ef6e5b1537-1673414272f906fc2e-2": {
-          "type": "text",
-          "settings": {
-            "heading": "Special Education",
-            "heading_size": "h1",
-            "caption": "",
-            "caption_style": "caption-with-letter-spacing",
-            "caption_size": "medium",
-            "text": "<p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<\/p>",
+            "caption_size": "small",
+            "text": "<p>Spin hisrattle mane<\/p>",
             "text_style": "body",
             "button_label": "",
             "button_link": ""
@@ -212,12 +283,13 @@
         "633f5bc8-2dd3-4358-a26d-a49944c73556": {
           "type": "text",
           "settings": {
-            "heading": "Art Classes",
-            "heading_size": "h1",
+            "block-image": "shopify:\/\/shop_images\/Burst3_1.svg",
+            "heading": "Sanp",
+            "heading_size": "h2",
             "caption": "",
             "caption_style": "caption-with-letter-spacing",
-            "caption_size": "medium",
-            "text": "<p>Amet consectetur adipiscing elit, eiusmod tempor incididunt ut labore.<\/p>",
+            "caption_size": "small",
+            "text": "<p>Snap thesmiles<\/p>",
             "text_style": "body",
             "button_label": "",
             "button_link": ""
@@ -227,16 +299,18 @@
       "block_order": [
         "template--15458952937670__020a8d32-9114-433b-b9cd-69ef6e5b1537-1673414272f906fc2e-0",
         "template--15458952937670__020a8d32-9114-433b-b9cd-69ef6e5b1537-1673414272f906fc2e-1",
-        "template--15458952937670__020a8d32-9114-433b-b9cd-69ef6e5b1537-1673414272f906fc2e-2",
         "633f5bc8-2dd3-4358-a26d-a49944c73556"
       ],
       "settings": {
         "page_full_width": false,
         "page_full_width_spacing": false,
-        "sub_heading": "Welcome to",
+        "bg_image": "shopify:\/\/shop_images\/Frame_113.jpg",
+        "sub_heading": "",
         "title": "Titoo's Fun Center",
+        "cover_image": "shopify:\/\/shop_images\/image_21.jpg",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=ADHlfDyQniE",
         "heading_size": "h1",
-        "subtitle": "",
+        "subtitle": "dfsdfsdf",
         "text_style": "caption-with-letter-spacing",
         "text_size": "medium",
         "text": "",
@@ -248,8 +322,8 @@
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
         "mobile_content_alignment": "left",
-        "padding_top": 68,
-        "padding_bottom": 124,
+        "padding_top": 20,
+        "padding_bottom": 56,
         "custom_class_name": ""
       }
     },
@@ -259,7 +333,7 @@
         "616c3f34-e4b3-4fef-b419-18fb213b555b": {
           "type": "text",
           "settings": {
-            "block_image": "shopify:\/\/shop_images\/mane-spin_1.png",
+            "block_image": "shopify:\/\/shop_images\/Mane_spin.gif",
             "show_content": false,
             "block_title": "Title",
             "enable_title_link": false,
@@ -273,7 +347,7 @@
         "7dd2362a-d996-499e-869f-5f6c3065a38c": {
           "type": "text",
           "settings": {
-            "block_image": "shopify:\/\/shop_images\/looky_clip_1.png",
+            "block_image": "shopify:\/\/shop_images\/Clip.gif",
             "show_content": false,
             "block_title": "",
             "enable_title_link": false,
@@ -304,7 +378,7 @@
         "grid-column": "2",
         "button_label": "Button label",
         "button_link": "",
-        "color_scheme": "accent-2",
+        "color_scheme": "primary-color04",
         "padding_top": 112,
         "padding_bottom": 24,
         "custom_class_name": "home-grid-banner-2",
@@ -325,7 +399,7 @@
       "type": "featured-collection",
       "settings": {
         "page_full_width": false,
-        "page_full_width_spacing": false,
+        "page_full_width_spacing": true,
         "title": "Our Products",
         "heading_size": "h1",
         "sub_heading": "Shop to",
@@ -364,89 +438,6 @@
         "columns_mobile": "1"
       }
     },
-    "250feea7-6d11-4131-8817-c92a4c157e4f": {
-      "type": "testimonials",
-      "blocks": {
-        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-0": {
-          "type": "text",
-          "settings": {
-            "content-heading": "",
-            "author": "David Joel",
-            "job_title": "Actor",
-            "quote": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<\/p>",
-            "star": "3",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-1": {
-          "type": "text",
-          "settings": {
-            "content-heading": "",
-            "author": "Mary J. McCord",
-            "job_title": "Supervisor",
-            "quote": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<\/p>",
-            "star": "3",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-2": {
-          "type": "text",
-          "settings": {
-            "content-heading": "",
-            "author": "Leroy E. Tyler",
-            "job_title": "Manager",
-            "quote": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<\/p>",
-            "star": "3",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "e19165f5-b913-4465-b3f6-a0ade92362bd": {
-          "type": "text",
-          "settings": {
-            "content-heading": "",
-            "author": "Lisa C. Barry",
-            "job_title": "Accounts",
-            "quote": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<\/p>",
-            "star": "3",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-0",
-        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-1",
-        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-2",
-        "e19165f5-b913-4465-b3f6-a0ade92362bd"
-      ],
-      "settings": {
-        "page_full_width": false,
-        "page_full_width_spacing": true,
-        "title": "Our Client Experience",
-        "heading_size": "h1",
-        "sub_heading": "Testimonials",
-        "description": "",
-        "button_label": "",
-        "button_link": "",
-        "button_style_secondary": false,
-        "column_alignment": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-2",
-        "padding_top": 116,
-        "padding_bottom": 188,
-        "custom_class_name": "",
-        "desktop_column": 3,
-        "tablet_column": 2,
-        "mobile_column": 1,
-        "centered_slide": true,
-        "swiper_pagination": false,
-        "swiper_navigation": true,
-        "auto_play": 0
-      }
-    },
     "6f92159b-b7ce-4465-8c7e-eb06f393e1a5": {
       "type": "featured-blog",
       "settings": {
@@ -481,58 +472,37 @@
         "custom_class_name": ""
       }
     },
-    "57fe2952-32ad-4b4f-b281-7cce5d888f2d": {
-      "type": "brand-logos",
+    "b9b9d58f-18af-4485-b88b-3612515db33e": {
+      "type": "collapsible-content",
       "blocks": {
-        "template--15458952937670__57fe2952-32ad-4b4f-b281-7cce5d888f2d-167325124032dbdcde-0": {
-          "type": "column",
+        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-1": {
+          "type": "collapsible_row",
           "settings": {
-            "link": "shopify:\/\/collections"
+            "heading": "Does The Looky Lou actually work?",
+            "icon": "none",
+            "row_content": "<p>We are proud to say, Yes! It does!<\/p>",
+            "page": ""
           }
         },
-        "template--15458952937670__57fe2952-32ad-4b4f-b281-7cce5d888f2d-167325124032dbdcde-1": {
-          "type": "column",
+        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-2": {
+          "type": "collapsible_row",
           "settings": {
-            "link": ""
-          }
-        },
-        "template--15458952937670__57fe2952-32ad-4b4f-b281-7cce5d888f2d-167325124032dbdcde-2": {
-          "type": "column",
-          "settings": {
-            "link": ""
-          }
-        },
-        "078ceef6-7de4-4c13-a738-3b0b66a50b37": {
-          "type": "column",
-          "settings": {
-            "link": ""
-          }
-        },
-        "9041a88b-4ae3-4aaf-906f-9da69b4cc968": {
-          "type": "column",
-          "settings": {
-            "link": ""
-          }
-        },
-        "d17cba89-07ac-4ace-a375-b1267e45fc31": {
-          "type": "column",
-          "settings": {
-            "link": ""
+            "heading": "Does The Looky Lou actually work?",
+            "icon": "none",
+            "row_content": "<p>lorem    <\/p>",
+            "page": ""
           }
         }
       },
       "block_order": [
-        "template--15458952937670__57fe2952-32ad-4b4f-b281-7cce5d888f2d-167325124032dbdcde-0",
-        "template--15458952937670__57fe2952-32ad-4b4f-b281-7cce5d888f2d-167325124032dbdcde-1",
-        "template--15458952937670__57fe2952-32ad-4b4f-b281-7cce5d888f2d-167325124032dbdcde-2",
-        "078ceef6-7de4-4c13-a738-3b0b66a50b37",
-        "9041a88b-4ae3-4aaf-906f-9da69b4cc968",
-        "d17cba89-07ac-4ace-a375-b1267e45fc31"
+        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-1",
+        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-2"
       ],
       "settings": {
-        "page_full_width": false,
-        "page_full_width_spacing": false,
-        "title": "",
+        "title": "FAQ's",
+        "heading_scale": 50,
+        "heading_scale_mobile": 30,
+        "color_scheme_font": "primary-color01",
         "heading_size": "h1",
         "sub_heading": "",
         "description": "",
@@ -540,85 +510,32 @@
         "button_link": "",
         "button_style_secondary": false,
         "column_alignment": "center",
-        "columns_desktop": 6,
-        "background_style": "primary",
-        "color_scheme": "background-1",
-        "block_color_scheme": "background-1",
-        "image_width": "full",
-        "padding_top": 68,
-        "padding_bottom": 68,
-        "swiper_enable": false,
-        "desktop_column": 4,
-        "tablet_column": 3,
-        "mobile_column": 1,
-        "swiper_pagination": false,
-        "swiper_navigation": false,
-        "auto_play": 0,
-        "swipe_on_mobile": true,
-        "columns_mobile": "2"
+        "layout": "none",
+        "color_scheme": "primary-color03",
+        "container_color_scheme": "primary-color02",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
-    "b9b9d58f-18af-4485-b88b-3612515db33e": {
-      "type": "collapsible-content",
-      "blocks": {
-        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-1": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-2": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-4": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-1",
-        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-2",
-        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-3",
-        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-4"
-      ],
+    "8574dc59-b795-44d4-8201-67921f1172d0": {
+      "type": "video",
       "settings": {
-        "title": "Collapsible Content",
+        "page_full_width": false,
+        "page_full_width_spacing": false,
+        "title": "Video banner",
         "heading_size": "h1",
         "sub_heading": "",
         "description": "",
         "button_label": "Button label",
         "button_link": "",
         "button_style_secondary": false,
-        "column_alignment": "center",
-        "layout": "none",
-        "color_scheme": "accent-1",
-        "container_color_scheme": "accent-1",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
+        "content_style": "overlay",
+        "video_url": "https:\/\/youtu.be\/ADHlfDyQniE?si=-yovuqTfUaukuoZB",
+        "alt_text": "",
+        "color_scheme": "background-1",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -628,12 +545,13 @@
     "fa72d8c2-1146-4380-82df-08deef5ccbd7",
     "e7583c6d-668b-405a-853d-7edfb463848b",
     "74d09de3-61d7-443f-84bf-75ba792df3be",
+    "8cb2088c-4294-4167-822a-c508f1552c00",
+    "250feea7-6d11-4131-8817-c92a4c157e4f",
     "020a8d32-9114-433b-b9cd-69ef6e5b1537",
     "03e0a54c-e292-4fc2-8de9-0ab73605265d",
     "e5e93aba-16a0-4fd3-9f94-a49691edffb9",
-    "250feea7-6d11-4131-8817-c92a4c157e4f",
     "6f92159b-b7ce-4465-8c7e-eb06f393e1a5",
-    "57fe2952-32ad-4b4f-b281-7cce5d888f2d",
-    "b9b9d58f-18af-4485-b88b-3612515db33e"
+    "b9b9d58f-18af-4485-b88b-3612515db33e",
+    "8574dc59-b795-44d4-8201-67921f1172d0"
   ]
 }

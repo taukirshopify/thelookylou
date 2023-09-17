@@ -30,7 +30,7 @@ blockquote {   margin: 0;   position: relative;}
 .custom-testimonials-style-2 .testimonials-2 .testimonial-container .testimonial-content:before { content:''; position:absolute; width: 62px; height: 78px; background-color:var(--gradient-base-background-1);
     left: 10%;  bottom: 1px; clip-path: polygon(0 0, 0% 100%, 100% 0); transform: translateY(100%); }
 .custom-testimonials-style-2 .testimonials-2 .testimonial-container.swiper-slide-active .testimonial-content{ opacity:1; }
-.custom-testimonials-style-2 .testimonials-2 .testimonial-container .testimonial-content:after {  content: ""; position: absolute; border: 2px dashed var(--gradient-base-accent-1); 
+.custom-testimonials-style-2 .testimonials-2 .testimonial-container .testimonial-content:after {  content: ""; position: absolute; border: 2px dashed var(--color-primary-one); 
  left: 20px; right: -20px; top: -20px; bottom: 20px; border-radius: 1rem; }
 .custom-testimonials-style-2 .testimonials-2 .testimonial-content blockquote > p{ line-height: normal; font-style: normal;  color: var(--gradient-base-accent-4); margin-top: 10px; letter-spacing:0; }
 .custom-testimonials-style-2 .testimonials-2 .testimonial-container .testimonial-content cite{font-style: normal; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }

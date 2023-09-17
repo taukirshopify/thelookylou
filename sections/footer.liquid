@@ -20,17 +20,22 @@
   footer#Banner-{{ section.id }}:before { position: absolute; content:'';
    background-image: url({{ section.settings.footer_before_image | image_url: width: 1200  }});
       background-repeat: no-repeat; background-size: 100%; background-attachment: scroll; background-position: center center;
-	 transition: all 0.3s linear ;  height: 764px; width: 404px; bottom:0;  }
+	 transition: all 0.3s linear ;  height: 640px; width: 404px; bottom:0;  }
    {% endif %}
   
   {% if section.settings.footer_after_image != blank %} 
   footer#Banner-{{ section.id }}:after { position: absolute; content:'';
    background-image: url({{ section.settings.footer_after_image | image_url: width: 300  }});
       background-repeat: no-repeat; background-size: 100%; background-attachment: scroll; background-position: center center;
-	 transition: all 0.3s linear ;  height: 308px; width: 300px; bottom:0; right:0; z-index:0; }
+	 transition: all 0.3s linear ;  height: 308px; width: 300px;   z-index:0; 
+  
+  
+   bottom: 33%;
+    right: 0.5%;
+  }
    {% endif %}
   
-footer#Banner-{{ section.id }} { background-color: var(--gradient-base-accent-7); }
+/* footer#Banner-{{ section.id }} { background-color: var(--gradient-base-accent-7); } */
   
   .footer {
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
@@ -59,9 +64,11 @@ footer#Banner-{{ section.id }} { background-color: var(--gradient-base-accent-7)
   }
 {%- endstyle -%}
 
+ {% include 'footerextendedcss' %}
+
 <div>
 
-<footer  id="Banner-{{ section.id }}" class="{% if request.page_type == 'index' %}index-footer{% endif %} footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding {% if section.settings.footer_default %}theme__default-footer_style{% endif %}">
+<footer  id="Banner-{{ section.id }}" class="{% if request.page_type == 'index' %}index-footer{% endif %} footer color-{{ section.settings.color_scheme }}  section-{{ section.id }}-padding {% if section.settings.footer_default %}theme__default-footer_style{% endif %}">
   {%- if section.settings.image != blank -%}
    <div class="banner__media media">
   <img
@@ -88,7 +95,7 @@ footer#Banner-{{ section.id }} { background-color: var(--gradient-base-accent-7)
         <div class="footer-block__details-content footer-block--newsletter {{ block.settings.alignment }}">
                 <div class="footer-block__newsletter">
                   {%- if section.settings.newsletter_heading != blank -%}
-                  <h2 class="footer-block__heading">{{ section.settings.newsletter_heading | escape }}</h2>
+                  <h2 class="footer-block__heading">{{ section.settings.newsletter_heading  }}</h2>
                   {%- endif -%}
                   {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                   <input type="hidden" name="contact[tags]" value="newsletter">
@@ -119,11 +126,12 @@ footer#Banner-{{ section.id }} { background-color: var(--gradient-base-accent-7)
                       </label>
                       <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
                         Sign Up <svg fill="currentColor" width="800px" height="800px" viewBox="-8 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-<title>paper-plane</title>
-<path d="M5.64 25.24c-0.12 0-0.24-0.040-0.36-0.080-0.28-0.16-0.48-0.44-0.48-0.76v-4.36c0-0.2 0.080-0.4 0.2-0.56l6-6.6c0.32-0.36 0.84-0.36 1.2-0.040s0.36 0.84 0.040 1.2l-5.76 6.32v2.36l3.36-2.52c0.24-0.16 0.56-0.2 0.8-0.12l2.12 0.84 1.8-11.8-12 6.68 1.92 1.12c0.4 0.24 0.52 0.76 0.28 1.16s-0.76 0.52-1.16 0.28l-3.2-1.88c-0.28-0.16-0.4-0.44-0.4-0.72 0-0.32 0.16-0.56 0.44-0.72l14.8-8.16c0.28-0.16 0.64-0.12 0.88 0.040 0.28 0.2 0.4 0.48 0.36 0.8l-2.24 14.52c-0.040 0.24-0.2 0.48-0.4 0.6s-0.48 0.16-0.72 0.040l-2.68-1.080-4.32 3.24c-0.12 0.12-0.28 0.2-0.48 0.2z"></path>
-</svg>
+                                <title>paper-plane</title>
+                                <path d="M5.64 25.24c-0.12 0-0.24-0.040-0.36-0.080-0.28-0.16-0.48-0.44-0.48-0.76v-4.36c0-0.2 0.080-0.4 0.2-0.56l6-6.6c0.32-0.36 0.84-0.36 1.2-0.040s0.36 0.84 0.040 1.2l-5.76 6.32v2.36l3.36-2.52c0.24-0.16 0.56-0.2 0.8-0.12l2.12 0.84 1.8-11.8-12 6.68 1.92 1.12c0.4 0.24 0.52 0.76 0.28 1.16s-0.76 0.52-1.16 0.28l-3.2-1.88c-0.28-0.16-0.4-0.44-0.4-0.72 0-0.32 0.16-0.56 0.44-0.72l14.8-8.16c0.28-0.16 0.64-0.12 0.88 0.040 0.28 0.2 0.4 0.48 0.36 0.8l-2.24 14.52c-0.040 0.24-0.2 0.48-0.4 0.6s-0.48 0.16-0.72 0.040l-2.68-1.080-4.32 3.24c-0.12 0.12-0.28 0.2-0.48 0.2z"></path>
+                                </svg>
                       </button>
                     </div>
+
                     {%- if form.errors -%}
                     <small class="newsletter-form__message form__message" id="ContactFooter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
                     {%- endif -%}
@@ -174,6 +182,11 @@ footer#Banner-{{ section.id }} { background-color: var(--gradient-base-accent-7)
                   </div>
                 {%- when 'link_list' -%}
                   {%- if block.settings.menu != blank  -%}
+
+                    <div class="d-flex ">
+                    
+                    
+             
                     <ul class="footer-block__details-content {% unless block.settings.list_style == 'vertical' %}list-menu list-menu--inline {% endunless %}list-unstyled {{ block.settings.alignment }}">
                       {%- for link in block.settings.menu.links -%}
                         <li>
@@ -183,6 +196,85 @@ footer#Banner-{{ section.id }} { background-color: var(--gradient-base-accent-7)
                         </li>
                       {%- endfor -%}
                     </ul>
+
+
+                    {%- if section.settings.show_social -%}
+                      <ul class="footer__list-social list-unstyled list-social" role="list">
+                        {%- if settings.social_twitter_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_twitter_link }}" class="link list-social__link" >
+                            {%- render 'icon-twitter' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+                          </a>
+                        </li>
+                        {%- endif -%}
+                        {%- if settings.social_facebook_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_facebook_link }}" class="link list-social__link" >
+                            {%- render 'icon-facebook' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+                          </a>
+                        </li>
+                        {%- endif -%}
+                        {%- if settings.social_pinterest_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_pinterest_link }}" class="link list-social__link" >
+                            {%- render 'icon-pinterest' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
+                          </a>
+                        </li>
+                        {%- endif -%}
+                        {%- if settings.social_instagram_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_instagram_link }}" class="link list-social__link" >
+                            {%- render 'icon-instagram' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+                          </a>
+                        </li>
+                        {%- endif -%}
+                        {%- if settings.social_tiktok_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_tiktok_link }}" class="link list-social__link" >
+                            {%- render 'icon-tiktok' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
+                          </a>
+                        </li>
+                        {%- endif -%}
+                        {%- if settings.social_tumblr_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_tumblr_link }}" class="link list-social__link" >
+                            {%- render 'icon-tumblr' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
+                          </a>
+                        </li>
+                        {%- endif -%}
+                        {%- if settings.social_snapchat_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_snapchat_link }}" class="link list-social__link" >
+                            {%- render 'icon-snapchat' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
+                          </a>
+                        </li>
+                        {%- endif -%}
+                        {%- if settings.social_youtube_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_youtube_link }}" class="link list-social__link" >
+                            {%- render 'icon-youtube' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
+                          </a>
+                        </li>
+                        {%- endif -%}
+                        {%- if settings.social_vimeo_link != blank -%}
+                        <li class="list-social__item">
+                          <a href="{{ settings.social_vimeo_link }}" class="link list-social__link" >
+                            {%- render 'icon-vimeo' -%}
+                            <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+                          </a>
+                        </li>
+                        {%- endif -%}
+                      </ul>
+                      {%- endif -%}
+                  </div>
                   {%- endif -%}
                 {%- when 'image' -%}
                   <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
@@ -291,82 +383,7 @@ footer#Banner-{{ section.id }} { background-color: var(--gradient-base-accent-7)
                   <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
                   {%- endif -%}
                   {%- endform -%}
-                  {%- if section.settings.show_social -%}
-                <ul class="footer__list-social list-unstyled list-social" role="list">
-                  {%- if settings.social_twitter_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_twitter_link }}" class="link list-social__link" >
-                      {%- render 'icon-twitter' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                  {%- if settings.social_facebook_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_facebook_link }}" class="link list-social__link" >
-                      {%- render 'icon-facebook' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                  {%- if settings.social_pinterest_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_pinterest_link }}" class="link list-social__link" >
-                      {%- render 'icon-pinterest' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                  {%- if settings.social_instagram_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_instagram_link }}" class="link list-social__link" >
-                      {%- render 'icon-instagram' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                  {%- if settings.social_tiktok_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_tiktok_link }}" class="link list-social__link" >
-                      {%- render 'icon-tiktok' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                  {%- if settings.social_tumblr_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_tumblr_link }}" class="link list-social__link" >
-                      {%- render 'icon-tumblr' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                  {%- if settings.social_snapchat_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_snapchat_link }}" class="link list-social__link" >
-                      {%- render 'icon-snapchat' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                  {%- if settings.social_youtube_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_youtube_link }}" class="link list-social__link" >
-                      {%- render 'icon-youtube' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                  {%- if settings.social_vimeo_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_vimeo_link }}" class="link list-social__link" >
-                      {%- render 'icon-vimeo' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                </ul>
-                {%- endif -%}
+
                 </div>                
               </div>
                 {%- endcase -%}
@@ -384,88 +401,11 @@ footer#Banner-{{ section.id }} { background-color: var(--gradient-base-accent-7)
       <div class="footer__column footer__column--info">
 
       <div class="footer__copyright caption">
-          <small class="copyright__content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small>
-          <small class="copyright__content">{{ powered_by_link }}</small>
+         
+          <small class="copyright__content">{{ section.settings.copytext }}</small>
         </div>
         
-        <div class="footer_bottom_social-icon">
-          {%- if section.settings.show_social -%}
-                <ul class="footer__list-social list-unstyled list-social" role="list">
-                  {%- if settings.social_twitter_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_twitter_link }}" class="link list-social__link" >
-                      {%- render 'icon-twitter' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                  {%- if settings.social_facebook_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_facebook_link }}" class="link list-social__link" >
-                      {%- render 'icon-facebook' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                  {%- if settings.social_pinterest_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_pinterest_link }}" class="link list-social__link" >
-                      {%- render 'icon-pinterest' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                  {%- if settings.social_instagram_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_instagram_link }}" class="link list-social__link" >
-                      {%- render 'icon-instagram' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                  {%- if settings.social_tiktok_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_tiktok_link }}" class="link list-social__link" >
-                      {%- render 'icon-tiktok' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                  {%- if settings.social_tumblr_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_tumblr_link }}" class="link list-social__link" >
-                      {%- render 'icon-tumblr' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                  {%- if settings.social_snapchat_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_snapchat_link }}" class="link list-social__link" >
-                      {%- render 'icon-snapchat' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                  {%- if settings.social_youtube_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_youtube_link }}" class="link list-social__link" >
-                      {%- render 'icon-youtube' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                  {%- if settings.social_vimeo_link != blank -%}
-                  <li class="list-social__item">
-                    <a href="{{ settings.social_vimeo_link }}" class="link list-social__link" >
-                      {%- render 'icon-vimeo' -%}
-                      <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
-                    </a>
-                  </li>
-                  {%- endif -%}
-                </ul>
-                {%- endif -%}
-        </div>
+
         {%- if section.settings.payment_enable -%}
           <div class="footer__payment">
             <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
@@ -494,7 +434,108 @@ footer#Banner-{{ section.id }} { background-color: var(--gradient-base-accent-7)
     mask-repeat: no-repeat; background:rgb(var(--color-background)); -webkit-mask-repeat: no-repeat; width: 100%; height: 100%; top: -30px; bottom: 0; transition:all 0.3s linear;
   }    
   {%  endunless %}
+
+  
+.footer__content-bottom {
+  border-top: 1px dashed #E0A151;
+    padding: 0rem 0;
+    position: relative;
+}
 {%- endstyle -%}
+
+
+
+
+
+
+
+<style>
+
+  
+ .footer__content-top h2{
+    {% render 'globalcolor' , color: section.settings.color_scheme_font %}
+    font-weight:700;
+    font-size: {{ section.settings.heading_scale_mobile }}px!important; 
+}
+
+ .footer-block__details-content h2{
+    {% render 'globalcolor' , color: section.settings.color_scheme_font %}
+    font-weight:700;
+    font-size: {{ section.settings.heading_scale_mobile }}px !important; 
+}
+
+@media screen and (min-width: 750px) {
+
+  .footer__content-top h2{
+    font-weight:700;
+    font-size:{{ section.settings.heading_scale }}px !important; 
+    }
+    .footer-block__details-content h2{
+    font-weight:700;
+    font-size:{{ section.settings.heading_scale }}px !important; 
+    }
+
+}
+.footer-block__details-content .list-menu__item--link {
+
+  margin-right: 13px;
+  font-weight: 600;
+}
+.footer-block__details-content .list-menu__item--link:hover {
+  {% render 'globalcolor' , color: section.settings.color_scheme_font %}
+  margin-right: 13px;
+  font-weight: 600 !important;
+}
+.copyright__content a:hover{
+ color:#000;
+ font-weight: 600;
+}
+.copyright__content a{
+ color:#000;
+ font-weight: 600;
+}
+.copyright__content {
+ color:#000;
+ font-weight: 600;
+}
+
+@media screen and (max-width: 750px) {
+  h2.footer-block__heading {
+    text-align: center;
+}
+  .d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.footer-block li {
+  display: block;
+  text-align: center;
+}
+.footer-block__details-content .list-menu__item--link {
+  margin-right: 0;
+  font-weight: 600;
+  text-align: center;
+  display: block;
+}
+
+.footer__column--info {
+  justify-content: center;
+
+
+  flex-direction: column;
+
+}
+
+
+.footer__content-top {
+  padding: 36px 40px;
+}
+}
+
+
+</style>
 {% schema %}
 {
   "name": "t:sections.footer.name",
@@ -517,6 +558,7 @@ footer#Banner-{{ section.id }} { background-color: var(--gradient-base-accent-7)
           "label": "t:sections.footer.blocks.link_list.settings.menu.label",
           "info": "t:sections.footer.blocks.link_list.settings.menu.info"
         },
+     
       {
                 "type": "select",
                 "id": "alignment",
@@ -703,6 +745,38 @@ footer#Banner-{{ section.id }} { background-color: var(--gradient-base-accent-7)
           "label": "t:sections.all.colors.accent_2.label"
         },
         {
+          "value": "primary-color01",
+          "label": "primary color one"
+        },
+        {
+          "value": "primary-color02",
+          "label": "primary color two"
+        },
+        {
+          "value": "primary-color03",
+          "label": "primary color three"
+        },
+        {
+          "value": "primary-color04",
+          "label": "primary color Four"
+        },
+        {
+          "value": "primary-color05",
+          "label": "primary color Five"
+        },
+        {
+          "value": "primary-color06",
+          "label": "primary color Six"
+        },
+        {
+          "value": "primary-color07",
+          "label": "primary color Severn"
+        },
+        {
+          "value": "primary-color08",
+          "label": "primary color Eight"
+        },
+        {
           "value": "background-1",
           "label": "t:sections.all.colors.background_1.label"
         },
@@ -718,6 +792,78 @@ footer#Banner-{{ section.id }} { background-color: var(--gradient-base-accent-7)
       "default": "background-1",
       "label": "t:sections.all.colors.label"
      }, 
+     {
+      "type": "number",
+      "id": "heading_scale",
+      "label": "Heading font on Desktop",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "heading_scale_mobile",
+      "label": "Heading font on Mobile",
+      "default": 30
+    },
+    {
+      "type": "select",
+      "id": "color_scheme_font",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "primary-color01",
+          "label": "primary color one"
+        },
+        {
+          "value": "primary-color02",
+          "label": "primary color two"
+        },
+        {
+          "value": "primary-color03",
+          "label": "primary color three"
+        },
+        {
+          "value": "primary-color04",
+          "label": "primary color Four"
+        },
+        {
+          "value": "primary-color05",
+          "label": "primary color Five"
+        },
+        {
+          "value": "primary-color06",
+          "label": "primary color Six"
+        },
+        {
+          "value": "primary-color07",
+          "label": "primary color Severn"
+        },
+        {
+          "value": "primary-color08",
+          "label": "primary color Eight"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "accent-1",
+      "label": "Font Heading Color"
+    },
      {
       "type": "image_picker",
       "id": "image",
@@ -803,6 +949,14 @@ footer#Banner-{{ section.id }} { background-color: var(--gradient-base-accent-7)
     "type": "text",
     "id": "newsletter_heading",
     "label": "Newsletter Heading"
+    },
+    {
+      "type": "text",
+      "id": "copytext",
+      "label": "Copy Right text",
+      "default": "Copyright © 2023 Lorem ipsum",
+
+      "placeholder": "Copyright © 2023 Lorem ipsum"
     }
   ],
   "default": {

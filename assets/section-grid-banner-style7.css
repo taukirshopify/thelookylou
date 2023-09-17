@@ -102,7 +102,7 @@
 }
 
 .grid-banner .grid-banner-section:not(.background-none) .grid-banner-wrapper {
-  background: rgb(var(--color-background));
+
   height: 100%;
 }
 

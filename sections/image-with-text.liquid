@@ -47,12 +47,18 @@ content: "";
   }
 {%- endstyle -%}
   
-<div class="image-with-text  {{ section.settings.custom_class_name }} image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == 'background-1' and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding  ">
+<div class="image-with-text section-{{ section.id }}  color-{{ section.settings.color_scheme }}  {{ section.settings.custom_class_name }} image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}
+section-{{ section.id }}-padding   ">
+
+
+
+
+
 <div class="{% if section.settings.page_full_width %} page-full-width {% else %} page-width {% endif %} {% if section.settings.page_full_width_spacing %} page-full-width_spacing {% endif %}section-{{ section.id }}-padding isolate">
 <div class="row">  
   <div class="image-with-text__grid  grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
     <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
-      <div class="image-with-text__media section-{{ section.id }} image-with-text__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}"
+      <div class="image-with-text__media section-{{ section.id }} image-with-text__media--{{ section.settings.height }}  color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}"
         {% if section.settings.height == 'adapt' and section.settings.image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"{% endif %}
       >
         {%- if section.settings.image != blank -%}
@@ -77,7 +83,7 @@ content: "";
       </div>
     </div>
     <div class="image-with-text__text-item grid__item">
-      <div id="ImageWithText--{{ section.id }}" class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} content-container">
+      <div id="ImageWithText--{{ section.id }}" class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }}  color-{{ section.settings.color_scheme }} content-container">
         {%- for block in section.blocks -%}
           {% case block.type %}
 
@@ -108,6 +114,24 @@ content: "";
 </div>
 </div>
 </div>
+
+<style>
+ .section-{{ section.id }} h2.specification__heading{
+  {% render 'globalcolor' , color: section.settings.color_scheme_font %}
+ 
+  }
+
+  @media screen and (min-width: 750px) {
+
+    .section-{{ section.id }} h2.specification__heading{
+      {% render 'globalcolor' , color: section.settings.color_scheme_font %}
+     
+      }
+
+  }
+
+</style>
+
 {% schema %}
 {
   "name": "t:sections.image-with-text.name",
@@ -125,6 +149,141 @@ content: "";
        "default": false,
       "label": "t:sections.all.page_full_width_spacing.label"
     },
+    {
+      "type": "number",
+      "id": "heading_scale",
+      "label": "Heading font on Desktop",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "heading_scale_mobile",
+      "label": "Heading font on Mobile",
+      "default": 30
+    },
+    {
+      "type": "select",
+      "id": "color_scheme_font",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "primary-color01",
+          "label": "primary color one"
+        },
+        {
+          "value": "primary-color02",
+          "label": "primary color two"
+        },
+        {
+          "value": "primary-color03",
+          "label": "primary color three"
+        },
+        {
+          "value": "primary-color04",
+          "label": "primary color Four"
+        },
+        {
+          "value": "primary-color05",
+          "label": "primary color Five"
+        },
+        {
+          "value": "primary-color06",
+          "label": "primary color Six"
+        },
+        {
+          "value": "primary-color07",
+          "label": "primary color Severn"
+        },
+        {
+          "value": "primary-color08",
+          "label": "primary color Eight"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "accent-1",
+      "label": "Font Color"
+    },
+     {
+          "type": "select",
+          "id": "color_scheme",
+          "options": [
+            {
+              "value": "accent-1",
+              "label": "t:sections.all.colors.accent_1.label"
+            },
+            {
+              "value": "accent-2",
+              "label": "t:sections.all.colors.accent_2.label"
+            },
+            {
+              "value": "primary-color01",
+              "label": "primary color one"
+            },
+            {
+              "value": "primary-color02",
+              "label": "primary color two"
+            },
+            {
+              "value": "primary-color03",
+              "label": "primary color three"
+            },
+            {
+              "value": "primary-color04",
+              "label": "primary color Four"
+            },
+            {
+              "value": "primary-color05",
+              "label": "primary color Five"
+            },
+            {
+              "value": "primary-color06",
+              "label": "primary color Six"
+            },
+            {
+              "value": "primary-color07",
+              "label": "primary color Severn"
+            },
+            {
+              "value": "primary-color08",
+              "label": "primary color Eight"
+            },
+            {
+              "value": "background-1",
+              "label": "t:sections.all.colors.background_1.label"
+            },
+            {
+              "value": "background-2",
+              "label": "t:sections.all.colors.background_2.label"
+            },
+            {
+              "value": "inverse",
+              "label": "t:sections.all.colors.inverse.label"
+            }
+          ],
+          "default": "accent-1",
+          "label": "Background Color"
+        },
+
+
+
     {
       "type": "image_picker",
       "id": "image",
@@ -243,34 +402,6 @@ content: "";
       ],
       "default": "no-overlap",
       "label": "t:sections.image-with-text.settings.content_layout.label"
-    },
-    {
-      "type": "select",
-      "id": "color_scheme",
-      "options": [
-        {
-          "value": "accent-1",
-          "label": "t:sections.all.colors.accent_1.label"
-        },
-        {
-          "value": "accent-2",
-          "label": "t:sections.all.colors.accent_2.label"
-        },
-        {
-          "value": "background-1",
-          "label": "t:sections.all.colors.background_1.label"
-        },
-        {
-          "value": "background-2",
-          "label": "t:sections.all.colors.background_2.label"
-        },
-        {
-          "value": "inverse",
-          "label": "t:sections.all.colors.inverse.label"
-        }
-      ],
-      "default": "background-1",
-      "label": "t:sections.all.colors.label"
     },
     {
         "type": "image_picker",

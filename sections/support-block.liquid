@@ -10,8 +10,19 @@
   .section-{{ section.id }}-padding .support-block-list.type-2 .support-block-list__item .support-block-card{ 
    {% if section.settings.enable_box_shadow %} box-shadow:-10px 0px 10px -4px var(--gradient-base-accent-3);{% endif %}  border-radius: var(--border-radius);  } 
   
-  .support-block-list__item:not(:last-child):after { position: absolute;  content:'';  -webkit-mask-image:url({{ 'support-after-img.png' | asset_url }});  mask-image: ({{ 'support-after-img.png' | asset_url }});  background: var(--gradient-base-accent-1); 
-    width: 25px; height: 265px;  right: -12px; left: auto; top: 8px; -webkit-mask-repeat: no-repeat;  -webkit-mask-size: contain;  -webkit-mask-position: center; transition: var(--duration-default); }
+  .support-block-list__item:not(:last-child):after { 
+    position: absolute;  content:'';  -webkit-mask-image:url({{ 'support-after-img.png' | asset_url }});  mask-image: ({{ 'support-after-img.png' | asset_url }}); 
+    
+    background: var(--gradient-base-accent-1); 
+
+    {% render 'globalbackground' , color: section.settings.color-bg %}
+    width: 25px; height: 265px;  right: -12px; 
+    
+    left: auto; top: 8px; -webkit-mask-repeat: no-repeat;
+      -webkit-mask-size: contain;  -webkit-mask-position: center; transition: var(--duration-default);
+  
+
+  }
 
 .support-block.Support-block-grid-style1 { position: relative; }
 
@@ -64,7 +75,15 @@
         }
   {%- endif -%}
  
+
+
+
   
+
+
+
+
+
 {%- endstyle -%}
 
 {%- liquid
@@ -84,7 +103,7 @@
   endif
 -%}
 
-<div class="support-block color-{{ section.settings.color_scheme }} section-{{ section.id }}-cover_image  gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %} Support-block-grid-style1 ">
+<div class="support-block section-{{ section.id }} color-{{ section.settings.color_scheme }}  section-{{ section.id }}-cover_image  {% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %} Support-block-grid-style1 ">
   <div class="{% if section.settings.page_full_width %} page-full-width {% else %} page-width {% endif %} {% if section.settings.page_full_width_spacing %} page-full-width_spacing {% endif %}section-{{ section.id }}-padding isolate">
   <div class="row {{ section.settings.custom_class_name }}">
     {%- unless section.settings.title == blank -%}
@@ -207,6 +226,34 @@
 
 </div>
 
+
+
+<style>
+
+  .section-{{ section.id }}  .support-block-card .support-block-card__info  h3{
+    
+    {% render 'globalcolor' , color: section.settings.fontcolor %}
+    font-size: {{ section.settings.heading_scale_mobile }}px;
+    font-weight:700;
+
+  
+  }
+  .section-{{ section.id }}  .support-block-card .support-block-card__info h3:hover{
+
+    {% render 'globalcolor' , color: section.settings.fontcolor %}
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }} h3{
+      {% render 'globalcolor' , color: section.settings.fontcolor %}
+    font-size:{{ section.settings.heading_scale }}px; 
+
+  }
+
+
+  }
+
+</style>
 {% schema %}
 {
   "name": "t:sections.support-block-grid-style1.name",
@@ -224,6 +271,138 @@
       "id":"page_full_width_spacing",
        "default": false,
       "label": "t:sections.all.page_full_width_spacing.label"
+    },
+    {
+      "type": "number",
+      "id": "heading_scale",
+      "label": "Heading font on Desktop",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "heading_scale_mobile",
+      "label": "Heading font on Mobile",
+      "default": 30
+    },
+    {
+      "type": "select",
+      "id": "fontcolor",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "primary-color01",
+          "label": "primary color one"
+        },
+        {
+          "value": "primary-color02",
+          "label": "primary color two"
+        },
+        {
+          "value": "primary-color03",
+          "label": "primary color three"
+        },
+        {
+          "value": "primary-color04",
+          "label": "primary color Four"
+        },
+        {
+          "value": "primary-color05",
+          "label": "primary color Five"
+        },
+        {
+          "value": "primary-color06",
+          "label": "primary color Six"
+        },
+        {
+          "value": "primary-color07",
+          "label": "primary color Severn"
+        },
+        {
+          "value": "primary-color08",
+          "label": "primary color Eight"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "accent-1",
+      "label": "Font color color"
+    },
+    {
+      "type": "select",
+      "id": "color-bg",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "primary-color01",
+          "label": "primary color one"
+        },
+        {
+          "value": "primary-color02",
+          "label": "primary color two"
+        },
+        {
+          "value": "primary-color03",
+          "label": "primary color three"
+        },
+        {
+          "value": "primary-color04",
+          "label": "primary color Four"
+        },
+        {
+          "value": "primary-color05",
+          "label": "primary color Five"
+        },
+        {
+          "value": "primary-color06",
+          "label": "primary color Six"
+        },
+        {
+          "value": "primary-color07",
+          "label": "primary color Severn"
+        },
+        {
+          "value": "primary-color08",
+          "label": "primary color Eight"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "accent-1",
+      "label": "Sheap color"
     },
     {
     "type": "image_picker",
@@ -310,6 +489,38 @@
           "label": "t:sections.all.colors.accent_2.label"
         },
         {
+          "value": "primary-color01",
+          "label": "primary color one"
+        },
+        {
+          "value": "primary-color02",
+          "label": "primary color two"
+        },
+        {
+          "value": "primary-color03",
+          "label": "primary color three"
+        },
+        {
+          "value": "primary-color04",
+          "label": "primary color Four"
+        },
+        {
+          "value": "primary-color05",
+          "label": "primary color Five"
+        },
+        {
+          "value": "primary-color06",
+          "label": "primary color Six"
+        },
+        {
+          "value": "primary-color07",
+          "label": "primary color Severn"
+        },
+        {
+          "value": "primary-color08",
+          "label": "primary color Eight"
+        },
+        {
           "value": "background-1",
           "label": "t:sections.all.colors.background_1.label"
         },
@@ -322,9 +533,10 @@
           "label": "t:sections.all.colors.inverse.label"
         }
       ],
-      "default": "background-1",
+      "default": "accent-1",
       "label": "t:sections.all.colors.label"
     },
+
     {
       "type": "header",
       "content": "t:sections.support-block-grid-style1.settings.block_settings.content"

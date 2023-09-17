@@ -6,6 +6,7 @@
     "primary-color03": "#ffffff",
     "primary-color04": "#f9ecdc",
     "primary-color05": "#f8fbed",
+    "primary-color06": "#f3f3f3",
     "gradient_accent_1": "",
     "colors_accent_2": "#363636",
     "gradient_accent_2": "",
@@ -126,7 +127,7 @@
     "breadcrumb_padding_bottom": 200,
     "social_twitter_link": "#",
     "social_facebook_link": "#",
-    "social_pinterest_link": "#",
+    "social_pinterest_link": "",
     "social_instagram_link": "#",
     "social_tiktok_link": "",
     "social_tumblr_link": "",
@@ -214,11 +215,14 @@
           "3b6340e8-94f5-4073-b56d-df8c1daf18d9"
         ],
         "settings": {
-          "color_scheme": "accent-2",
+          "color_scheme": "primary-color03",
           "logo": "shopify:\/\/shop_images\/95ca602687b4e31ed73a8993cc65448e.png",
           "logo_width": 100,
           "logo_position": "middle-left",
           "menu": "main-menu",
+          "menufont": 15,
+          "menucolor": "primary-color02",
+          "menucolorhover": "primary-color01",
           "menu_type_desktop": "mega",
           "mobile_screen_width": "800",
           "show_line_separator": false,
@@ -249,54 +253,31 @@
           "21d555c4-7fe0-45b1-bda5-e24e643e85cc": {
             "type": "link_list",
             "settings": {
-              "heading": "Legal",
+              "heading": "Look lou",
               "menu": "footer",
-              "alignment": "",
-              "list_style": "vertical"
-            }
-          },
-          "efb35b37-3d4f-4e54-ac84-e34290b3ae88": {
-            "type": "text",
-            "settings": {
-              "heading": "Opening hours",
-              "subtext": "<p>Monday - Friday ----- 09.00 - 19.00<\/p><p>Saturday -------------10.00 - 17.00<\/p><p>Sunday ---------- Closed<\/p>",
-              "alignment": ""
-            }
-          },
-          "3242c352-6749-4054-ac84-f6c87519ca87": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Partner",
-              "menu": "",
-              "alignment": "",
-              "list_style": "vertical"
-            }
-          },
-          "6c392075-c7d3-4e9a-b990-9b3da659ce40": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Services",
-              "menu": "",
               "alignment": "",
               "list_style": "vertical"
             }
           }
         },
         "block_order": [
-          "21d555c4-7fe0-45b1-bda5-e24e643e85cc",
-          "efb35b37-3d4f-4e54-ac84-e34290b3ae88",
-          "3242c352-6749-4054-ac84-f6c87519ca87",
-          "6c392075-c7d3-4e9a-b990-9b3da659ce40"
+          "21d555c4-7fe0-45b1-bda5-e24e643e85cc"
         ],
         "settings": {
-          "color_scheme": "background-2",
+          "color_scheme": "primary-color04",
+          "heading_scale": 50,
+          "heading_scale_mobile": 30,
+          "color_scheme_font": "primary-color01",
           "show_social": true,
           "payment_enable": true,
           "footer_default": false,
+          "footer_before_image": "shopify:\/\/shop_images\/OBJECTS.png",
+          "footer_after_image": "shopify:\/\/shop_images\/Group_1.png",
           "margin_top": 0,
           "padding_top": 0,
           "padding_bottom": 0,
-          "newsletter_heading": "Get updates about new <br> products and discounts!"
+          "newsletter_heading": "Get updates about new <br> products and discounts!",
+          "copytext": "Copyright © 2023 Lorem ipsum"
         }
       },
       "main-password-header": {

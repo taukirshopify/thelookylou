@@ -65,8 +65,8 @@
 
   .list-menu__item--link {
     text-decoration: none;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    {% comment %} padding-bottom: 1rem;
+    padding-top: 1rem; {% endcomment %}
     line-height: calc(1 + 0.8 / var(--font-body-scale));
   }
 
@@ -75,13 +75,94 @@
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
     }
+
+    .header__heading-logo {
+      height: auto;
+      width: 80px;
+      padding: 0;
+      margin: 0;
+      line-height: 1;
+  }
+
   }
 
   .header__heading, .header__heading-link {
 
     width: 110px;
+    height:80px;
+    padding:0;
 }
+
+
+
+ul.dt-nav > li > a { font-family: var(--font-heading-family);  letter-spacing:0; text-transform: uppercase;  font-weight: 700;  display: block; padding: 0; margin: 10px 18px 10px 18px; position: relative;  box-sizing: border-box; 
+  border-radius: var(--DTRadius); transition: all 0.3s linear;
+  font-size: {{ section.settins.menufont }}px;
+ {% render 'globalcolor' , color: section.settings.menucolor %}
+
+
+}
+
+ul.dt-nav > li > a span:before, ul.dt-nav > li > a span:after { content: ""; position: absolute; height: 2px; bottom: -12px; width: 0; margin: auto; border-radius: 2px; 
+
+  {% render 'globalcolor' , color: section.settings.menucolorhover %}
+}
+
+ul.dt-nav > li:hover > a span, ul.dt-nav li.active > a, ul.dt-nav > li:hover > a, ul.dt-nav > li.active > a, ul.dt-nav > li.active > a.mega-menu > span:after {
+{% render 'globalcolor' , color: section.settings.menucolorhover %}
+}
+
+.ul.dt-nav >  li:hover > a > span{
+  font-size: {{ section.settins.menufont }}px;
+ {% render 'globalcolor' , color: section.settings.menucolorhover %}
+}
+.ul.dt-nav  span {
+  display: block;
+}
+
+
+@media screen and (max-width: 750px) {
+
   
+  header-drawer {
+    order: 1;
+  }
+  
+  .header__heading {
+    order: 2;
+  }
+  
+  .header__icons {
+    order: 3;
+  }
+  .header__heading, .header__heading-link{
+    grid-area: unset !important;
+    justify-self: center;
+  
+  }
+  .header--middle-left {
+    grid-template-areas: "heading navigation icons";
+    grid-template-columns:  auto  1fr auto;
+    column-gap: 2rem;
+}
+
+.header {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.header {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.header__heading, .header__heading-link {
+  width: 80px;
+  height: 80px;
+
+}
+
+}
+
 </style>
 
 {%- style -%}
@@ -128,8 +209,12 @@
     <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
   </symbol>
 </svg>
-<{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
-  <header id="header" class="{% if request.page_type == 'index' %}{%- if section.settings.enable_transparent_header != blank -%}index-header {% endif %}{% endif %} header header--{{ section.settings.logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}">
+<{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper
+  
+  color-{{ section.settings.color_scheme }}
+  
+  gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
+  <header id="header" class="{% if request.page_type == 'index' %}{%- if section.settings.enable_transparent_header != blank -%}index-header {% endif %}{% endif %} header header--{{ section.settings.logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}    color-{{ section.settings.color_scheme }}">
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="tablet">
         <details id="Details-menu-drawer-container" class="menu-drawer-container">
@@ -138,7 +223,7 @@
       <span>
               {% render 'icon-hamburger' %}
       
-              {% render 'icon-close' %}
+              {% comment %} {% render 'icon-close' %} {% endcomment %}
             </span>
  
       
@@ -787,6 +872,7 @@
   "name": "t:sections.header.name",
   "class": "section-header",
   "settings": [
+
     {
       "type": "select",
       "id": "color_scheme",
@@ -798,6 +884,38 @@
         {
           "value": "accent-2",
           "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "primary-color01",
+          "label": "primary color one"
+        },
+        {
+          "value": "primary-color02",
+          "label": "primary color two"
+        },
+        {
+          "value": "primary-color03",
+          "label": "primary color three"
+        },
+        {
+          "value": "primary-color04",
+          "label": "primary color Four"
+        },
+        {
+          "value": "primary-color05",
+          "label": "primary color Five"
+        },
+        {
+          "value": "primary-color06",
+          "label": "primary color Six"
+        },
+        {
+          "value": "primary-color07",
+          "label": "primary color Severn"
+        },
+        {
+          "value": "primary-color08",
+          "label": "primary color Eight"
         },
         {
           "value": "background-1",
@@ -812,8 +930,8 @@
           "label": "t:sections.all.colors.inverse.label"
         }
       ],
-      "default": "background-1",
-      "label": "t:sections.all.colors.label"
+      "default": "accent-1",
+      "label": "Section Backgound Color"
     },
     {
       "type": "image_picker",
@@ -857,6 +975,133 @@
       "default": "main-menu",
       "label": "t:sections.header.settings.menu.label"
     },
+    {
+      "type": "number",
+      "id": "menufont",
+      "label": "Menu font on size desktop",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "menucolor",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "primary-color01",
+          "label": "primary color one"
+        },
+        {
+          "value": "primary-color02",
+          "label": "primary color two"
+        },
+        {
+          "value": "primary-color03",
+          "label": "primary color three"
+        },
+        {
+          "value": "primary-color04",
+          "label": "primary color Four"
+        },
+        {
+          "value": "primary-color05",
+          "label": "primary color Five"
+        },
+        {
+          "value": "primary-color06",
+          "label": "primary color Six"
+        },
+        {
+          "value": "primary-color07",
+          "label": "primary color Severn"
+        },
+        {
+          "value": "primary-color08",
+          "label": "primary color Eight"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "accent-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "select",
+      "id": "menucolorhover",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "primary-color01",
+          "label": "primary color one"
+        },
+        {
+          "value": "primary-color02",
+          "label": "primary color two"
+        },
+        {
+          "value": "primary-color03",
+          "label": "primary color three"
+        },
+        {
+          "value": "primary-color04",
+          "label": "primary color Four"
+        },
+        {
+          "value": "primary-color05",
+          "label": "primary color Five"
+        },
+        {
+          "value": "primary-color06",
+          "label": "primary color Six"
+        },
+        {
+          "value": "primary-color07",
+          "label": "primary color Severn"
+        },
+        {
+          "value": "primary-color08",
+          "label": "primary color Eight"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "accent-1",
+      "label": "t:sections.all.colors.label"
+    },
+
     {
       "type": "select",
       "id": "menu_type_desktop",

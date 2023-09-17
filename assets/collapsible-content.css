@@ -91,9 +91,7 @@
 .collapsible-row-layout .accordion summary { background: var(--gradient-base-background-2); }
 .collapsible-row-layout .accordion .accordion__content { background: var(--gradient-base-accent-3);  color: var(--gradient-base-accent-2); padding: 30px; }
 
-.collapsible-content summary:hover {
-  background: var(--gradient-base-background-2);
-}
+
 
 .collapsible-content summary:hover .accordion__title {
   text-decoration: none;
