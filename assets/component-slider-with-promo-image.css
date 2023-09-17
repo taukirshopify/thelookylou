@@ -65,7 +65,7 @@ slideshow-component .slideshow.banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 62.5rem;
+  max-width: 72.5rem;
   min-width: auto;
 /*   background: var(--gradient-background); */
 /*   padding-top: 190px; */

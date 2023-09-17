@@ -7,19 +7,20 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/image_9_1.png",
+            "mobile_image": "shopify:\/\/shop_images\/image_9_1.jpg",
             "heading": "Click, Spin, & Snap Your Way to Capturing Memories",
             "heading_size": "h2",
             "subheading": "",
-            "text": "With the Looky Lou, kids and babies will FINALLY smile at the camera – every time",
+            "text": "With the Looky Lou, kids and babies will FINALLY smile  at the camera – every time",
             "button_label": "Shop now",
             "link": "shopify:\/\/collections",
-            "button_style_secondary": false,
+            "button_style_secondary": true,
             "box_align": "middle-left",
-            "show_text_box": true,
+            "show_text_box": false,
             "text_alignment": "left",
             "image_overlay_opacity": 0,
-            "color_scheme": "accent-1",
-            "text_alignment_mobile": "left"
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
           }
         }
       },
@@ -29,11 +30,15 @@
       "settings": {
         "page_full_width": true,
         "page_full_width_spacing": false,
+        "heading_scale": 60,
+        "heading_scale_mobile": 24,
+        "color_scheme_font": "primary-color01",
+        "boxshadow": false,
         "slide_height": "adapt_image",
         "swiper_pagination": false,
-        "swiper_navigation": true,
+        "swiper_navigation": false,
         "auto_play": 0,
-        "slider_effect": "slide",
+        "slider_effect": "fade",
         "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
       }
@@ -186,6 +191,119 @@
         "custom_class_name": ""
       }
     },
+    "23902b00-05cb-4458-baa0-cce5db652f63": {
+      "type": "runningslidebenner",
+      "blocks": {
+        "c47fa3b8-bae5-44d9-9eac-27aedb9facb5": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "a5531cb0-5523-4e9e-af94-96994973f15f": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "0e1d9c6e-1593-4e9f-8324-286807b75e13": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "3e5e2049-b8ae-4baf-87aa-ab2254581ca8": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "c4e357cb-75d9-4d75-b304-3bf67689a41b": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "b0227797-3a02-4ec9-b1a4-bfd7784743bc": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "df89e2d9-02e3-4813-81d0-2369b9434331": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "4e7bdfdf-beba-41b6-aa44-0dded7c12f5c": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "8aeab137-2f83-4396-83e2-93266b7d87e9": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "197fe920-1e0e-418b-b05b-de5f213113a0": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "0bd8be9d-003b-4b2e-ad17-d76935870350": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "6cdee36d-c734-4b22-8121-f2c4db3189b5": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "54df1459-9bbd-4900-8a9f-dabaaa24054f": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "88caca21-7c28-4eda-b39a-f7caf72eba0d": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        }
+      },
+      "block_order": [
+        "c47fa3b8-bae5-44d9-9eac-27aedb9facb5",
+        "a5531cb0-5523-4e9e-af94-96994973f15f",
+        "0e1d9c6e-1593-4e9f-8324-286807b75e13",
+        "3e5e2049-b8ae-4baf-87aa-ab2254581ca8",
+        "c4e357cb-75d9-4d75-b304-3bf67689a41b",
+        "b0227797-3a02-4ec9-b1a4-bfd7784743bc",
+        "df89e2d9-02e3-4813-81d0-2369b9434331",
+        "4e7bdfdf-beba-41b6-aa44-0dded7c12f5c",
+        "8aeab137-2f83-4396-83e2-93266b7d87e9",
+        "197fe920-1e0e-418b-b05b-de5f213113a0",
+        "0bd8be9d-003b-4b2e-ad17-d76935870350",
+        "6cdee36d-c734-4b22-8121-f2c4db3189b5",
+        "54df1459-9bbd-4900-8a9f-dabaaa24054f",
+        "88caca21-7c28-4eda-b39a-f7caf72eba0d"
+      ],
+      "settings": {
+        "color_scheme": "primary-color01",
+        "heading_scale": 18,
+        "heading_scale_mobile": 15,
+        "color_scheme_font": "primary-color03",
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
     "250feea7-6d11-4131-8817-c92a4c157e4f": {
       "type": "testimonials",
       "blocks": {
@@ -308,6 +426,7 @@
         "sub_heading": "",
         "title": "Titoo's Fun Center",
         "cover_image": "shopify:\/\/shop_images\/image_21.jpg",
+        "color_scheme_font": "accent-1",
         "video_url": "https:\/\/www.youtube.com\/watch?v=ADHlfDyQniE",
         "heading_size": "h1",
         "subtitle": "dfsdfsdf",
@@ -546,6 +665,7 @@
     "e7583c6d-668b-405a-853d-7edfb463848b",
     "74d09de3-61d7-443f-84bf-75ba792df3be",
     "8cb2088c-4294-4167-822a-c508f1552c00",
+    "23902b00-05cb-4458-baa0-cce5db652f63",
     "250feea7-6d11-4131-8817-c92a4c157e4f",
     "020a8d32-9114-433b-b9cd-69ef6e5b1537",
     "03e0a54c-e292-4fc2-8de9-0ab73605265d",

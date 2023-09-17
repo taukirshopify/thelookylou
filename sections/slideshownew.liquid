@@ -5,7 +5,7 @@
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
-  /* @media screen and (max-width: 749px) {
+  @media screen and (max-width: 749px) {
     #Slider-{{ section.id }}::before,
     #Slider-{{ section.id }} .media::before,
     #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
@@ -22,7 +22,7 @@
       content: '';
       display: block;
     }
-  } */
+  }
      {%- for block in section.blocks -%}      
         #Slide-{{ section.id }}-{{ forloop.index }} .banner__media::after {
           opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
@@ -31,81 +31,7 @@
   {%- endstyle -%}
 {%- endif -%}
 
-<style>
-
-  .section-{{ section.id }} .banner__heading{
-     {% render 'globalcolor' , color: section.settings.color_scheme_font %}
-       font-size: {{ section.settings.heading_scale_mobile }}px !important; 
-
-        margin-bottom: 0rem;
-        line-height: 1.29;
-
-        
-  text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(24, 39, 75, 0.12);
-
-     
-
-    }
-  
-    .banner__buttons a{
-     color:white
-    }
-
-    .banner__buttons.button-two a{
-      
-      background:white;
-      color: var(--color-primary-one);
-
-   }
-
-    @media screen and (min-width: 750px) {
-  
-      .section-{{ section.id }} .banner__heading{
-        {% render 'globalcolor' , color: section.settings.color_scheme_font %}
-         font-size:{{ section.settings.heading_scale }}px !important; 
-         {% if boxshadow %}
-          text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(24, 39, 75, 0.12);
-        {% endif %}
-        } 
-      
-        .button-two{
-          margin-left:20px;
-        }
-
-      }
-
-      {% comment %} end  {% endcomment %}
-    @media screen and (max-width: 749px) {
-      .banner__buttons.button-two {
-        margin-top: 2rem;
-
-    }
-
-      
-        .banner__buttons {
-          display: block  !important;
-          flex-wrap: wrap;
-          gap: 1rem;
-          max-width: 100% !important;
-          word-break: break-word;
-      }
-      .button, .button-label, .shopify-challenge__button, .customer button {
-        font-size: 1.6rem;
-        letter-spacing: 0;
-        padding: 1.8rem 6rem;
-        font-weight: 700;
-        line-height: 1;
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-
-      }
-
-     
-</style>
-
-<slideshow-component class="{% if section.settings.page_full_width %} page-full-width {% else %} page-width {% endif %} {% if section.settings.page_full_width_spacing %} page-full-width_spacing {% endif %} {% if section.settings.show_text_below %} mobile-text-below{% endif %} section-{{ section.id }}">
+<slideshow-component class="{% if section.settings.page_full_width %} page-full-width {% else %} page-width {% endif %} {% if section.settings.page_full_width_spacing %} page-full-width_spacing {% endif %} {% if section.settings.show_text_below %} mobile-text-below{% endif %}">
    <div class="row">
   <div data-slider-options='{"loop": "true","effect": "{{ section.settings.slider_effect }}", "auto_play": "{{ section.settings.auto_play }}"}'>
   <div class="swiper" data-swiper-slider>
@@ -166,23 +92,14 @@
             {%- endif -%}           
             {%- if block.settings.text != blank -%}
               <div class="banner__text" {{ block.shopify_attributes }}>
-                <span>{{ block.settings.text  }}</span>
+                <span>{{ block.settings.text | escape }}</span>
               </div>
             {%- endif -%}
-
-             <div class="d-flex">
-              {%- if block.settings.button_label != blank -%}
-                <div class="banner__buttons">
-                  <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
-                </div>
-              {%- endif -%}
-              {%- if block.settings.button_label != blank -%}
-                <div class="banner__buttons button-two">
-                  <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
-                </div>
-              {%- endif -%}
-             </div>
-
+            {%- if block.settings.button_label != blank -%}
+              <div class="banner__buttons">
+                <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
+              </div>
+            {%- endif -%}
           </div>
         </div>
       </div>
@@ -206,7 +123,7 @@
 
 {% schema %}
 {
-  "name": "Benner",
+  "name": "t:sections.slideshow.name",
   "tag": "section",
   "class": "section slideshow",
   "settings": [
@@ -221,84 +138,6 @@
       "id":"page_full_width_spacing",
        "default": false,
       "label": "t:sections.all.page_full_width_spacing.label"
-    },
-    {
-      "type": "number",
-      "id": "heading_scale",
-      "label": "Heading font on Desktop",
-      "default": 50
-    },
-    {
-      "type": "number",
-      "id": "heading_scale_mobile",
-      "label": "Heading font on Mobile",
-      "default": 30
-    },
-    {
-      "type": "select",
-      "id": "color_scheme_font",
-      "options": [
-        {
-          "value": "accent-1",
-          "label": "t:sections.all.colors.accent_1.label"
-        },
-        {
-          "value": "accent-2",
-          "label": "t:sections.all.colors.accent_2.label"
-        },
-        {
-          "value": "primary-color01",
-          "label": "primary color one"
-        },
-        {
-          "value": "primary-color02",
-          "label": "primary color two"
-        },
-        {
-          "value": "primary-color03",
-          "label": "primary color three"
-        },
-        {
-          "value": "primary-color04",
-          "label": "primary color Four"
-        },
-        {
-          "value": "primary-color05",
-          "label": "primary color Five"
-        },
-        {
-          "value": "primary-color06",
-          "label": "primary color Six"
-        },
-        {
-          "value": "primary-color07",
-          "label": "primary color Severn"
-        },
-        {
-          "value": "primary-color08",
-          "label": "primary color Eight"
-        },
-        {
-          "value": "background-1",
-          "label": "t:sections.all.colors.background_1.label"
-        },
-        {
-          "value": "background-2",
-          "label": "t:sections.all.colors.background_2.label"
-        },
-        {
-          "value": "inverse",
-          "label": "t:sections.all.colors.inverse.label"
-        }
-      ],
-      "default": "accent-1",
-      "label": "Font color"
-    },
-    {
-      "type": "checkbox",
-      "id": "boxshadow",
-      "label": "Shadow Enable",
-      "default": true
     },
     {
       "type": "select",
@@ -598,8 +437,11 @@
   ],
   "presets": [
     {
-      "name": "Benner",
+      "name": "t:sections.slideshow.presets.name",
       "blocks": [
+        {
+          "type": "slide"
+        },
         {
           "type": "slide"
         }

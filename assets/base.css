@@ -1989,7 +1989,9 @@ button.shopify-payment-button__button--unbranded {
 .customer button {
   font-size: 1.6rem;
   letter-spacing: 0;
- /* line-height: calc(1 + 0.2 / var(--font-body-scale));  */ line-height: 2.6rem; 
+  padding: 1.8rem 6rem 1.8rem;
+  font-weight: 700;
+ /* line-height: calc(1 + 0.2 / var(--font-body-scale));  */ line-height: 1; 
 }
 
 .button--tertiary {

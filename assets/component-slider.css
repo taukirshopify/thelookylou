@@ -232,7 +232,9 @@ slider-component.slider-component-full-width {
 @media screen and (min-width:1200px) {
   .slideshow__text .banner__heading {
     font-size: calc(var(--font-heading-scale) * 9rem);
-    margin-bottom:0rem; line-height:10rem;
+    margin-bottom:0rem; 
+    
+    /* line-height:10rem; */
     
 }
   
