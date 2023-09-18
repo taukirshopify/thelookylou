@@ -39,6 +39,12 @@ content: "";
  .image-with-text__media.section-{{ section.id }}:after { height: 400px; }
     }
   
+   @media screen and (max-width: 750px) {
+  .section-{{ section.id }}  .image-with-text__media {
+    padding: 0 !important;
+}
+    }
+  
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -116,16 +122,16 @@ section-{{ section.id }}-padding   ">
 </div>
 
 <style>
- .section-{{ section.id }} h2.specification__heading{
+ .section-{{ section.id }} h2.image-with-text__heading{
   {% render 'globalcolor' , color: section.settings.color_scheme_font %}
- 
+  font-size: {{ section.settings.heading_scale_mobile }}px !important; 
   }
 
   @media screen and (min-width: 750px) {
 
-    .section-{{ section.id }} h2.specification__heading{
+    .section-{{ section.id }} h2.image-with-text__heading{
       {% render 'globalcolor' , color: section.settings.color_scheme_font %}
-     
+      font-size:{{ section.settings.heading_scale }}px !important; 
       }
 
   }

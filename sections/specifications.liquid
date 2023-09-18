@@ -22,30 +22,123 @@
 {%- endstyle -%}
 
 <style>
-  .section-{{ section.id }} .grid {
+  .section-{{ section.id }} .grid {flex-direction: row-reverse;
+    align-items: center;
+  }
 
-    flex-direction: row-reverse;
-    }
-    .section-{{ section.id }} .specification__text.rte>p,
-    .section-{{ section.id }} h2.image-with-text__heading{
+    .section-{{ section.id }} .title-0 {
       {% render 'globalcolor' , color: section.settings.color_scheme_font %}
+      font-size: {{ section.settings.heading_scale_mobile }}px !important; 
      
       }
-    
-      @media screen and (min-width: 750px) {
-        .section-{{ section.id }} .specification__text.rte>p,
-        .section-{{ section.id }} h2.image-with-text__heading{
-          {% render 'globalcolor' , color: section.settings.color_scheme_font %}
-   
+    .section-{{ section.id }} .specification__text.rte>p,
+    .section-{{ section.id }} h2.specification__heading >p{
+      {% render 'globalcolor' , color: section.settings.color_scheme_font_body %}
+     
+      }
 
-          }
+
+      .section-{{ section.id }} .specification_block h2.specification__heading{
+      {% render 'globalcolor' , color: section.settings.color_scheme_font %}
+    }
+
+
+
+      @media screen and (min-width: 750px) {
+          .section-{{ section.id }} .button-two {
+            margin-left: 0px;
+        }
+        .section-{{ section.id }} .title-0{
     
+          font-size:{{ section.settings.heading_scale }}px !important; 
+        }
+
+        .section-{{ section.id }} .specification__text.rte>p,
+        .section-{{ section.id }} h2.title.h1{
+          {% render 'globalcolor' , color: section.settings.color_scheme_font %}
+         }
+            .specification__text-item.grid__item {
+              width: calc(35% - var(--grid-desktop-horizontal-spacing) / 2);
+          }
+            .specification__media-item.grid__item {
+              width: calc(64% - var(--grid-desktop-horizontal-spacing) / 2);
+              padding: 0 82px;
+          }
+      }
+
+
+
+      @media screen and (max-width: 750px) {
       
+        .specification_block .specification_image-item-list {
+          margin-bottom: 0;
+      }
+      .specification_block {
+
+        padding: 0.5rem;
+
+        flex-direction: row;
 
     }
+
+    .specification .specification__text-item .specification__content {
+
+          grid-gap: 20px;
+
+      }
+
+      .section-{{ section.id }}   .banner__buttons.button-two {
+        margin: 0 6px;
+       }
+       .specification__media-item.grid__item {
+        padding: 0 !important;
+       }
+      }
+
+
+{% comment %} video css  {% endcomment %}
+.video-wrapper {
+  position: relative;
+}
+
+.video-wrapper > video {
+  width: 100%;
+  vertical-align: middle;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.video-wrapper > video.has-media-controls-hidden::-webkit-media-controls {
+  display: none;
+}
+
+.video-overlay-play-button {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 10px calc(50% - 50px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  opacity: 0.95;
+  cursor: pointer;
+  background-image: linear-gradient(transparent, #000);
+  transition: opacity 150ms;
+}
+
+.video-overlay-play-button:hover {
+  opacity: 1;
+}
+
+.video-overlay-play-button.is-hidden {
+  display: none;
+}
+
+{% comment %} End vidoe css  {% endcomment %}
 </style>
 
-  <div class="specification section-{{ section.id }} {{ section.settings.custom_class_name }} section-{{ section.id }} specification--{{ section.settings.content_layout }} color-{{ section.settings.color_scheme }} gradient {% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == 'background-1' and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} {% if section.settings.bg_image != blank %}section-{{ section.id }}-bg{% endif %} ">
+  <div class="specification section-{{ section.id }} {{ section.settings.custom_class_name }} section-{{ section.id }} specification--{{ section.settings.content_layout }} color-{{ section.settings.color_scheme }} {% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == 'background-1' and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} {% if section.settings.bg_image != blank %}section-{{ section.id }}-bg{% endif %} ">
   <div class="{% if section.settings.page_full_width %} page-full-width {% else %} page-width {% endif %} {% if section.settings.page_full_width_spacing %} page-full-width_spacing {% endif %}section-{{ section.id }}-padding isolate">
     <div class="row">
     {%- unless section.settings.title == blank -%}
@@ -54,9 +147,7 @@
         {%- if section.settings.sub_heading != blank -%}  
          <h6 class="sub-heading">{{ section.settings.sub_heading | escape }}</h6>
          {%- endif -%} 
-      <h2 class="title {{ section.settings.heading_size }}">
-            {{ section.settings.title | escape }}
-          </h2>
+
          <div class="specification list__text rte" {{ section.shopify_attributes }}>{{ section.settings.text }}</div> 
           {%- if section.settings.button_label != blank and show_mobile_slider -%}
             <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">{{ section.settings.button_label | escape }}</a>
@@ -66,84 +157,21 @@
   <div class="specification__grid  grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} specification__grid--reverse{% endif %}">
     <div class="specification__media-item specification__media-item--{{ section.settings.desktop_image_width }} specification__media-item--{{ section.settings.desktop_content_position }} grid__item">
       {% comment %} VIDEO CODE START  {% endcomment %}
-                  <div class="video-wrapper">
-                    <noscript>
-                      <div class="video-section__media"
-                        {% if section.settings.cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
-                      >
-                        <a href="{{ section.settings.video_url }}" class="video-section__poster media media--transparent media--landscape{% if section.settings.cover_image == blank %} video-section__placeholder{% endif %}">
-                          {%- if section.settings.cover_image != blank -%}
-                            <img
-                              srcset="{%- if section.settings.cover_image.width >= 375 -%}{{ section.settings.cover_image | image_url: width: 375 }} 375w,{%- endif -%}
-                                {%- if section.settings.cover_image.width >= 750 -%}{{ section.settings.cover_image | image_url: width: 750 }} 750w,{%- endif -%}
-                                {%- if section.settings.cover_image.width >= 1100 -%}{{ section.settings.cover_image | image_url: width: 1100 }} 1100w,{%- endif -%}
-                                {%- if section.settings.cover_image.width >= 1500 -%}{{ section.settings.cover_image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                                {%- if section.settings.cover_image.width >= 1780 -%}{{ section.settings.cover_image | image_url: width: 1780 }} 1780w,{%- endif -%}
-                                {%- if section.settings.cover_image.width >= 2000 -%}{{ section.settings.cover_image | image_url: width: 2000 }} 2000w,{%- endif -%}
-                                {%- if section.settings.cover_image.width >= 3000 -%}{{ section.settings.cover_image | image_url: width: 3000 }} 3000w,{%- endif -%}
-                                {%- if section.settings.cover_image.width >= 3840 -%}{{ section.settings.cover_image | image_url: width: 3840 }} 3840w,{%- endif -%}
-                                {{ section.settings.cover_image | image_url }} {{ section.settings.cover_image.width }}w"
-                              src="{{ section.settings.cover_image | image_url: width: 1920 }}"
-                              sizes="{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}"
-                              alt="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
-                              loading="lazy"
-                              width="{{ section.settings.cover_image.width }}"
-                              height="{{ section.settings.cover_image.height }}"
-                            >
-                          {%- else -%}
-                            {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                          {%- endif -%}
-                        </a>
+                  <div class="video-wrapper-outer">
+                        <div class="video-wrapper">
+                          <video src="{{ section.settings.video.sources[1].url }}" poster="{{ section.settings.cover_image | img_url:'' }}"></video>
                       </div>
-                    </noscript>
-                    <deferred-media class="video-section__media deferred-media no-js-hidden gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}" data-media-id="{{ section.settings.video_url.id }}"
-                      {% if section.settings.cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
-                    >
-                      <button
-                        id="Deferred-Poster-Modal-{{ section.settings.video_url.id }}"
-                        class="video-section__poster media deferred-media__poster media--landscape"
-                        type="button"
-                      >
-                        {%- if section.settings.cover_image != blank -%}
-                          <img
-                            srcset="{%- if section.settings.cover_image.width >= 375 -%}{{ section.settings.cover_image | image_url: width: 375 }} 375w,{%- endif -%}
-                              {%- if section.settings.cover_image.width >= 750 -%}{{ section.settings.cover_image | image_url: width: 750 }} 750w,{%- endif -%}
-                              {%- if section.settings.cover_image.width >= 1100 -%}{{ section.settings.cover_image | image_url: width: 1100 }} 1100w,{%- endif -%}
-                              {%- if section.settings.cover_image.width >= 1500 -%}{{ section.settings.cover_image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                              {%- if section.settings.cover_image.width >= 1780 -%}{{ section.settings.cover_image | image_url: width: 1780 }} 1780w,{%- endif -%}
-                              {%- if section.settings.cover_image.width >= 2000 -%}{{ section.settings.cover_image | image_url: width: 2000 }} 2000w,{%- endif -%}
-                              {%- if section.settings.cover_image.width >= 3000 -%}{{ section.settings.cover_image | image_url: width: 3000 }} 3000w,{%- endif -%}
-                              {%- if section.settings.cover_image.width >= 3840 -%}{{ section.settings.cover_image | image_url: width: 3840 }} 3840w,{%- endif -%}
-                              {{ section.settings.cover_image | image_url }} {{ section.settings.cover_image.width }}w"
-                            src="{{ section.settings.cover_image | image_url: width: 1920 }}"
-                            sizes="{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}"
-                            alt="{{ 'sections.video.load_video' | t: description: section.settings.alt_text | escape }}"
-                            loading="lazy"
-                            width="{{ section.settings.cover_image.width }}"
-                            height="{{ section.settings.cover_image.height }}"
-                          >
-                        {%- else -%}
-                          {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                        {%- endif -%}
-                        <span class="deferred-media__poster-button motion-reduce">
-                          {%- render 'icon-play' -%}
-                        </span>
-                      </button>
-                      <template>
-                        {%- if section.settings.video_url.type == 'youtube' -%}
-                          <iframe src="https://www.youtube.com/embed/{{ section.settings.video_url.id }}?enablejsapi=1" class="js-youtube" allow="autoplay; encrypted-media" allowfullscreen title="{{ section.settings.description | escape }}"></iframe>
-                        {%- else -%}
-                          <iframe src="https://player.vimeo.com/video/{{ section.settings.video_url.id }}" class="js-vimeo" allow="autoplay; encrypted-media" allowfullscreen title="{{ section.settings.description | escape }}"></iframe>
-                        {%- endif -%}
-                      </template>
-                    </deferred-media>
-                      
                   </div>
         {% comment %} VIDEO CODE END HERE  {% endcomment %}
     </div>
     <div class="specification__text-item grid__item">
       <div id="ImageWithText--{{ section.id }}" class="specification__content specification__content--{{ section.settings.desktop_content_position }} specification__content--desktop-{{ section.settings.desktop_content_alignment }} specification__content--mobile-{{ section.settings.mobile_content_alignment }} specification__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} content-container  {%-  if section.blocks.size > 3 %} layout-segmented{%- endif -%}">
       {%  if section.blocks.size > 8 %}  <div class="specification__text-items_group">{% endif %}
+
+      <h2 class="title-0 {{ section.settings.heading_size }}">
+        {{ section.settings.title | escape }}
+      </h2>
+      
         {%- for block in section.blocks limit: 8 -%}   
         <div class="specification_block">
          <div class="specification_image-item-list">
@@ -166,6 +194,8 @@
         {%- else -%}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
+
+
          </div>
           <div class="specification__text-item--list">
               <h2 class="specification__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
@@ -181,6 +211,13 @@
           </div>
       </div>  
         {%- endfor -%}
+            <div class="banner__buttons  button-two">
+              <a href="{{ section.settings.url }}" class="button button--primary">
+              {{ section.settings.urltext }}
+              </a>
+            </div>
+ 
+
          {%  if section.blocks.size > 3 %}</div>{% endif %}
 
       </div>
@@ -207,6 +244,7 @@
        "default": false,
       "label": "t:sections.all.page_full_width_spacing.label"
      },
+
      {
        "type": "image_picker",
         "id": "bg_image",
@@ -227,6 +265,18 @@
       "type": "image_picker",
       "id": "cover_image",
       "label": "t:sections.video.settings.cover_image.label"
+    },
+    {
+      "type": "number",
+      "id": "heading_scale",
+      "label": "Heading font on Desktop",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "heading_scale_mobile",
+      "label": "Heading font on Mobile",
+      "default": 30
     },
     {
       "type": "select",
@@ -289,16 +339,140 @@
       "label": "Font Color"
     },
     {
-      "type": "video_url",
-      "id": "video_url",
-      "accept": [
-        "youtube",
-        "vimeo"
+      "type": "select",
+      "id": "color_scheme_font_body",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "primary-color01",
+          "label": "primary color one"
+        },
+        {
+          "value": "primary-color02",
+          "label": "primary color two"
+        },
+        {
+          "value": "primary-color03",
+          "label": "primary color three"
+        },
+        {
+          "value": "primary-color04",
+          "label": "primary color Four"
+        },
+        {
+          "value": "primary-color05",
+          "label": "primary color Five"
+        },
+        {
+          "value": "primary-color06",
+          "label": "primary color Six"
+        },
+        {
+          "value": "primary-color07",
+          "label": "primary color Severn"
+        },
+        {
+          "value": "primary-color08",
+          "label": "primary color Eight"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
       ],
-      "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-      "label": "t:sections.video.settings.video_url.label",
-      "placeholder": "t:sections.video.settings.video_url.placeholder",
-      "info": "t:sections.video.settings.video_url.info"
+      "default": "accent-1",
+      "label": "Component color"
+    },
+    {
+      "type": "text",
+      "id": "urltext",
+      "label": "Title",
+      "default": "Buy Now"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "primary-color01",
+          "label": "primary color one"
+        },
+        {
+          "value": "primary-color02",
+          "label": "primary color two"
+        },
+        {
+          "value": "primary-color03",
+          "label": "primary color three"
+        },
+        {
+          "value": "primary-color04",
+          "label": "primary color Four"
+        },
+        {
+          "value": "primary-color05",
+          "label": "primary color Five"
+        },
+        {
+          "value": "primary-color06",
+          "label": "primary color Six"
+        },
+        {
+          "value": "primary-color07",
+          "label": "primary color Severn"
+        },
+        {
+          "value": "primary-color08",
+          "label": "primary color Eight"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "accent-1",
+      "label": "Section backgound color"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video"
     },
     {
       "type": "select",
@@ -491,34 +665,7 @@
       "default": "no-overlap",
       "label": "t:sections.specifications.settings.content_layout.label"
     },
-    {
-      "type": "select",
-      "id": "color_scheme",
-      "options": [
-        {
-          "value": "accent-1",
-          "label": "t:sections.all.colors.accent_1.label"
-        },
-        {
-          "value": "accent-2",
-          "label": "t:sections.all.colors.accent_2.label"
-        },
-        {
-          "value": "background-1",
-          "label": "t:sections.all.colors.background_1.label"
-        },
-        {
-          "value": "background-2",
-          "label": "t:sections.all.colors.background_2.label"
-        },
-        {
-          "value": "inverse",
-          "label": "t:sections.all.colors.inverse.label"
-        }
-      ],
-      "default": "background-1",
-      "label": "t:sections.all.colors.label"
-    },
+
     {
       "type": "header",
       "content": "Mobile layout"
@@ -711,3 +858,40 @@
   ]
 }
 {% endschema %}
+
+
+
+<script>
+
+  let videoPlayButton,
+	videoWrapper = document.getElementsByClassName('video-wrapper')[0],
+    video = document.getElementsByTagName('video')[0],
+    videoMethods = {
+        renderVideoPlayButton: function() {
+            if (videoWrapper.contains(video)) {
+				this.formatVideoPlayButton()
+                video.classList.add('has-media-controls-hidden')
+                videoPlayButton = document.getElementsByClassName('video-overlay-play-button')[0]
+                videoPlayButton.addEventListener('click', this.hideVideoPlayButton)
+            }
+        },
+
+        formatVideoPlayButton: function() {
+            videoWrapper.insertAdjacentHTML('beforeend', '\
+                <svg class="video-overlay-play-button" viewBox="0 0 200 200" alt="Play video">\
+                    <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="#fff"/>\
+                    <polygon points="70, 55 70, 145 145, 100" fill="#fff"/>\
+                </svg>\
+            ')
+        },
+
+        hideVideoPlayButton: function() {
+            video.play()
+            videoPlayButton.classList.add('is-hidden')
+            video.classList.remove('has-media-controls-hidden')
+            video.setAttribute('controls', 'controls')
+        }
+	}
+
+videoMethods.renderVideoPlayButton();
+</script>

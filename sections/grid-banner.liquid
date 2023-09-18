@@ -94,7 +94,7 @@
 {%- endstyle -%}    
   
  
-<div class="grid-banner    color-{{ section.settings.color_scheme }} gradient{% if section.settings.title == blank %} no-heading{% endif %} {{ section.settings.custom_class_name }} ">
+<div class="grid-banner    color-{{ section.settings.color_scheme }} {% if section.settings.title == blank %} no-heading{% endif %} {{ section.settings.custom_class_name }} ">
  <div class="styli7 {% if section.settings.page_full_width %} page-full-width {% else %} page-width {% endif %} {% if section.settings.page_full_width_spacing %} page-full-width_spacing {% endif %}">
    <div class="styli section-{{ section.id }}-padding isolate">
 <div class="row"> 

@@ -328,7 +328,7 @@ p.spr-review-content-body { font-size: 1.6rem; }
 
 .card-information > .rating { display: none; }
 
-.layout-type .contact-form-section .field__input { background: #fff3f3; border: none; }
+.layout-type .contact-form-section .field__input { background: #fff; border: none; }
 .layout-type .contact-form-section .field__input:focus {  border:1px solid var(--gradient-base-accent-1); } 
 .layout-type .contact-form-section .field__label { color: #8d8d8d; font-weight: 400; }
 
@@ -476,6 +476,14 @@ html.no-js .no-js-hidden {
   }
 }
 
+
+@media screen and (max-width: 750px) {
+
+  .page-width{
+
+    padding: 0 0.5rem;
+  }
+}
 @media screen and (min-width: 990px) {
   .page-width--narrow {
     /*     max-width: 72.6rem; */
@@ -503,9 +511,14 @@ html.no-js .no-js-hidden {
   position: relative;
   z-index: 1;
 /*   float:left;
+
   width:100%; */
+  overflow: hidden;
 }
 
+.testimonials-2:after {
+  z-index: 10;
+}
 .section + .section {
   margin-top: var(--spacing-sections-mobile);
 }
@@ -2019,7 +2032,7 @@ button.shopify-payment-button__button--unbranded {
 
 .button--full-width {
   display: flex;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .button.loading {

@@ -77,7 +77,7 @@
 
 
 
-  <div class="masonry-banner color-{{ section.settings.color_scheme }} gradient{% if section.settings.title == blank %} no-heading{% endif %} {{ section.settings.custom_class_name }} ">
+  <div class="masonry-banner color-{{ section.settings.color_scheme }} {% if section.settings.title == blank %} no-heading{% endif %} {{ section.settings.custom_class_name }} ">
      <div class="{% if section.settings.page_full_width %} page-full-width {% else %} page-width {% endif %} {% if section.settings.page_full_width_spacing %} page-full-width_spacing {% endif %}section-{{ section.id }}-padding isolate">
        <div class="row">     
       {%- unless section.settings.title == blank -%}

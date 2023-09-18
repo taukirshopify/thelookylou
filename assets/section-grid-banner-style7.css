@@ -12,7 +12,11 @@
 .section.grid-banner-style7 .grid-banner.home-grid-banner-1 .overlay .grid-banner-inners {  width: 47%; }
 
 .home-grid-banner-2 .grid-banner-block-image  {  transition: var(--duration-default); }
-.home-grid-banner-2 .grid-banner-block-image:after {  content: ""; position: absolute; border: 2px dashed var(--gradient-base-accent-1);  z-index: -1;
+.home-grid-banner-2 .grid-banner-block-image:after {  content: ""; position: absolute;
+  
+  /* border: 2px dashed var(--gradient-base-accent-1);  */
+  
+  z-index: -1;
  left: -20px; right: 20px; top: -20px; bottom: 20px;  border-radius: 1rem; height: 330px; margin: 0; transition: var(--duration-default);  }
 .home-grid-banner-2 .grid-banner-block-image:hover:after { left: -2px; right: -2px; top: -7px; bottom: 0px; transition: var(--duration-default); }
 .home-grid-banner-2 .grid-banner-wrapper .team-section-slider .swiper-wrapper { margin: 110px 0; } 

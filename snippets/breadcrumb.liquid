@@ -4,7 +4,19 @@
  .breadcrumb a{color: rgba(var(--color-foreground),1);}  
  .breadcrumb a:hover{ color: var(--gradient-base-background-2);}
  .breadcrumb{padding-top:{{settings.breadcrumb_padding_top}}px;padding-bottom:{{settings.breadcrumb_padding_bottom}}px;margin-bottom:{{settings.breadcrumb_margin_bottom}}px;position: relative;z-index: 1;}  
- .breadcrumb .breadcrumb_title{margin:0; font-size: calc(var(--font-heading-scale) * 3.6rem); color: var(--gradient-base-accent-9); }
+ .breadcrumb .breadcrumb_title{margin:0;  
+  {% render 'globalcolor' , color: settings.color_scheme_font_breadcome %}
+
+  font-size: 40px;
+font-style: normal;
+font-weight: 800;
+}
+
+
+
+
+
+
  .breadcrumb a, .breadcrumb span{display: inline-block;margin-top:1rem; color: var(--gradient-base-accent-2);  padding-right: 2px; margin-right: 2px; } 
  .breadcrumb.text-center{text-align:center;}  
  .breadcrumb.text-start{text-align:left;}  
@@ -95,10 +107,8 @@
 
     {% elsif template contains 'page' %}
     <h1 class="breadcrumb_title">{{ page.title }}</h1>
-    <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+ 
 
-    <span aria-hidden="true" class="breadcrumb__sep">&#47;</span>
-    <span>{{ page.title }}</span>
 
     {% else %}
     {% if template == 'list-collections' %}

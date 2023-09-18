@@ -1,1 +1,124 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"page_full_width":false,"page_full_width_spacing":false,"padding_top":100,"padding_bottom":40}},"d5d30654-dcdc-49f9-bae5-ef64e0db0f9a":{"type":"specifications","blocks":{"template--15458953003206__d5d30654-dcdc-49f9-bae5-ef64e0db0f9a-167352887657b60b75-0":{"type":"text","settings":{"block-image":"shopify:\/\/shop_images\/specification-icon-1.png","heading":"Activity Rooms","heading_size":"h1","caption":"","caption_style":"caption-with-letter-spacing","caption_size":"medium","text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<\/p>","text_style":"body","button_label":"","button_link":""}},"template--15458953003206__d5d30654-dcdc-49f9-bae5-ef64e0db0f9a-167352887657b60b75-1":{"type":"text","settings":{"block-image":"shopify:\/\/shop_images\/specification-icon-2.png","heading":"Languages","heading_size":"h1","caption":"","caption_style":"caption-with-letter-spacing","caption_size":"medium","text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<\/p>","text_style":"body","button_label":"","button_link":""}},"template--15458953003206__d5d30654-dcdc-49f9-bae5-ef64e0db0f9a-167352887657b60b75-2":{"type":"text","settings":{"block-image":"shopify:\/\/shop_images\/specification-icon-3.png","heading":"Special Education","heading_size":"h1","caption":"","caption_style":"caption-with-letter-spacing","caption_size":"medium","text":"<p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<\/p>","text_style":"body","button_label":"","button_link":""}},"bcc88f2a-c37b-485b-bf67-3acb570764cd":{"type":"text","settings":{"block-image":"shopify:\/\/shop_images\/specification-icon-4.png","heading":"Art Classes","heading_size":"h1","caption":"","caption_style":"caption-with-letter-spacing","caption_size":"medium","text":"<p>Amet consectetur adipiscing elit, eiusmod tempor incididunt ut labore.<\/p>","text_style":"body","button_label":"","button_link":""}}},"block_order":["template--15458953003206__d5d30654-dcdc-49f9-bae5-ef64e0db0f9a-167352887657b60b75-0","template--15458953003206__d5d30654-dcdc-49f9-bae5-ef64e0db0f9a-167352887657b60b75-1","template--15458953003206__d5d30654-dcdc-49f9-bae5-ef64e0db0f9a-167352887657b60b75-2","bcc88f2a-c37b-485b-bf67-3acb570764cd"],"settings":{"page_full_width":false,"page_full_width_spacing":false,"bg_image":"shopify:\/\/shop_images\/specification-bg-img_1364849e-e0f4-4104-8f12-ac4714381cdd.png","sub_heading":"SOFT Toys","title":"Titoo's Fun Center","heading_size":"h1","subtitle":"","text_style":"caption-with-letter-spacing","text_size":"medium","title_image":"shopify:\/\/shop_images\/heading-star-1.png","text":"","image":"shopify:\/\/shop_images\/child-img.png","height":"small","desktop_image_width":"small","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","mobile_content_alignment":"left","padding_top":100,"padding_bottom":120,"custom_class_name":""}},"90d4e145-68e9-42d5-b2f1-743257fc9d7a":{"type":"multicolumn","blocks":{"template--15458953003206__90d4e145-68e9-42d5-b2f1-743257fc9d7a-16744684907496160e-0":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/about-02.jpg","icon-text":"","subtitle":"Woolen Toys","title":"Hand Crafted","text":"<p>Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl<\/p>","price_text":"","link_label":"","link":"","icon_class":false}},"template--15458953003206__90d4e145-68e9-42d5-b2f1-743257fc9d7a-16744684907496160e-1":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/about-01.jpg","icon-text":"","subtitle":"Stuffed Toys","title":"Machine Made","text":"<p>Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl. Sed vestibulum nulla elementum auctor tincidunt.<\/p>","price_text":"","link_label":"","link":"","icon_class":false}}},"block_order":["template--15458953003206__90d4e145-68e9-42d5-b2f1-743257fc9d7a-16744684907496160e-0","template--15458953003206__90d4e145-68e9-42d5-b2f1-743257fc9d7a-16744684907496160e-1"],"settings":{"page_full_width":false,"page_full_width_spacing":false,"sub_heading":"branded","title":"Quality & Safety","heading_size":"h1","subtitle":"","text_style":"caption-with-letter-spacing","text_size":"medium","image_width":"full","image_ratio":"adapt","columns_desktop":2,"column_alignment":"left","background_style":"none","button_label":"","button_link":"","color_scheme":"accent-2","enable_overlay":true,"columns_mobile":"1","swipe_on_mobile":false,"padding_top":100,"padding_bottom":100,"custom_class_name":"about-multicolumn-overlay"}},"c9b3af9e-29b5-4c5f-81ff-01662d2c5b5a":{"type":"image-with-text","blocks":{"template--15458953003206__c9b3af9e-29b5-4c5f-81ff-01662d2c5b5a-16744706828f9b1aaa-0":{"type":"heading","settings":{"sub_heading":"PREMIUM QUALITY","heading":"Safe for Infants","enable_title_link":false,"button_link":"","heading_size":"h1"}},"template--15458953003206__c9b3af9e-29b5-4c5f-81ff-01662d2c5b5a-16744706828f9b1aaa-1":{"type":"text","settings":{"text":"<p>Integer vel erat nec erat luctus scelerisque eu quis nisi. Nunc sapien elit, posuere sit amet est quis, elementum pellentesque arcu. Nam orci urna, ullamcorper venenatis purus a, cursus pretium felis.<\/p>","text_style":"body"}},"template--15458953003206__c9b3af9e-29b5-4c5f-81ff-01662d2c5b5a-16744706828f9b1aaa-2":{"type":"button","settings":{"button_label":"Know More","button_link":"shopify:\/\/collections"}}},"block_order":["template--15458953003206__c9b3af9e-29b5-4c5f-81ff-01662d2c5b5a-16744706828f9b1aaa-0","template--15458953003206__c9b3af9e-29b5-4c5f-81ff-01662d2c5b5a-16744706828f9b1aaa-1","template--15458953003206__c9b3af9e-29b5-4c5f-81ff-01662d2c5b5a-16744706828f9b1aaa-2"],"settings":{"page_full_width":false,"page_full_width_spacing":false,"image":"shopify:\/\/shop_images\/about-04.jpg","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","color_scheme":"background-1","before_image":"shopify:\/\/shop_images\/about-img-1_73d52635-8ce3-4f85-af2b-e155d4e0d495.jpg","mobile_content_alignment":"left","padding_top":100,"padding_bottom":24,"custom_class_name":"image-text-overlay"}},"6fbdfa03-59e4-4f9a-ae05-ccc054878610":{"type":"image-with-text","blocks":{"template--15458953003206__6fbdfa03-59e4-4f9a-ae05-ccc054878610-1674476196c6a968fc-0":{"type":"heading","settings":{"sub_heading":"Good Toys","heading":"Quality Toys","enable_title_link":false,"button_link":"","heading_size":"h1"}},"template--15458953003206__6fbdfa03-59e4-4f9a-ae05-ccc054878610-1674476196c6a968fc-1":{"type":"text","settings":{"text":"<p>Nam orci urna, ullamcorper venenatis purus a, cursus pretium felis. Integer vel erat nec erat luctus scelerisque eu quis nisi. Nunc sapien elit, posuere sit amet est quis, elementum pellentesque arcu.<\/p>","text_style":"body"}},"template--15458953003206__6fbdfa03-59e4-4f9a-ae05-ccc054878610-1674476196c6a968fc-2":{"type":"button","settings":{"button_label":"Know More","button_link":"shopify:\/\/collections"}}},"block_order":["template--15458953003206__6fbdfa03-59e4-4f9a-ae05-ccc054878610-1674476196c6a968fc-0","template--15458953003206__6fbdfa03-59e4-4f9a-ae05-ccc054878610-1674476196c6a968fc-1","template--15458953003206__6fbdfa03-59e4-4f9a-ae05-ccc054878610-1674476196c6a968fc-2"],"settings":{"page_full_width":false,"page_full_width_spacing":false,"image":"shopify:\/\/shop_images\/about-03.jpg","height":"adapt","desktop_image_width":"medium","layout":"image_first","desktop_content_position":"top","desktop_content_alignment":"right","content_layout":"no-overlap","color_scheme":"background-1","before_image":"shopify:\/\/shop_images\/about-04.jpg","mobile_content_alignment":"left","padding_top":16,"padding_bottom":64,"custom_class_name":"image-text-overlay-1"}},"e2b90c34-86bc-4b23-a350-151ad758261a":{"type":"testimonials","blocks":{"template--16838509494570__e2b90c34-86bc-4b23-a350-151ad758261a-1672901799a10f9a59-0":{"type":"text","settings":{"image":"shopify:\/\/shop_images\/home-test-04.jpg","content-heading":"","author":"David Joel","job_title":"Actor","quote":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<\/p>","star":"3","link_label":"","link":""}},"template--16838509494570__e2b90c34-86bc-4b23-a350-151ad758261a-1672901799a10f9a59-1":{"type":"text","settings":{"image":"shopify:\/\/shop_images\/home-test-01.jpg","content-heading":"","author":"Column","job_title":"john","quote":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<\/p>","star":"3","link_label":"","link":""}},"template--16838509494570__e2b90c34-86bc-4b23-a350-151ad758261a-1672901799a10f9a59-2":{"type":"text","settings":{"image":"shopify:\/\/shop_images\/home-test-02.jpg","content-heading":"","author":"Column","job_title":"john","quote":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<\/p>","star":"3","link_label":"","link":""}},"52d1d251-feb2-4bd5-85f4-cc9695df4c42":{"type":"text","settings":{"image":"shopify:\/\/shop_images\/home-test-03.jpg","content-heading":"","author":"Lisa C. Barry","job_title":"john","quote":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<\/p>","star":"3","link_label":"","link":""}}},"block_order":["template--16838509494570__e2b90c34-86bc-4b23-a350-151ad758261a-1672901799a10f9a59-0","template--16838509494570__e2b90c34-86bc-4b23-a350-151ad758261a-1672901799a10f9a59-1","template--16838509494570__e2b90c34-86bc-4b23-a350-151ad758261a-1672901799a10f9a59-2","52d1d251-feb2-4bd5-85f4-cc9695df4c42"],"settings":{"page_full_width":false,"page_full_width_spacing":true,"title":"Our Client Experience","heading_size":"h1","sub_heading":"Testimonials","description":"","button_label":"","button_link":"","button_style_secondary":false,"column_alignment":"center","content_alignment":"center","color_scheme":"background-2","padding_top":116,"padding_bottom":188,"mask_before_image":"shopify:\/\/shop_images\/arrow-next.png","mask_after_image":"shopify:\/\/shop_images\/arrow-prev.png","custom_class_name":"","desktop_column":3,"tablet_column":2,"mobile_column":1,"centered_slide":true,"swiper_pagination":false,"swiper_navigation":true,"auto_play":0}}},"order":["main","d5d30654-dcdc-49f9-bae5-ef64e0db0f9a","90d4e145-68e9-42d5-b2f1-743257fc9d7a","c9b3af9e-29b5-4c5f-81ff-01662d2c5b5a","6fbdfa03-59e4-4f9a-ae05-ccc054878610","e2b90c34-86bc-4b23-a350-151ad758261a"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "page_full_width": false,
+        "page_full_width_spacing": false,
+        "color_scheme_font": "accent-1",
+        "padding_top": 100,
+        "padding_bottom": 40
+      }
+    },
+    "22a8a68d-a571-421e-ab33-6991a7e3c203": {
+      "type": "image-banner",
+      "blocks": {
+        "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-buttons-1": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-heading-1",
+        "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-text-1",
+        "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-buttons-1"
+      ],
+      "settings": {
+        "page_full_width": true,
+        "page_full_width_spacing": false,
+        "image": "shopify:\/\/shop_images\/Group_26.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "custom_class_name": ""
+      }
+    },
+    "afe2c6b8-22de-4cfc-9335-93e073bf31e7": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20948669366591__afe2c6b8-22de-4cfc-9335-93e073bf31e7-heading-1": {
+          "type": "heading",
+          "settings": {
+            "sub_heading": "",
+            "heading": "Our Story",
+            "enable_title_link": false,
+            "button_link": "",
+            "heading_size": "h1"
+          }
+        },
+        "template--20948669366591__afe2c6b8-22de-4cfc-9335-93e073bf31e7-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kaitlyn & Chad were taking the 1000th photo of their newborn, cooing and clapping and basically making themselves look like idiots to get their baby to look at the camera. While scrolling through a few hundred unusable (and uncute) photos, Chad happened to mumble something like “They should make something that gets your kid to actually look at the camera…”<br\/><\/p><p>And from that moment forward, Kaitlyn went to work ideating, testing and building what is now The Looky Lou.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--20948669366591__afe2c6b8-22de-4cfc-9335-93e073bf31e7-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20948669366591__afe2c6b8-22de-4cfc-9335-93e073bf31e7-heading-1",
+        "template--20948669366591__afe2c6b8-22de-4cfc-9335-93e073bf31e7-text-1",
+        "template--20948669366591__afe2c6b8-22de-4cfc-9335-93e073bf31e7-button-1"
+      ],
+      "settings": {
+        "page_full_width": false,
+        "page_full_width_spacing": false,
+        "heading_scale": 50,
+        "heading_scale_mobile": 30,
+        "color_scheme_font": "accent-1",
+        "color_scheme": "primary-color03",
+        "image": "shopify:\/\/shop_images\/image_29_1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_class_name": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "22a8a68d-a571-421e-ab33-6991a7e3c203",
+    "afe2c6b8-22de-4cfc-9335-93e073bf31e7"
+  ]
+}
