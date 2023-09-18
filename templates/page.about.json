@@ -12,43 +12,25 @@
       }
     },
     "22a8a68d-a571-421e-ab33-6991a7e3c203": {
-      "type": "image-banner",
+      "type": "image-banneraboutpage",
       "blocks": {
         "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "Welcome to the #lookylou",
             "heading_size": "h1"
-          }
-        },
-        "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-buttons-1": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-heading-1",
-        "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-text-1",
-        "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-buttons-1"
+        "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-heading-1"
       ],
       "settings": {
         "page_full_width": true,
         "page_full_width_spacing": false,
         "image": "shopify:\/\/shop_images\/Group_26.jpg",
+        "heading_scale": 50,
+        "heading_scale_mobile": 30,
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "adapt_height_first_image": true,
@@ -63,16 +45,17 @@
       }
     },
     "afe2c6b8-22de-4cfc-9335-93e073bf31e7": {
-      "type": "image-with-text",
+      "type": "image-with-textaboutus",
       "blocks": {
         "template--20948669366591__afe2c6b8-22de-4cfc-9335-93e073bf31e7-heading-1": {
           "type": "heading",
           "settings": {
-            "sub_heading": "",
+            "sub_heading": "shopify:\/\/shop_images\/95ca602687b4e31ed73a8993cc65448e.png",
             "heading": "Our Story",
             "enable_title_link": false,
             "button_link": "",
-            "heading_size": "h1"
+            "heading_scale": 50,
+            "heading_scale_mobile": 30
           }
         },
         "template--20948669366591__afe2c6b8-22de-4cfc-9335-93e073bf31e7-text-1": {
@@ -98,9 +81,10 @@
       "settings": {
         "page_full_width": false,
         "page_full_width_spacing": false,
+        "bg-image": "shopify:\/\/shop_images\/Vector.png",
         "heading_scale": 50,
         "heading_scale_mobile": 30,
-        "color_scheme_font": "accent-1",
+        "color_scheme_font": "primary-color01",
         "color_scheme": "primary-color03",
         "image": "shopify:\/\/shop_images\/image_29_1.png",
         "height": "adapt",
@@ -109,6 +93,7 @@
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
+        "before_image": "shopify:\/\/shop_images\/image_29_2.png",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36,
