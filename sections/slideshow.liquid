@@ -46,6 +46,11 @@
      
 
     }
+    .section-{{ section.id }} .banner__text{
+      {% render 'globalcolor' , color: section.settings.color_scheme_font-two %}
+    
+    
+    }
   
     .banner__buttons a{
      color:white
@@ -173,7 +178,7 @@
               {%- endif -%}
               {%- if block.settings.button_label != blank -%}
                 <div class="banner__buttons button-two">
-                  <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
+                  <a{% if block.settings.link %} href="{{ block.settings.link_two }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary_two %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label_two | escape }}</a>
                 </div>
               {%- endif -%}
              </div>
@@ -288,6 +293,66 @@
       ],
       "default": "accent-1",
       "label": "Font color"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme_font-two",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "primary-color01",
+          "label": "primary color one"
+        },
+        {
+          "value": "primary-color02",
+          "label": "primary color two"
+        },
+        {
+          "value": "primary-color03",
+          "label": "primary color three"
+        },
+        {
+          "value": "primary-color04",
+          "label": "primary color Four"
+        },
+        {
+          "value": "primary-color05",
+          "label": "primary color Five"
+        },
+        {
+          "value": "primary-color06",
+          "label": "primary color Six"
+        },
+        {
+          "value": "primary-color07",
+          "label": "primary color Severn"
+        },
+        {
+          "value": "primary-color08",
+          "label": "primary color Eight"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "accent-1",
+      "label": "Dec color"
     },
     {
       "type": "checkbox",
@@ -451,6 +516,24 @@
         {
           "type": "checkbox",
           "id": "button_style_secondary",
+          "label": "t:sections.slideshow.blocks.slide.settings.secondary_style.label",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "button_label_two",
+          "default": "Button label",
+          "label": "t:sections.slideshow.blocks.slide.settings.button_label.label",
+          "info": "t:sections.slideshow.blocks.slide.settings.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "link_two",
+          "label": "t:sections.slideshow.blocks.slide.settings.link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_two",
           "label": "t:sections.slideshow.blocks.slide.settings.secondary_style.label",
           "default": false
         },

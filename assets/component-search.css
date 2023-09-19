@@ -7,7 +7,7 @@
 }
 
 .search__input.field__input {
-   background: var(--gradient-base-accent-3);
+   background: #f3f3f3;
   width: 29rem;
   padding: 0 1rem 0 5rem; border:none; 
 }
@@ -79,3 +79,6 @@ header .field__label {
   background:transparent;
 }
 .contact .main-page-title{margin-bottom:0;} */
+form.search.search-modal__form .field__input:focus {
+  padding: 0 4rem;
+}

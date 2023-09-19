@@ -164,6 +164,10 @@ h2.image-with-text__heading:hover a {
   justify-content: center;
   align-self: center;
   padding: 4rem calc(0rem / var(--font-body-scale)) 5rem;
+  @media screen and (max-width: 750px) {
+
+    padding: 4rem calc(0rem / var(--font-body-scale))  5rem  0  4rem calc(0rem / var(--font-body-scale));
+  }
   position: relative;
   z-index: 1;
   color: var(--color-icon);

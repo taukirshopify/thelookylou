@@ -12,9 +12,12 @@
             "heading_size": "h2",
             "subheading": "",
             "text": "With the Looky Lou, kids and babies will FINALLY smile  at the camera – every time",
-            "button_label": "Shop now",
+            "button_label": "Buy Now",
             "link": "shopify:\/\/collections",
             "button_style_secondary": true,
+            "button_label_two": "To See How Lou works!",
+            "link_two": "",
+            "button_style_secondary_two": false,
             "box_align": "middle-left",
             "show_text_box": false,
             "text_alignment": "left",
@@ -33,6 +36,7 @@
         "heading_scale": 60,
         "heading_scale_mobile": 24,
         "color_scheme_font": "primary-color01",
+        "color_scheme_font-two": "primary-color02",
         "boxshadow": false,
         "slide_height": "adapt_image",
         "swiper_pagination": false,
@@ -50,7 +54,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/Isolation_Mode.png",
-            "title": "Exclusive Collections",
+            "title": "Fits any phone or tablet",
             "heading_size": "h0",
             "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.<\/p>",
             "link_label": "",
@@ -61,7 +65,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/Layer_1_eb916edf-87c2-494c-b0a3-82167dc8d690.png",
-            "title": "Happiness Guaranteed",
+            "title": "Built-inrattle",
             "heading_size": "h1",
             "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.<\/p>",
             "link_label": "",
@@ -72,7 +76,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/Layer_1_1.png",
-            "title": "Trending Toys",
+            "title": "Non-toxic materials",
             "heading_size": "h1",
             "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.<\/p>",
             "link_label": "",
@@ -88,9 +92,9 @@
       "settings": {
         "page_full_width": false,
         "page_full_width_spacing": true,
-        "heading_scale": 50,
-        "heading_scale_mobile": 30,
-        "fontcolor": "primary-color01",
+        "heading_scale": 30,
+        "heading_scale_mobile": 22,
+        "fontcolor": "primary-color02",
         "color-bg": "primary-color01",
         "title": "",
         "heading_size": "h1",
@@ -171,8 +175,8 @@
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "mobile_content_alignment": "left",
-        "padding_top": 52,
-        "padding_bottom": 52,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "custom_class_name": ""
       }
     },
@@ -405,7 +409,7 @@
         "tablet_column": 2,
         "mobile_column": 1,
         "centered_slide": false,
-        "swiper_pagination": true,
+        "swiper_pagination": false,
         "swiper_navigation": true,
         "auto_play": 0
       }
@@ -445,7 +449,7 @@
         "desktop_column": 4,
         "tablet_column": 3,
         "mobile_column": 1,
-        "centered_slide": false,
+        "centered_slide": true,
         "swiper_pagination": true,
         "swiper_navigation": true,
         "auto_play": 0,
@@ -651,8 +655,40 @@
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 76,
+        "padding_bottom": 44
+      }
+    },
+    "b28e4dd3-c506-4527-80ac-138a2eca0ecb": {
+      "type": "rich-textalt",
+      "blocks": {
+        "template--20948669301055__b28e4dd3-c506-4527-80ac-138a2eca0ecb-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Follow us on Instagram",
+            "headingtwo": "@thelookylou",
+            "heading_size": "h1"
+          }
+        },
+        "template--20948669301055__b28e4dd3-c506-4527-80ac-138a2eca0ecb-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tag us to have your little one featured!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20948669301055__b28e4dd3-c506-4527-80ac-138a2eca0ecb-heading-1",
+        "template--20948669301055__b28e4dd3-c506-4527-80ac-138a2eca0ecb-text-1"
+      ],
+      "settings": {
+        "heading_scale": 50,
+        "heading_scale_mobile": 30,
+        "color_scheme_font": "primary-color01",
+        "color_scheme": "primary-color04",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 20
       }
     }
   },
@@ -666,6 +702,7 @@
     "e5e93aba-16a0-4fd3-9f94-a49691edffb9",
     "020a8d32-9114-433b-b9cd-69ef6e5b1537",
     "03e0a54c-e292-4fc2-8de9-0ab73605265d",
-    "b9b9d58f-18af-4485-b88b-3612515db33e"
+    "b9b9d58f-18af-4485-b88b-3612515db33e",
+    "b28e4dd3-c506-4527-80ac-138a2eca0ecb"
   ]
 }

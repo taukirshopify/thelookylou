@@ -23,14 +23,31 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+ 
+  .section-{{ section.id }} h2{
+    text-align: center;
+  {% render 'globalcolor' , color: section.settings.color_scheme_font %}
+  font-size: {{ section.settings.heading_scale_mobile }}px !important; 
+  }
+
+  @media screen and (min-width: 750px) {
+
+    .section-{{ section.id }} h2{
+      {% render 'globalcolor' , color: section.settings.color_scheme_font %}
+      font-size:{{ section.settings.heading_scale }}px !important; 
+      }
+
+  }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient ">
+<div class="color-{{ section.settings.color_scheme }}  section-{{ section.id }}">
   <product-recommendations class="product-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}">
 <div class="{% if section.settings.page_full_width %} page-full-width {% else %} page-width {% endif %} {% if section.settings.page_full_width_spacing %} page-full-width_spacing {% endif %}section-{{ section.id }}-padding isolate">
  <div class="row">  
     {% if recommendations.performed and recommendations.products_count > 0 %}
+
       <h2 class="product-recommendations__heading {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
+      
       <ul class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list">
         {% for recommendation in recommendations.products %}
           <li class="grid__item">
@@ -52,6 +69,8 @@
 </div>
   </div>
 </div>
+
+
 {% javascript %}
   class ProductRecommendations extends HTMLElement {
     constructor() {
@@ -117,24 +136,76 @@
       "label": "t:sections.product-recommendations.settings.heading.label"
     },
     {
+      "type": "number",
+      "id": "heading_scale",
+      "label": "Heading font on Desktop",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "heading_scale_mobile",
+      "label": "Heading font on Mobile",
+      "default": 30
+    },
+    {
       "type": "select",
-      "id": "heading_size",
+      "id": "color_scheme_font",
       "options": [
         {
-          "value": "h2",
-          "label": "t:sections.all.heading_size.options__1.label"
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
         },
         {
-          "value": "h1",
-          "label": "t:sections.all.heading_size.options__2.label"
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
         },
         {
-          "value": "h0",
-          "label": "t:sections.all.heading_size.options__3.label"
+          "value": "primary-color01",
+          "label": "primary color one"
+        },
+        {
+          "value": "primary-color02",
+          "label": "primary color two"
+        },
+        {
+          "value": "primary-color03",
+          "label": "primary color three"
+        },
+        {
+          "value": "primary-color04",
+          "label": "primary color Four"
+        },
+        {
+          "value": "primary-color05",
+          "label": "primary color Five"
+        },
+        {
+          "value": "primary-color06",
+          "label": "primary color Six"
+        },
+        {
+          "value": "primary-color07",
+          "label": "primary color Severn"
+        },
+        {
+          "value": "primary-color08",
+          "label": "primary color Eight"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
         }
       ],
-      "default": "h1",
-      "label": "t:sections.all.heading_size.label"
+      "default": "accent-1",
+      "label": "t:sections.all.colors.label"
     },
     {
       "type": "range",
@@ -165,6 +236,38 @@
         {
           "value": "accent-2",
           "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "primary-color01",
+          "label": "primary color one"
+        },
+        {
+          "value": "primary-color02",
+          "label": "primary color two"
+        },
+        {
+          "value": "primary-color03",
+          "label": "primary color three"
+        },
+        {
+          "value": "primary-color04",
+          "label": "primary color Four"
+        },
+        {
+          "value": "primary-color05",
+          "label": "primary color Five"
+        },
+        {
+          "value": "primary-color06",
+          "label": "primary color Six"
+        },
+        {
+          "value": "primary-color07",
+          "label": "primary color Severn"
+        },
+        {
+          "value": "primary-color08",
+          "label": "primary color Eight"
         },
         {
           "value": "background-1",

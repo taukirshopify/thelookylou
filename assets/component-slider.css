@@ -14,7 +14,13 @@
     font-family: var(--font-body-family);
     font-weight: 400;
     font-size: 2rem;
-    line-height: 30px;     margin: 4rem 0 1rem 0;
+    line-height: 30px;     margin: 2rem 0 1rem 0;
+    @media only screen and (min-width: 1020px)  {
+      padding-right: 36%;
+
+    }
+
+
 }
 .banner__content--middle-right .slideshow__text .banner__text { color: var(--gradient-base-accent-4); }
 .slideshow__text .banner__sub_heading{

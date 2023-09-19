@@ -35,7 +35,7 @@
   .deal-banner.banner--content-align-left.banner--desktop-transparent .banner__box,
   .deal-banner.banner--content-align-right.banner--desktop-transparent .banner__box,
   .deal-banner.banner--medium.banner--desktop-transparent .banner__box {
-    max-width: 83rem;
+    max-width: 78rem;
   }
 }
 
@@ -328,7 +328,7 @@
     --color-foreground: var(--color-base-background-1);
     --color-button: var(--color-base-background-2);
     --color-button-text: 255, 255, 255;
-    max-width: 82rem;
+    max-width: 78rem;
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -485,7 +485,7 @@
     letter-spacing: 0;
 } 
  .deal-banner .banner__buttons a.button.button--primary {
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
    font-weight: 700;
 }
 .deal-banner .banner__text.subtitle span:after {

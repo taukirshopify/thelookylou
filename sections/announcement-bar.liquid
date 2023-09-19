@@ -1,8 +1,8 @@
 {%- style -%}
-  /* .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | divided_by: 0.5 }}em;
-    padding-bottom: {{ section.settings.padding_bottom | divided_by: 0.5}}em;
-  } */
+ .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | modulo: 2  }}em;
+    padding-bottom: {{ section.settings.padding_bottom | modulo: 2 }}em;
+  } 
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {

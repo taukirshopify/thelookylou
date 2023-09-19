@@ -128,7 +128,7 @@ cart-drawer-items.is-empty + .drawer__footer {
 
 .drawer__footer > details {
   margin-top: -1.5rem;
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);
+  border-bottom: 0.1rem solid #A3A3A3;
 }
 
 .drawer__footer > details[open] {
@@ -380,6 +380,7 @@ cart-drawer-items {
 @media screen and (max-width: 576px) {
 .cart-drawer .cart-item>td+td{padding-left:1rem}
 }
+.cart-drawer .cart-item>td+td{padding-left:1rem}
 cart-drawer-items::-webkit-scrollbar {
   width: 3px;
 }
@@ -388,7 +389,13 @@ cart-drawer-items::-webkit-scrollbar-thumb {
   background-color: rgba(var(--color-foreground), 0.7);
   border-radius: 100px;
 }
-
+.totals>h2 {
+  font-size: 19px;
+}
 cart-drawer-items::-webkit-scrollbar-track-piece {
   margin-top: 31px;
+}
+cart-remove-button#CartDrawer-Remove-1 button {
+  background: transparent !important;
+  color: black !important;
 }

@@ -1,6 +1,6 @@
 /* custom */
 
-.product__info-wrapper .product__info-container .product__title h5 { font-size: 4.8rem; color: var(--gradient-base-accent-6); }
+.product__info-wrapper .product__info-container .product__title h5 { font-size: 2.8rem; color:#363636 }
 quick-add-modal .product__info-wrapper .product__info-container .product__title h5 { display: none; }
 
 
@@ -370,7 +370,7 @@ variant-selects .product-form__input .form__label{
   font-size: 1.6rem;
   letter-spacing: 0rem;
   font-family: var(--font-body-family);
-  font-weight: 400; padding: 1.8rem 3rem 1.5rem;
+  font-weight: 400; 
 }
 
 /* Product info */
@@ -537,7 +537,7 @@ quick-add-modal .product .price .badge,
 
 .product-form__quantity .form__label {
   margin-bottom: 0;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   font-weight: 700; width:140px; max-width: 140px; 
 }
 
@@ -1329,14 +1329,13 @@ quick-add-modal .product .price .badge,
 }
 /*main product*/
 button.product-form__submit.button.button--full-width.button--secondary {
-  margin-right: 25px;
+
   margin-bottom: 25px;
-  width: calc(50% - 25px);
+  width: 100%;
 }
 .dT_VProdWishList {
-  margin-right: 25px;
   margin-bottom: 25px;
-  width: calc(50% - 25px);
+  width: 100%;
 }
 .product-form__buttons {
   font-weight: 400;
@@ -1392,7 +1391,7 @@ a.button.add-wishlist.button--secondary {
 .product__info-bottom.tabs .accordion__title {
   color: currentcolor;
   max-width: 100%;
-  font-weight: normal;
+  font-weight: 700;
   font-size: 1.6rem;
 }
 .product__info-bottom.tabs .summary__title {
@@ -1401,12 +1400,15 @@ a.button.add-wishlist.button--secondary {
   border: 1px solid var(--color-badge-border);
   margin-right: 10px;
   transition: linear var(--duration-default);
-  color: var(--gradient-base-background-1);
-  font-size: 1.6rem; background: var(--gradient-base-accent-1);     border-radius: 10px 10px 0 0;
+  font-weight: 700;
+  color: #363636;
+  font-size: 1.6rem;
+  background: #F3F3F3 ;
+  font-size: 1.6rem;     border-radius: 10px 10px 0 0;
 }
 .product__info-bottom.tabs .summary__title:hover,
 .product__info-bottom.tabs .summary__title.active {
-  background-color: var(--gradient-base-accent-2);
+  background-color: var(--color-primary-one) ;
   color: var(--gradient-base-background-1);
 }
 .product__info-as-bottom-tabs .dt-sc-tabs-content {
@@ -1480,6 +1482,7 @@ label.swatch-variant-image {
 .product-form__buttons a.button.add-wishlist.button--secondary {
   background: var(--gradient-base-background-2);
   color: var(--gradient-base-background-1);
+  width: 100%;
 }
 .product-form__buttons
   button.product-form__submit.button.button--full-width.button--secondary:hover,
