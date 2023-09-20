@@ -168,7 +168,19 @@ border-top: 1px solid  #D1D1D1;
           </aside>
         {%- endunless -%}
         <div class="main-product_info product  product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }}  {%  if thumb_carousel_layout %}{% if thumb_slick_layout %} media-slick-slider{% endif %} product--{{ section.settings.thumb_carousel_layout }}{% endif %} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %} ">
-          <div class="grid__item product__media-wrapper">
+            <div class="product-top-wrapper">
+              <h2> {{ product.title }} </h2>
+              <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                {%- render 'price',
+                  product: product,
+                  use_variant: true,
+                  show_badges: true,
+                  price_class: 'price--large '
+                -%}
+              </div>
+            </div>
+        
+        <div class="grid__item product__media-wrapper">
             {% comment %} <media-gallery
               id="MediaGallery-{{ section.id }}"
               role="region"
@@ -529,7 +541,7 @@ border-top: 1px solid  #D1D1D1;
                         product: product,
                         use_variant: true,
                         show_badges: true,
-                        price_class: 'price--large'
+                        price_class: 'price--large mobile-hide-price'
                       -%}
                     </div>
                     {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
@@ -1005,7 +1017,21 @@ border-top: 1px solid  #D1D1D1;
                                <img src="{{ block.settings.img | img_url:'master' }}" alt="">    {{ block.settings.title }}
                               </h6>
                             </div>
-                            {% render 'icon-caret' %}
+                            <div class="colleps-icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none" class="svg-plus icon icon-caret">
+                                <g id="Plus">
+                                <path id="Vector" d="M3.75 12.041H20.25" stroke="#505050" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path id="Vector_2" d="M12 3.79102V20.291" stroke="#505050" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                </svg>
+        
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none" class="svg-minous icon icon-caret">
+                                  <g id="Minus">
+                                  <path id="Vector" d="M20.25 12.791H3.75C3.55109 12.791 3.36032 12.712 3.21967 12.5713C3.07902 12.4307 3 12.2399 3 12.041C3 11.8421 3.07902 11.6513 3.21967 11.5107C3.36032 11.37 3.55109 11.291 3.75 11.291H20.25C20.4489 11.291 20.6397 11.37 20.7803 11.5107C20.921 11.6513 21 11.8421 21 12.041C21 12.2399 20.921 12.4307 20.7803 12.5713C20.6397 12.712 20.4489 12.791 20.25 12.791Z" fill="#505050"/>
+                                  </g>
+                                  </svg>
+        
+                            </div>
                           </summary>
                           <div class="accordion__content rte">
                            {{ block.settings.dec }}
@@ -2533,7 +2559,66 @@ font-weight: 700;
   overflow: hidden;
   height: 700px;
   position: relative;
+
+  @media screen and (max-width: 750px) {
+    height: 300px;
+  
+  }
+
 }
+
+@media screen and (max-width: 750px) {
+  .grid__item.product__media-wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+}
+
+
+@media screen and (min-width: 750px) {
+
+.product-top-wrapper {
+ display:none;
+}
+}
+
+.product-top-wrapper h2 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0 0 13px 0;
+}
+div#price-template--21050215465279__main {
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 750px) {
+  .mobile-hide-price{
+    display:none;
+  }
+  .product__title{
+    display: none;
+   }
+  .swiper-container img {
+    max-width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 0 !important;
+}
+  .swiper-container.gallery-thumbs {
+ width: 100%;
+    overflow: hidden;
+    height: 100px;
+    padding: 10px 15px;
+}
+.swiper-container.gallery-top {
+  width: 100%;
+
+}
+}
+
 .swiper-container img {
   max-width: 100%;
   object-fit: cover;
@@ -2600,20 +2685,51 @@ h2.spr-header-title {
   font-style: normal;
   font-weight: 800 !important;
 }
+.right-proudctpage svg.icon.icon-accordion {
+  display: none;
+}
+summary .icon-caret {
+  position: absolute;
+  height: 18px;
+  right: 1.5rem;
+  top: calc(50% - 1.2rem);
+  color: var(--gradient-base-background-1);
+}
+.accordion details[open]>summary  .svg-minous{
+  display:block;
+}
+.accordion details[open]>summary  .svg-plus{
+  display:none;
+}
+.breadcrumb.text-center {
+
+  display: none;
+}
+
+.swiper-slide-thumb-active {
+  border: 2px solid  #E0A151;
+  border-radius: 12px;
+}
 </style>
 
 
   <script>
     var galleryThumbs = new Swiper('.gallery-thumbs', {
       spaceBetween: 10,
-      direction:'vertical',
-
+      direction:'horizontal',
+      slidesPerView: 3,
       height:100,
       loop: true,
       freeMode: true,
    
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          direction:'vertical',
+        },
+      },
     });
     var galleryTop = new Swiper('.gallery-top', {
       spaceBetween: 10,

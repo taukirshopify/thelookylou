@@ -9,7 +9,7 @@
             "image": "shopify:\/\/shop_images\/image_9_1.png",
             "mobile_image": "shopify:\/\/shop_images\/image_9_1.jpg",
             "heading": "Click, Spin, & Snap Your Way to Capturing Memories",
-            "heading_size": "h2",
+            "heading_size": "h0",
             "subheading": "",
             "text": "With the Looky Lou, kids and babies will FINALLY smile  at the camera – every time",
             "button_label": "Buy Now",
@@ -33,7 +33,7 @@
       "settings": {
         "page_full_width": true,
         "page_full_width_spacing": false,
-        "heading_scale": 60,
+        "heading_scale": 70,
         "heading_scale_mobile": 24,
         "color_scheme_font": "primary-color01",
         "color_scheme_font-two": "primary-color02",
@@ -108,7 +108,7 @@
         "block_style": "grid__item",
         "column_alignment": "center",
         "icon_outer_size": "",
-        "icon_size": "130",
+        "icon_size": "120",
         "image_radius": "0",
         "block_color_scheme": "inverse",
         "vertical_position": "veritcal_center",
@@ -309,7 +309,7 @@
       }
     },
     "250feea7-6d11-4131-8817-c92a4c157e4f": {
-      "type": "testimonials",
+      "type": "testimonialsnewstyle",
       "blocks": {
         "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-0": {
           "type": "text",
@@ -319,7 +319,6 @@
             "author": "David Joel",
             "job_title": "Actor",
             "quote": "<p>“The Looky Lou has brought such joy & wonder to our son. He especially adores the book & consistently pulls it off of the shelf. The packaging was also perfection & will surely make the perfect gift for any expecting parents.”<br\/><\/p>",
-            "star": "5",
             "link_label": "",
             "link": ""
           }
@@ -390,7 +389,7 @@
         "title": "Our Client Experience",
         "heading_scale": 50,
         "heading_scale_mobile": 30,
-        "color_scheme_font": "primary-color01",
+        "color_scheme_font": "primary-color07",
         "heading_size": "h1",
         "sub_heading": "shopify:\/\/shop_images\/v_1.png",
         "description": "",
@@ -517,7 +516,7 @@
         "page_full_width_spacing": false,
         "bg_image": "shopify:\/\/shop_images\/Frame_113.jpg",
         "sub_heading": "",
-        "title": "Titoo's Fun Center",
+        "title": "How the Looky Lou Works",
         "cover_image": "shopify:\/\/shop_images\/image_21.jpg",
         "heading_scale": 50,
         "heading_scale_mobile": 30,
@@ -641,7 +640,7 @@
         "title": "FAQ's",
         "heading_scale": 50,
         "heading_scale_mobile": 30,
-        "color_scheme_font": "primary-color01",
+        "color_scheme_font": "primary-color07",
         "heading_size": "h1",
         "sub_heading": "",
         "description": "",
@@ -684,7 +683,7 @@
       "settings": {
         "heading_scale": 50,
         "heading_scale_mobile": 30,
-        "color_scheme_font": "primary-color01",
+        "color_scheme_font": "primary-color07",
         "color_scheme": "primary-color04",
         "full_width": true,
         "padding_top": 40,

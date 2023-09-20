@@ -2,12 +2,22 @@
   display: flex;
   position: relative;
   line-height: 1;
-  padding: 1.5rem;
+  padding: 2.5rem 0 !important;
 }
 
 .accordion .summary__title {
   display: flex;
   flex: 1;
+}
+.accordion__content p {
+  margin-bottom: 1.5rem;
+  word-break: break-word;
+  overflow-x: auto;
+  /* padding: 0 0.6rem; */
+  padding-left: 1.8rem;
+  font-weight: 600;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* .accordion .summary__title + .icon-caret {
@@ -52,7 +62,7 @@
   margin-bottom: 1.5rem;
   word-break: break-word;
   overflow-x: auto;
-  padding: 0 0.6rem;
+  padding: 0 !important;
 }
 
 .accordion__content img {

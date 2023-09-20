@@ -235,7 +235,7 @@ body#the-looky-lou {
 
 /* custom */
 
-.support-block .support-block-list .support-block-list__item .support-block-card .support-block-card__info .rte { max-width: 80%; margin:auto; }
+.support-block .support-block-list .support-block-list__item .support-block-card .support-block-card__info .rte {  margin:auto; }
 .support-block .support-block-list .support-block-card .support-block-card__info h3 { color: var(--gradient-base-accent-2); margin-bottom: 0.7rem; transition: var(--duration-default); } 
 .support-block .support-block-list .support-block-card .support-block-card__info h3:hover { color: var(--gradient-base-background-2); }
 .support-block-list__item.grid__item { position:relative; }

@@ -262,6 +262,12 @@ h2.image-with-text__heading:hover a {
   margin: -3rem auto 0;
 }
 
+@media screen and (min-width: 1400px) {
+
+  .image-with-text__grid--reverse .image-with-text__content {
+    margin-right: 40px;
+}
+}
 @media screen and (min-width: 750px) {
   .image-with-text__grid--reverse .image-with-text__content {
     margin-left: auto;
@@ -403,7 +409,7 @@ h2.image-with-text__heading:hover a {
 }
 
 .image-with-text__content .image-with-text__text + .button {
-  margin-top: 3.5rem;
+  margin-top: 1.5rem;
   
 }
 

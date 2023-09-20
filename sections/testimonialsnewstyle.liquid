@@ -161,34 +161,39 @@ assign padding_bottom = padding[1]
         <div class="testimonial-container swiper-slide">
           
           <div class="testimonial-content {{ section.settings.content_alignment }}">
-            <blockquote>
+            <blockquote class="d-flex">
 
 
-              <svg xmlns="http://www.w3.org/2000/svg" width="49" height="35" viewBox="0 0 49 35" fill="none">
-                <path id="â" d="M15.3306 34.4196H0.225189L14.442 0.802734H24.068L15.3306 34.4196ZM39.3215 34.4196H24.2161L38.4329 0.802734H48.0589L39.3215 34.4196Z" fill="#B38141"/>
-                </svg>
-          <span class="content-heading">{{ block.settings.content-heading }}</span>
-          {%- if block.settings.quote != blank -%}{{ block.settings.quote }}{%- endif -%}
-
-              {% comment %} {%  render 'dt-sc-rating-widget', block: block %}  {% endcomment %}
+          
+             
 
 
-              {% if block.settings.image != blank %}    
-              <div class="testimonial-image mask-{{ forloop.index }}-image"> 
-                <img loading="lazy" width="" height=""
-                     src="{{ block.settings.image | image_url: width: 550 }}"
-                     alt="{{ block.settings.title }}"
-                     class="img {%- if section.settings.rounded_image -%}rounded_image{%- endif -%}">   
-              </div>
-              {% endif %}
-
-              {%- if block.settings.author != blank -%}
-  
-                  <p class="testimonial-author">{{ block.settings.author }}</p>
-   
- 
-                {%- endif -%}
-
+        
+                <div class="left-iamge-wrapper">
+                  {% if block.settings.image != blank %}    
+                  <div class="testimonial-image mask-{{ forloop.index }}-image"> 
+                    <img loading="lazy" width="" height=""
+                         src="{{ block.settings.image | image_url: width: 550 }}"
+                         alt="{{ block.settings.title }}"
+                         class="img {%- if section.settings.rounded_image -%}rounded_image{%- endif -%}">   
+                  </div>
+                  {% endif %}
+    
+                  {%- if block.settings.author != blank -%}
+      
+                      <p class="testimonial-author">{{ block.settings.author }}</p>
+       
+     
+                    {%- endif -%}
+                
+                </div>
+                <div class="right-image-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="49" height="35" viewBox="0 0 49 35" fill="none">
+                    <path id="â" d="M15.3306 34.4196H0.225189L14.442 0.802734H24.068L15.3306 34.4196ZM39.3215 34.4196H24.2161L38.4329 0.802734H48.0589L39.3215 34.4196Z" fill="#B38141"/>
+                    </svg>
+                    <span class="content-heading">{{ block.settings.content-heading }}</span>
+                    {%- if block.settings.quote != blank -%}{{ block.settings.quote }}{%- endif -%}
+                </div>
             </blockquote>
           </div>
         </div>
@@ -217,9 +222,18 @@ assign padding_bottom = padding[1]
 
 <style>
 
+  .custom-testimonials-style-2 .testimonials-2 .testimonial-image .img {
+    max-width: 120px;
+    border-radius: 0% !important;
+}
   .custom-testimonials-style-2 .testimonials-2 .testimonial-image .img{
      position: unset;
   }
+
+ .right-image-wrapper p {
+    text-align: left;
+   color:  #505050;
+}
 
   .custom-testimonials-style-2 .testimonials-2 .testimonial-image .img {
 
@@ -227,6 +241,10 @@ assign padding_bottom = padding[1]
 
 }
 
+.left-iamge-wrapper {
+  width: 35%;
+  padding: 0 5px;
+}
 .custom-testimonials-style-2 .testimonials-2 .testimonial-container .testimonial-author{
 
  color: {{ section.settings.color-tran }}
@@ -255,13 +273,23 @@ assign padding_bottom = padding[1]
 
   
   }
+
+
+  .left-iamge-wrapper{
+   width: 35%;
+  
+  }
+  .right-image-wrapper{
+   width: 65%;
+  
+  }
 </style>
 
 
 
 {% schema %}
   {
-    "name": "t:sections.testimonials-style-2.name",
+    "name": "testimonial two",
     "class": "section custom-testimonials-style-2",
     "tag": "section",
     "settings": [

@@ -124,7 +124,14 @@
 .collapsible-content-wrapper-narrow p {
  color: black;
 }
+.accordion {
+  border-top: 1px solid #D1D1D1 !important;
+}
 
+.accordion  + .accordion  {
+  border-bottom: 1px solid #D1D1D1 !important;
+  border-top: 1px solid #D1D1D1 !important;
+}
 .section-{{ section.id }} .collapsible-content-wrapper-narrow .h1 {
   {% render 'globalcolor' , color: section.settings.color_scheme_font %}
   font-weight:700;
@@ -137,6 +144,7 @@
       {% render 'globalcolor' , color: section.settings.color_scheme_font %}
       font-weight:700;
       font-size:{{ section.settings.heading_scale }}px; 
+      margin-right: 45px;
       }
 
   
