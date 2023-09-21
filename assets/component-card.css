@@ -115,6 +115,7 @@
 .card__media {
   margin: var(--card-image-padding);
   width: calc(100% - 2 * var(--card-image-padding));
+  /* height: 312px; */
 }
 
 .card--standard .card__media {
@@ -123,7 +124,7 @@
 
 .card__inner {
   width: 100%;
-/*   height:100vh; */
+  height: 312px;
 }
 .card__content .grid-view-hidden {display:none;}
 .list-view-filter .card__content .rte.grid-view-hidden { position: relative; text-align: left; margin: 1rem 0; line-height: 3rem; display:block;}

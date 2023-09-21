@@ -320,7 +320,13 @@ body#the-looky-lou {
 .spr-starrating { margin-bottom: 5px;}
 a.spr-review-reportreview {  font-size: 1.4rem; }
 p.spr-review-content-body { font-size: 1.6rem; }
-.spr-container { border-radius: var(--inputs-radius);  padding: 30px!important; }
+.spr-container { border-radius: var(--inputs-radius); 
+  
+  @media screen and (max-width: 750px) {
+  padding: 0px!important;
+  }
+
+}
 
 .enquiry-modal .enquiry-content .contact-form > *:not(.button) {  border-radius: 10px; background: transparent; }
 .enquiry-modal .enquiry-content .contact-form .enquiry-choose input { margin-bottom: 7px!important; }

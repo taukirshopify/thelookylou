@@ -272,7 +272,7 @@ h2.specification__heading {
 
 
 .specification__content > * + * {
-  margin-top: 3rem;
+  margin-top: 1.58rem;
 }
 
 .specification__content > .specification__text:empty ~ a {
@@ -324,7 +324,7 @@ h2.specification__heading {
 .specification_block .specification_image-item-list { width: 80px;  height: 80px; display: flex; align-items: center; justify-content: center;}
 .specification_block .specification__text-item--list{ padding-left: 20px; }
 .specification_block{display: flex; height: 100%; align-items: center; flex-wrap: nowrap; background: var(--gradient-base-background-1); border-radius: var(--text-boxes-radius); 
-  padding: 1.56rem; box-shadow: 0 0 10px #d6d6d6; transition: var(--duration-default); }
+  padding: 1.30rem; box-shadow: 0 0 10px #d6d6d6; transition: var(--duration-default); }
 .specification_block:hover { background: var(--gradient-base-accent-1); }
 .specification_block h2.specification__heading{
    margin:0; margin-bottom: 1rem; overflow:hidden;  transition: var(--duration-default); }
@@ -379,7 +379,7 @@ h2.specification__heading {
   
 @media screen and (max-width: 1540px) {
  
-.specification_block { margin: 3rem 1.5rem; }
+.specification_block { margin: 3rem 0; }
 
 .specification__media-item.grid__item { margin: auto; }
 .specification__media-item .specification__media.media>*:not(.zoom):not(.deferred-media__poster-button) { margin-top: 0px; }

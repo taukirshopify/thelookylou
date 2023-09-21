@@ -46,7 +46,7 @@ footer .footer-block__newsletter h2.footer-block__heading {  font-size: calc(var
 }
 
 .footer__content-top {
-  padding: 125px 15px;
+  padding: 85px 15px 24px 0;
   display: block;
   position: relative;
 }
@@ -595,9 +595,21 @@ footer .banner__media.media img {  z-index:0;}
 
 @media screen and (max-width:1540px) {
 footer .page-width { max-width: 80%;} 
-  .footer__content-top { padding: 125px 40px; }
+  .footer__content-top { 
+
+    padding: 37px 125px;
+   }
 }
 
+
+@media screen and (max-width:1540px) {
+
+
+  .footer__content-top {
+    padding: 37px 70px;
+}
+
+}
 @media screen and (max-width:1199px) {
 .footer-block.grid__item.footer-block--menu { width: calc(50% - var(--grid-desktop-horizontal-spacing) * 3 / 4); }
   .footer-block.grid__item {  width: calc(50% - var(--grid-desktop-horizontal-spacing) * 3 / 4);  }

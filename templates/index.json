@@ -319,6 +319,7 @@
             "author": "David Joel",
             "job_title": "Actor",
             "quote": "<p>“The Looky Lou has brought such joy & wonder to our son. He especially adores the book & consistently pulls it off of the shelf. The packaging was also perfection & will surely make the perfect gift for any expecting parents.”<br\/><\/p>",
+            "star": "3",
             "link_label": "",
             "link": ""
           }
@@ -448,8 +449,8 @@
         "desktop_column": 4,
         "tablet_column": 3,
         "mobile_column": 1,
-        "centered_slide": true,
-        "swiper_pagination": true,
+        "centered_slide": false,
+        "swiper_pagination": false,
         "swiper_navigation": true,
         "auto_play": 0,
         "swipe_on_mobile": true,

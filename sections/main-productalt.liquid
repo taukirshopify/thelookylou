@@ -2682,9 +2682,14 @@ h2.spr-header-title {
   color:  #B38141 !important;
   font-family: Dosis;
   font-size: 50px !important;
+  @media screen and (max-width: 992px) {
+    font-size: 30px !important;
+  }
   font-style: normal;
   font-weight: 800 !important;
 }
+
+
 .right-proudctpage svg.icon.icon-accordion {
   display: none;
 }
@@ -2717,13 +2722,23 @@ summary .icon-caret {
     var galleryThumbs = new Swiper('.gallery-thumbs', {
       spaceBetween: 10,
       direction:'horizontal',
-      slidesPerView: 3,
+
       height:100,
+      loopAdditionalSlides: 100,
       loop: true,
       freeMode: true,
-   
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
+      keyboardControl: true,
+      mousewheelControl: 'true',
+      loopedSlides: 7,
+      centeredSlides: true,
+      slidesPerView: 3,
+      loopAdditionalSlides:1,
+      roundLengths:true,
+      mousewheelControl:true,
+      watchActiveIndex:true,
+      onSlideClick: function(swiper) {
+          SwiperMenu.swipeTo(SwiperMenu.clickedSlideLoopIndex,600);
+      },
       breakpoints: {
         640: {
           slidesPerView: 1,
@@ -2734,8 +2749,8 @@ summary .icon-caret {
     var galleryTop = new Swiper('.gallery-top', {
       spaceBetween: 10,
       height:100,
-      loop: true,
- 
+
+
       navigation: {
         nextEl: '.swiper-button-next-two',
         prevEl: '.swiper-button-prev-two',
@@ -2744,4 +2759,9 @@ summary .icon-caret {
         swiper: galleryThumbs,
       },
     });
+
+
+
+    galleryThumbs.params.control = galleryTop;
+    galleryTop.params.control = galleryThumbs;
   </script>

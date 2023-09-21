@@ -22,13 +22,17 @@
 {%- endstyle -%}
 
 <style>
-  .section-{{ section.id }} .grid {flex-direction: row-reverse;
-    align-items: center;
+  .section-{{ section.id }} .grid {
+    
+    flex-direction: row-reverse;
+    align-items: stretch;
+    justify-content: space-between;
   }
 
     .section-{{ section.id }} .title-0 {
       {% render 'globalcolor' , color: section.settings.color_scheme_font %}
       font-size: {{ section.settings.heading_scale_mobile }}px !important; 
+      line-height: 1.2;
      
       }
     .section-{{ section.id }} .specification__text.rte>p,
@@ -50,9 +54,13 @@
       @media screen and (min-width: 750px) {
           .section-{{ section.id }} .button-two {
             margin-left: 0px;
+            display: inline-block;
+            margin-top: 0rem;
+
+
         }
         .section-{{ section.id }} .title-0{
-          margin-bottom: 0;
+          margin: 0;
           font-size:{{ section.settings.heading_scale }}px !important; 
         }
 
@@ -61,9 +69,64 @@
               width: calc(35% - var(--grid-desktop-horizontal-spacing) / 2);
           }
             .specification__media-item.grid__item {
-              width: calc(67% - var(--grid-desktop-horizontal-spacing) / 2);
-              padding: 0 82px;
+              width: calc(65% - var(--grid-desktop-horizontal-spacing) / 2);
+              padding: 0 40px;
           }
+
+          {% comment %} .specification_block {
+            margin: 1.5rem 0;
+
+              padding: 0.3rem;
+
+        } {% endcomment %}
+
+
+
+      }
+
+
+      @media screen and (min-width: 1400px) {
+          .section-{{ section.id }} .button-two {
+            margin-left: 0px;
+            display: inline-block;
+            margin-top: 3.5rem;
+
+
+        }
+
+         .specification_block {
+            margin: 1.5rem 0;
+
+              padding: 0.3rem;
+
+        }
+        .section-{{ section.id }} .title-0{
+          margin: 0;
+          font-size:{{ section.settings.heading_scale }}px !important; 
+        }
+
+
+            .specification__text-item.grid__item {
+              width: calc(35% - var(--grid-desktop-horizontal-spacing) / 2);
+          }
+            .specification__media-item.grid__item {
+              width: calc(65% - var(--grid-desktop-horizontal-spacing) / 2);
+              padding: 0 40px;
+          }
+      }
+
+
+
+
+
+      @media screen and (min-width: 1400px) {
+      
+        .specification__media-item.grid__item {
+          width: calc(67% - var(--grid-desktop-horizontal-spacing) / 2);
+          padding: 0 80px;
+      }
+
+
       }
 
 

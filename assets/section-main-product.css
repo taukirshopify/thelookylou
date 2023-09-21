@@ -1393,10 +1393,18 @@ a.button.add-wishlist.button--secondary {
   max-width: 100%;
   font-weight: 700;
   font-size: 1.6rem;
+  @media screen and (max-width: 750px) {
+    font-size: 14px;
+  }
 }
 .product__info-bottom.tabs .summary__title {
   cursor: pointer;
  padding: 15px 25px 10px 25px;
+ @media screen and (max-width: 750px) {
+
+  padding: 10px;
+
+ }
   border: 1px solid var(--color-badge-border);
   margin-right: 10px;
   transition: linear var(--duration-default);
