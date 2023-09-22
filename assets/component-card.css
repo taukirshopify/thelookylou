@@ -10,7 +10,7 @@
 .card .quick-add__submit.button {
   margin: 0;
   padding: 19px 60px;
-  font-size: 1.225rem;
+  font-size:16px;
   text-transform: inherit;
   font-weight: 700;
 }
@@ -168,7 +168,10 @@
   -webkit-mask-size: contain;
   -webkit-mask-position: center;
 }
-.product-icons { z-index:2; pointer-events: none; left: 0; right: 0; top: 50%;transform:translateY(-50%);padding:15px; position: absolute; justify-content: center;  opacity:0; display: flex; transition: 0.3s linear all;  list-style:none;}
+.product-icons { z-index:2; pointer-events: none; left: 0; right: 0; top: 50%;transform:translateY(-50%);padding:15px; position: absolute; justify-content: center;  opacity:0; display: flex; transition: 0.3s linear all;  list-style:none;
+
+display: none !important;
+}
 .product-icons li{ margin:3px; pointer-events: all; position: relative; transition: all 0.3s linear; }
 ul.product-icons.top-aligned { top: 0; bottom: auto; transform: initial;}
 

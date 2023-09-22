@@ -307,98 +307,6 @@
         "padding_bottom": 8
       }
     },
-    "250feea7-6d11-4131-8817-c92a4c157e4f": {
-      "type": "testimonialsnewstyle",
-      "blocks": {
-        "0e8c5ecc-3aa7-45b5-adaf-bdd041f48eeb": {
-          "type": "text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/357347996_166265449779634_8051296006765209937_n.jpg",
-            "content-heading": "",
-            "author": "Greyson's Parents",
-            "job_title": "john",
-            "quote": "<p>The Looky Lou has brought such joy & wonder to our son. He especially adores the book & consistently pulls it off of the shelf. The packaging was also perfection & will surely make the perfect gift for any expecting parents.<\/p>",
-            "star": "3",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "aea82c42-4f1e-4fa1-828f-a59c2727daf1": {
-          "type": "text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/almas_parents_250x_798d3da6-16e9-4f09-bb82-07dcf716011b.png",
-            "content-heading": "",
-            "author": "Jack's Parents",
-            "job_title": "john",
-            "quote": "<p>AMAZING. The product itself is really well made and has a really nice matte finish to the plastic so you know it's high quality. I originally purchased it for my younger son to take those monthly newborn photos, but my toddler also loves it and likes to play with it. The packaging was also top notch and I even re-used the box b\/c it was such a cute box. I immediately purchased 2 more for baby shower gifts.<\/p>",
-            "star": "3",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-0": {
-          "type": "text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_1.png",
-            "content-heading": "",
-            "author": "David Joel",
-            "job_title": "Actor",
-            "quote": "<p>“The Looky Lou has brought such joy & wonder to our son. He especially adores the book & consistently pulls it off of the shelf. The packaging was also perfection & will surely make the perfect gift for any expecting parents.”<br\/><\/p>",
-            "star": "3",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-1": {
-          "type": "text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_1_1.png",
-            "content-heading": "",
-            "author": "Mary J. McCord",
-            "job_title": "",
-            "quote": "<p>\"AMAZING. The product itself is really well made and has a really nice matt e finish to the plastic so you know it's high quality. I originally purchased it for my younger son to take those monthly newborn photos, but my toddler also loves it and likes to play with it. The packaging was also top notch and I even re-used the box b\/c it was such a cute box. I immediately purchased 2 more for baby shower gifts.\"<\/p>",
-            "star": "3",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "0e8c5ecc-3aa7-45b5-adaf-bdd041f48eeb",
-        "aea82c42-4f1e-4fa1-828f-a59c2727daf1",
-        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-0",
-        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-1"
-      ],
-      "settings": {
-        "page_full_width": false,
-        "page_full_width_spacing": true,
-        "title": "Our Client Experience",
-        "heading_scale": 50,
-        "heading_scale_mobile": 30,
-        "color_scheme_font": "primary-color07",
-        "heading_size": "h1",
-        "sub_heading": "shopify:\/\/shop_images\/v_1.png",
-        "description": "",
-        "button_label": "",
-        "button_link": "",
-        "button_style_secondary": false,
-        "column_alignment": "center",
-        "content_alignment": "center",
-        "color_scheme": "primary-color04",
-        "color-tran": "#e0a151",
-        "after_image": "shopify:\/\/shop_images\/Group.png",
-        "padding_top": 76,
-        "padding_bottom": 156,
-        "custom_class_name": "",
-        "desktop_column": 2,
-        "tablet_column": 2,
-        "mobile_column": 1,
-        "centered_slide": false,
-        "swiper_pagination": false,
-        "swiper_navigation": true,
-        "auto_play": 0
-      }
-    },
     "e5e93aba-16a0-4fd3-9f94-a49691edffb9": {
       "type": "featured-collection",
       "settings": {
@@ -434,7 +342,7 @@
         "desktop_column": 4,
         "tablet_column": 3,
         "mobile_column": 1,
-        "centered_slide": true,
+        "centered_slide": false,
         "swiper_pagination": false,
         "swiper_navigation": true,
         "auto_play": 0,
@@ -529,6 +437,65 @@
         "custom_class_name": ""
       }
     },
+    "47d1b720-d11a-4469-bf18-b7a142bd4ed3": {
+      "type": "testimonials",
+      "blocks": {
+        "template--20948669301055__47d1b720-d11a-4469-bf18-b7a142bd4ed3-text-2": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/almas_parents_250x_798d3da6-16e9-4f09-bb82-07dcf716011b.png",
+            "content-heading": "john",
+            "author": "Jack's Parents",
+            "job_title": "john",
+            "quote": "<p>\"AMAZING. The product itself is really well made and has a really nice matte finish to the plastic so you know it's high quality. I originally purchased it for my younger son to take those monthly newborn photos, but my toddler also loves it and likes to play with it. The packaging was also top notch and I even re-used the box b\/c it was such a cute box. I immediately purchased 2 more for baby shower gifts.\"<\/p>",
+            "star": "3",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "a6021e09-7ea0-4aaf-baf5-355cbdc2ff79": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/357347996_166265449779634_8051296006765209937_n.jpg",
+            "content-heading": "john",
+            "author": "Greyson's Parents",
+            "job_title": "john",
+            "quote": "<p>The Looky Lou has brought such joy & wonder to our son. He especially adores the book & consistently pulls it off of the shelf. The packaging was also perfection & will surely make the perfect gift for any expecting parents.<\/p>",
+            "star": "3",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20948669301055__47d1b720-d11a-4469-bf18-b7a142bd4ed3-text-2",
+        "a6021e09-7ea0-4aaf-baf5-355cbdc2ff79"
+      ],
+      "settings": {
+        "page_full_width": false,
+        "page_full_width_spacing": false,
+        "title": "Testimonial",
+        "heading_size": "h1",
+        "sub_heading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style_secondary": false,
+        "column_alignment": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-2",
+        "padding_top": 80,
+        "padding_bottom": 124,
+        "custom_class_name": "",
+        "desktop_column": 2,
+        "tablet_column": 2,
+        "mobile_column": 1,
+        "centered_slide": false,
+        "swiper_pagination": false,
+        "swiper_navigation": false,
+        "auto_play": 0
+      }
+    },
     "b9b9d58f-18af-4485-b88b-3612515db33e": {
       "type": "collapsible-content",
       "blocks": {
@@ -580,7 +547,7 @@
         "layout": "none",
         "color_scheme": "primary-color03",
         "container_color_scheme": "primary-color02",
-        "open_first_collapsible_row": true,
+        "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 76,
@@ -626,9 +593,9 @@
     "74d09de3-61d7-443f-84bf-75ba792df3be",
     "8cb2088c-4294-4167-822a-c508f1552c00",
     "23902b00-05cb-4458-baa0-cce5db652f63",
-    "250feea7-6d11-4131-8817-c92a4c157e4f",
     "e5e93aba-16a0-4fd3-9f94-a49691edffb9",
     "020a8d32-9114-433b-b9cd-69ef6e5b1537",
+    "47d1b720-d11a-4469-bf18-b7a142bd4ed3",
     "b9b9d58f-18af-4485-b88b-3612515db33e",
     "b28e4dd3-c506-4527-80ac-138a2eca0ecb"
   ]

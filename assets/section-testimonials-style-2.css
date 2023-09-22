@@ -23,7 +23,7 @@ blockquote {   margin: 0;   position: relative;}
     margin-top: -25px; }
 .custom-testimonials-style-2 .testimonials-2 .page-full-width.page-full-width_spacing .row { margin: 0 calc(var(--page-full-width-spacing) + 8%);}
 .custom-testimonials-style-2 .testimonials-2 .testimonial-image .img{  margin:auto;   max-width: 150px; 
-    border-radius: 50%; position: absolute; top: -145px; left:0; right:0; z-index: 1; }
+    position: absolute; top: -145px; left:0; right:0; z-index: 1; }
 
 .custom-testimonials-style-2 .testimonials-2 .testimonial-container .testimonial-content{ position:relative; padding: 70px 30px 90px 30px; margin: 100px 25px; 
  box-shadow: #0000000d 0 5px 20px; opacity:0.5; background: var(--gradient-base-background-1); border-radius: 10px; }

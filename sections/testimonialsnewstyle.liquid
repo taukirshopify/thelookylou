@@ -191,7 +191,7 @@ assign padding_bottom = padding[1]
                   <svg xmlns="http://www.w3.org/2000/svg" width="49" height="35" viewBox="0 0 49 35" fill="none">
                     <path id="â" d="M15.3306 34.4196H0.225189L14.442 0.802734H24.068L15.3306 34.4196ZM39.3215 34.4196H24.2161L38.4329 0.802734H48.0589L39.3215 34.4196Z" fill="#B38141"/>
                     </svg>
-                    <span class="content-heading">{{ block.settings.content-heading }}</span>
+             
                     {%- if block.settings.quote != blank -%}{{ block.settings.quote }}{%- endif -%}
                 </div>
             </blockquote>
@@ -643,12 +643,7 @@ assign padding_bottom = padding[1]
             "label": "t:sections.testimonials-style-2.blocks.text.settings.image.label"
           },
 
-          {
-            "type": "text",
-            "id": "content-heading",
-            "default": "john",
-            "label": "t:sections.testimonials-style-2.blocks.text.settings.content-heading.label"
-          },
+
           {
             "type": "text",
             "id": "author",

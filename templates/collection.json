@@ -37,7 +37,7 @@
         "enable_grid_list": true,
         "show_menu": true,
         "menu_title": "Custom Menu",
-        "linklist": "main-menu",
+        "linklist": "",
         "show_carousel": false,
         "carousel_title": "Best Seller",
         "carousel": "frontpage",

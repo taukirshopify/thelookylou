@@ -988,9 +988,14 @@ input.mobile-facets__checkbox {
     padding: 10px;
     font-size: 1.6rem;
     color: var(--gradient-base-accent-2);
-    background-color: #fff3f3;
-    border-left: 5px solid #ff8ea6; }
+    /* background-color:  #f8e3ca;  */
+    /* border-left: 5px solid  #f4d9bb; */
+  
+  }
  .facets__heading--vertical {  font-size: 1.6rem; color: var(--gradient-base-accent-2);}
+ .facets__summary .icon-caret {
+  right: 14px;
+}
 @media screen and (min-width: 750px) {
   .facets-vertical {
     display: flex;
