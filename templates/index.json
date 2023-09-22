@@ -186,12 +186,11 @@
         "page_full_width": true,
         "page_full_width_spacing": false,
         "image": "shopify:\/\/shop_images\/Frame_15046.jpg",
-        "image_two": "shopify:\/\/shop_images\/looky-anatomy-2-02_1_1.png",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "adapt_height_first_image": false,
-        "stack_images_on_mobile": true,
-        "show_text_below": true,
+        "image_two": "shopify:\/\/shop_images\/Product_Infographic.svg",
+        "image_three": "shopify:\/\/shop_images\/looky_clip.gif",
+        "image_four": "shopify:\/\/shop_images\/mane-spin.gif",
+        "padding_top": 36,
+        "padding_bottom": 36,
         "custom_class_name": ""
       }
     },
@@ -311,6 +310,32 @@
     "250feea7-6d11-4131-8817-c92a4c157e4f": {
       "type": "testimonialsnewstyle",
       "blocks": {
+        "0e8c5ecc-3aa7-45b5-adaf-bdd041f48eeb": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/357347996_166265449779634_8051296006765209937_n.jpg",
+            "content-heading": "john",
+            "author": "Greyson's Parents",
+            "job_title": "john",
+            "quote": "<p>The Looky Lou has brought such joy & wonder to our son. He especially adores the book & consistently pulls it off of the shelf. The packaging was also perfection & will surely make the perfect gift for any expecting parents.<\/p>",
+            "star": "3",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "aea82c42-4f1e-4fa1-828f-a59c2727daf1": {
+          "type": "text",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/almas_parents_250x_798d3da6-16e9-4f09-bb82-07dcf716011b.png",
+            "content-heading": "Jack's Parents",
+            "author": "Jack's Parents",
+            "job_title": "john",
+            "quote": "<p>AMAZING. The product itself is really well made and has a really nice matte finish to the plastic so you know it's high quality. I originally purchased it for my younger son to take those monthly newborn photos, but my toddler also loves it and likes to play with it. The packaging was also top notch and I even re-used the box b\/c it was such a cute box. I immediately purchased 2 more for baby shower gifts.<\/p>",
+            "star": "3",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-0": {
           "type": "text",
           "settings": {
@@ -336,53 +361,13 @@
             "link_label": "",
             "link": ""
           }
-        },
-        "75a6ff2d-d103-4370-92fa-132b1ba41067": {
-          "type": "text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_1.png",
-            "content-heading": "",
-            "author": "David Joel",
-            "job_title": "Actor",
-            "quote": "<p>“The Looky Lou has brought such joy & wonder to our son. He especially adores the book & consistently pulls it off of the shelf. The packaging was also perfection & will surely make the perfect gift for any expecting parents.”<br\/><\/p>",
-            "star": "5",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "dab17419-6c06-4e3f-ac62-a8cff8d7b6c9": {
-          "type": "text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_1_1.png",
-            "content-heading": "",
-            "author": "Mary J. McCord",
-            "job_title": "",
-            "quote": "<p>\"AMAZING. The product itself is really well made and has a really nice matt e finish to the plastic so you know it's high quality. I originally purchased it for my younger son to take those monthly newborn photos, but my toddler also loves it and likes to play with it. The packaging was also top notch and I even re-used the box b\/c it was such a cute box. I immediately purchased 2 more for baby shower gifts.\"<\/p>",
-            "star": "3",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "b5d24683-fca2-4650-9a12-68a0533a6108": {
-          "type": "text",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Ellipse_1_1.png",
-            "content-heading": "",
-            "author": "Mary J. McCord",
-            "job_title": "",
-            "quote": "<p>\"AMAZING. The product itself is really well made and has a really nice matt e finish to the plastic so you know it's high quality. I originally purchased it for my younger son to take those monthly newborn photos, but my toddler also loves it and likes to play with it. The packaging was also top notch and I even re-used the box b\/c it was such a cute box. I immediately purchased 2 more for baby shower gifts.\"<\/p>",
-            "star": "3",
-            "link_label": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
+        "0e8c5ecc-3aa7-45b5-adaf-bdd041f48eeb",
+        "aea82c42-4f1e-4fa1-828f-a59c2727daf1",
         "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-0",
-        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-1",
-        "75a6ff2d-d103-4370-92fa-132b1ba41067",
-        "dab17419-6c06-4e3f-ac62-a8cff8d7b6c9",
-        "b5d24683-fca2-4650-9a12-68a0533a6108"
+        "template--15458952937670__250feea7-6d11-4131-8817-c92a4c157e4f-1673251194a40782f8-1"
       ],
       "settings": {
         "page_full_width": false,
@@ -526,6 +511,7 @@
         "urltext": "Buy Now",
         "url": "",
         "color_scheme": "primary-color01",
+        "video": "shopify:\/\/files\/videos\/2be8cb4a247f49e7b41c2a826ee835c1.HD-1080p-7.2Mbps-16324628.mp4",
         "heading_size": "h1",
         "subtitle": "",
         "text_style": "caption-with-letter-spacing",
@@ -543,74 +529,6 @@
         "custom_class_name": ""
       }
     },
-    "03e0a54c-e292-4fc2-8de9-0ab73605265d": {
-      "type": "grid-banner",
-      "blocks": {
-        "616c3f34-e4b3-4fef-b419-18fb213b555b": {
-          "type": "text",
-          "settings": {
-            "block_image": "shopify:\/\/shop_images\/Mane_spin.gif",
-            "show_content": false,
-            "block_title": "Title",
-            "enable_title_link": false,
-            "block_sub_title": "Sub title",
-            "block_description": "Short description",
-            "block_button_text": "",
-            "block_button_link": "",
-            "desktop_contents_alignments": "center"
-          }
-        },
-        "7dd2362a-d996-499e-869f-5f6c3065a38c": {
-          "type": "text",
-          "settings": {
-            "block_image": "shopify:\/\/shop_images\/Clip.gif",
-            "show_content": false,
-            "block_title": "",
-            "enable_title_link": false,
-            "block_sub_title": "Sub title",
-            "block_description": "Short description",
-            "block_button_text": "",
-            "block_button_link": "",
-            "desktop_contents_alignments": "center"
-          }
-        }
-      },
-      "block_order": [
-        "616c3f34-e4b3-4fef-b419-18fb213b555b",
-        "7dd2362a-d996-499e-869f-5f6c3065a38c"
-      ],
-      "settings": {
-        "page_full_width": true,
-        "page_full_width_spacing": false,
-        "sub_heading": "",
-        "title": "",
-        "heading_size": "h1",
-        "subtitle": "",
-        "text_style": "caption-with-letter-spacing",
-        "text_size": "medium",
-        "column_alignment": "center",
-        "background_style": "primary",
-        "banner_style": "overlay",
-        "grid-column": "2",
-        "button_label": "Button label",
-        "button_link": "",
-        "color_scheme": "primary-color05",
-        "padding_top": 112,
-        "padding_bottom": 60,
-        "custom_class_name": "home-grid-banner-2",
-        "swiper_enable": false,
-        "desktop_column": 2,
-        "tablet_column": 3,
-        "mobile_column": 2,
-        "centered_slide": true,
-        "swiper_pagination": false,
-        "swiper_navigation": false,
-        "auto_play": 0,
-        "mobile_space": 5,
-        "tab_space": 30,
-        "desktop_space": 30
-      }
-    },
     "b9b9d58f-18af-4485-b88b-3612515db33e": {
       "type": "collapsible-content",
       "blocks": {
@@ -626,16 +544,26 @@
         "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Does The Looky Lou actually work?",
+            "heading": "What phone is The Looky Lou compatible with?",
             "icon": "none",
-            "row_content": "<p>lorem    <\/p>",
+            "row_content": "<p>All phones! We designed it to clip to the side if needed and with slanted legs to avoid cameras or flashes. It can be used for a selfie or a candid shot.<\/p>",
+            "page": ""
+          }
+        },
+        "fd27c47b-a9bc-4ca1-9acc-b1f653cd5228": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the Looky Lou made out of?",
+            "icon": "check_mark",
+            "row_content": "<p>We use baby safe plastic and have taken all safety precautions but please note: this is not a toy. The Looky Lou is designed for adult use. Please do not leave Lou alone with a child.<\/p>",
             "page": ""
           }
         }
       },
       "block_order": [
         "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-1",
-        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-2"
+        "template--20948669301055__b9b9d58f-18af-4485-b88b-3612515db33e-collapsible_row-2",
+        "fd27c47b-a9bc-4ca1-9acc-b1f653cd5228"
       ],
       "settings": {
         "title": "FAQ's",
@@ -652,7 +580,7 @@
         "layout": "none",
         "color_scheme": "primary-color03",
         "container_color_scheme": "primary-color02",
-        "open_first_collapsible_row": false,
+        "open_first_collapsible_row": true,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 76,
@@ -701,7 +629,6 @@
     "250feea7-6d11-4131-8817-c92a4c157e4f",
     "e5e93aba-16a0-4fd3-9f94-a49691edffb9",
     "020a8d32-9114-433b-b9cd-69ef6e5b1537",
-    "03e0a54c-e292-4fc2-8de9-0ab73605265d",
     "b9b9d58f-18af-4485-b88b-3612515db33e",
     "b28e4dd3-c506-4527-80ac-138a2eca0ecb"
   ]

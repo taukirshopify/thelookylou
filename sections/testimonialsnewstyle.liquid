@@ -37,7 +37,7 @@
    {% endif %} 
   
     @media screen and (min-width: 1200px) {
-  .testimonials-2 .section-{{ section.id }}-padding { width: var(--page-width); max-width: 75%; }
+  .testimonials-2 .section-{{ section.id }}-padding { width: var(--page-width); max-width: 90%; }
 
     }
   
@@ -225,6 +225,9 @@ assign padding_bottom = padding[1]
   .custom-testimonials-style-2 .testimonials-2 .testimonial-image .img {
     max-width: 120px;
     border-radius: 0% !important;
+    height: 145px;
+    width: 150px;
+    object-fit: cover;
 }
   .custom-testimonials-style-2 .testimonials-2 .testimonial-image .img{
      position: unset;
@@ -235,11 +238,6 @@ assign padding_bottom = padding[1]
    color:  #505050;
 }
 
-  .custom-testimonials-style-2 .testimonials-2 .testimonial-image .img {
-
-    max-width: 52px;
-
-}
 
 .left-iamge-wrapper {
   width: 35%;

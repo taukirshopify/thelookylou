@@ -1,13 +1,16 @@
 {
   "sections": {
-
     "form": {
       "type": "contact-form",
       "settings": {
         "page_full_width": true,
         "page_full_width_spacing": false,
         "heading": "Contact Form",
+        "heading_scale": 50,
+        "heading_scale_mobile": 30,
+        "color_scheme_font": "primary-color07",
         "heading_size": "h1",
+        "headingtwo": "It's always a pleasure hearing from you!",
         "color_scheme": "primary-color04",
         "padding_top": 0,
         "padding_bottom": 12,

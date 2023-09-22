@@ -323,9 +323,12 @@ h2.specification__heading {
 .specification__text-item.grid__item{width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);}
 .specification_block .specification_image-item-list { width: 80px;  height: 80px; display: flex; align-items: center; justify-content: center;}
 .specification_block .specification__text-item--list{ padding-left: 20px; }
-.specification_block{display: flex; height: 100%; align-items: center; flex-wrap: nowrap; background: var(--gradient-base-background-1); border-radius: var(--text-boxes-radius); 
-  padding: 1.30rem; box-shadow: 0 0 10px #d6d6d6; transition: var(--duration-default); }
-.specification_block:hover { background: var(--gradient-base-accent-1); }
+.specification_block{display: flex; height: 100%; align-items: center; flex-wrap: nowrap;  border-radius: var(--text-boxes-radius); 
+  padding: 1.30rem; 
+  
+  border: 2px dashed #fff;
+  transition: var(--duration-default); }
+
 .specification_block h2.specification__heading{
    margin:0; margin-bottom: 1rem; overflow:hidden;  transition: var(--duration-default); }
 .specification_block .specification__text p { transition: var(--duration-default); }

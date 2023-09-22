@@ -47,6 +47,7 @@
 }
 
 .accordion .icon-accordion {
+  display: none;
   align-self: center;
   fill: rgb(var(--color-base-background-1));
   height: calc(var(--font-heading-scale) * 2rem);

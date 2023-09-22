@@ -374,7 +374,7 @@
   .banner--mobile-bottom .banner__media::after {
     display: none;
   }
-  .banner__box { padding: 4rem 4rem; }
+  .banner__box { padding: 1rem  }
 }
 
 /* .banner::after, */
@@ -427,11 +427,11 @@
 }
 
 @media screen and (min-width: 750px) {
-  .banner__box {
+  /* .banner__box {
     width: auto;
     max-width: 71rem;
     min-width: 45rem;
-  }
+  } */
  
 }
 @media screen and (min-width: 990px) {

@@ -51,7 +51,7 @@
 
 
 
-      @media screen and (min-width: 750px) {
+      @media screen and (min-width: 1200px) {
           .section-{{ section.id }} .button-two {
             margin-left: 0px;
             display: inline-block;
@@ -70,7 +70,8 @@
           }
             .specification__media-item.grid__item {
               width: calc(65% - var(--grid-desktop-horizontal-spacing) / 2);
-              padding: 0 40px;
+              padding: 0 0 0 40px;
+              margin:0;
           }
 
           {% comment %} .specification_block {
@@ -113,26 +114,57 @@
               width: calc(65% - var(--grid-desktop-horizontal-spacing) / 2);
               padding: 0 40px;
           }
+          .specification__media-item.grid__item {
+            width: calc(67% - var(--grid-desktop-horizontal-spacing) / 2);
+            padding: 0 80px;
+        }
+  
       }
 
 
 
 
 
-      @media screen and (min-width: 1400px) {
+      @media screen and (min-width: 1020px) {
       
-        .specification__media-item.grid__item {
-          width: calc(67% - var(--grid-desktop-horizontal-spacing) / 2);
-          padding: 0 80px;
-      }
+        .specification .specification__text-item .specification__content {
 
+          display: inline-block;
 
       }
 
+    .section-template--20949040333119__020a8d32-9114-433b-b9cd-69ef6e5b1537 .title-0 {
+
+      line-height: 1;
+  }
+  .specification_block {
 
 
-      @media screen and (max-width: 750px) {
+    margin: 1rem 0;
+
+}
+.specification_block h2.specification__heading {
+  margin: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  transition: var(--duration-default);
+}
+
+      }
+      @media only screen and (max-width: 1550px) and (min-width: 1200px)  {
       
+        .specification__text-item.grid__item {
+          padding-right: 22px;
+      }
+      .specification_block {
+
+        margin: 0rem 0;
+    }
+      }
+
+
+      @media screen and (max-width: 1500px) {
+
         .specification_block .specification_image-item-list {
           margin-bottom: 0;
       }
@@ -158,7 +190,14 @@
        }
       }
 
-
+      .specification .specification__text-item .specification__content {
+        position: relative;
+        background: none;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+    }
 {% comment %} video css  {% endcomment %}
 .video-wrapper {
   position: relative;
@@ -223,7 +262,7 @@
       {% comment %} VIDEO CODE START  {% endcomment %}
                   <div class="video-wrapper-outer">
                         <div class="video-wrapper">
-                          <video src="{{ section.settings.video.sources[1].url }}" poster="{{ section.settings.cover_image | img_url:'' }}"></video>
+                          <video src="{{ section.settings.video.sources[1].url }}" controls autoplay></video>
                       </div>
                   </div>
         {% comment %} VIDEO CODE END HERE  {% endcomment %}
