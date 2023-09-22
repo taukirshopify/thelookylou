@@ -1092,6 +1092,10 @@ ul.product-list-style .card__content .variant-option-color,
 ul.product-list-style .card__content .variant-option-size{
   display: none;
 }
+ul.product-list-style .product-icons{
+
+  display: none !important;
+}
 ul.product-list-style li:not(:last-child) {
   margin-bottom: 30px;
 }

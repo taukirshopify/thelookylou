@@ -314,7 +314,7 @@
           "type": "text",
           "settings": {
             "image": "shopify:\/\/shop_images\/357347996_166265449779634_8051296006765209937_n.jpg",
-            "content-heading": "john",
+            "content-heading": "",
             "author": "Greyson's Parents",
             "job_title": "john",
             "quote": "<p>The Looky Lou has brought such joy & wonder to our son. He especially adores the book & consistently pulls it off of the shelf. The packaging was also perfection & will surely make the perfect gift for any expecting parents.<\/p>",
@@ -327,7 +327,7 @@
           "type": "text",
           "settings": {
             "image": "shopify:\/\/shop_images\/almas_parents_250x_798d3da6-16e9-4f09-bb82-07dcf716011b.png",
-            "content-heading": "Jack's Parents",
+            "content-heading": "",
             "author": "Jack's Parents",
             "job_title": "john",
             "quote": "<p>AMAZING. The product itself is really well made and has a really nice matte finish to the plastic so you know it's high quality. I originally purchased it for my younger son to take those monthly newborn photos, but my toddler also loves it and likes to play with it. The packaging was also top notch and I even re-used the box b\/c it was such a cute box. I immediately purchased 2 more for baby shower gifts.<\/p>",
@@ -434,7 +434,7 @@
         "desktop_column": 4,
         "tablet_column": 3,
         "mobile_column": 1,
-        "centered_slide": false,
+        "centered_slide": true,
         "swiper_pagination": false,
         "swiper_navigation": true,
         "auto_play": 0,

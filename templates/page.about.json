@@ -17,13 +17,21 @@
         "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Welcome to the #lookylou",
+            "heading": "Welcome to the",
+            "heading_size": "h1"
+          }
+        },
+        "302ec370-4c2c-4f3b-8a3c-dfb1b2924c47": {
+          "type": "heading",
+          "settings": {
+            "heading": "#lookylou",
             "heading_size": "h1"
           }
         }
       },
       "block_order": [
-        "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-heading-1"
+        "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-heading-1",
+        "302ec370-4c2c-4f3b-8a3c-dfb1b2924c47"
       ],
       "settings": {
         "page_full_width": true,
@@ -37,6 +45,7 @@
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
+        "color_scheme_font": "primary-color07",
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
