@@ -123,7 +123,7 @@
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "background-1",
     "accent_icons": "outline-button",
-    "breadcrumb_image": "shopify:\/\/shop_images\/Frame_427320234.jpg",
+    "breadcrumb_image": "shopify:\/\/shop_images\/Frame_427320234_1.png",
     "image_overlay_opacity": 0,
     "breadcrumb_padding_top": 100,
     "breadcrumb_padding_bottom": 80,
@@ -255,7 +255,7 @@
           "21d555c4-7fe0-45b1-bda5-e24e643e85cc": {
             "type": "link_list",
             "settings": {
-              "heading": "Look lou",
+              "heading": "Looky Lou",
               "menu": "footer",
               "alignment": "",
               "list_style": "vertical"

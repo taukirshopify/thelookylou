@@ -53,7 +53,7 @@
         "template--15458952937670__e7583c6d-668b-405a-853d-7edfb463848b-1673251047adb9b428-0": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Isolation_Mode.png",
+            "image": "shopify:\/\/shop_images\/Isolation_Mode_2.png",
             "title": "Fits any phone or tablet",
             "heading_size": "h0",
             "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.<\/p>",
@@ -64,7 +64,7 @@
         "template--15458952937670__e7583c6d-668b-405a-853d-7edfb463848b-1673251047adb9b428-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Layer_1_eb916edf-87c2-494c-b0a3-82167dc8d690.png",
+            "image": "shopify:\/\/shop_images\/Layer_1_1_5336236b-2aa3-4717-89f6-46d0808d45fd.svg",
             "title": "Built-in Rattle",
             "heading_size": "h1",
             "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.<\/p>",
@@ -75,7 +75,7 @@
         "template--15458952937670__e7583c6d-668b-405a-853d-7edfb463848b-1673251047adb9b428-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Layer_1_1.png",
+            "image": "shopify:\/\/shop_images\/Layer_1_4.png",
             "title": "Non-toxic materials",
             "heading_size": "h1",
             "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.<\/p>",
@@ -175,8 +175,8 @@
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "mobile_content_alignment": "left",
-        "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_top": 20,
+        "padding_bottom": 20,
         "custom_class_name": ""
       }
     },
@@ -202,7 +202,7 @@
           "type": "text",
           "settings": {
             "block_image": "shopify:\/\/shop_images\/mane-spin.gif",
-            "show_content": true,
+            "show_content": false,
             "block_title": "Title",
             "enable_title_link": false,
             "block_sub_title": "Sub title",
@@ -216,14 +216,14 @@
           "type": "text",
           "settings": {
             "block_image": "shopify:\/\/shop_images\/looky_clip.gif",
-            "show_content": true,
+            "show_content": false,
             "block_title": "",
             "enable_title_link": false,
             "block_sub_title": "",
             "block_description": "Short description",
             "block_button_text": "",
             "block_button_link": "",
-            "desktop_contents_alignments": "center"
+            "desktop_contents_alignments": "top-right"
           }
         }
       },
@@ -235,7 +235,7 @@
         "page_full_width": false,
         "page_full_width_spacing": false,
         "sub_heading": "",
-        "title": "grid-banner",
+        "title": "",
         "heading_size": "h1",
         "subtitle": "",
         "text_style": "caption-with-letter-spacing",
@@ -413,11 +413,12 @@
       "settings": {
         "page_full_width": false,
         "page_full_width_spacing": false,
-        "title": "",
+        "title": "Our Client Experience",
         "heading_size": "h1",
         "heading_scale": 30,
         "heading_scale_mobile": 24,
-        "color_scheme_font": "primary-color04",
+        "color_scheme_font": "primary-color01",
+        "sub_heading": "shopify:\/\/shop_images\/v_1.png",
         "description": "",
         "button_label": "",
         "button_link": "",
@@ -451,7 +452,7 @@
         "button_link": "",
         "button_style_secondary": false,
         "column_alignment": "center",
-        "collection": "frontpage",
+        "collection": "all-collectin",
         "products_to_show": 8,
         "columns_desktop": 4,
         "full_width": true,
@@ -465,8 +466,8 @@
         "show_new_tag": false,
         "show_rating": false,
         "enable_quick_add": true,
-        "padding_top": 112,
-        "padding_bottom": 120,
+        "padding_top": 40,
+        "padding_bottom": 40,
         "custom_class_name": "",
         "swiper_enable": true,
         "desktop_column": 4,
@@ -562,8 +563,8 @@
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "mobile_content_alignment": "left",
-        "padding_top": 20,
-        "padding_bottom": 112,
+        "padding_top": 0,
+        "padding_bottom": 48,
         "custom_class_name": ""
       }
     },
@@ -621,7 +622,7 @@
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
-        "padding_top": 76,
+        "padding_top": 36,
         "padding_bottom": 44
       }
     },

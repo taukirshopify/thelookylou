@@ -30,7 +30,7 @@
                 </svg>
                 
                 
-               <span>  {{ c.settings.slide }} </span>
+               <span class="benner">  {{ c.settings.slide }} </span>
 {% comment %} 
                 <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
                   <circle cx="3.78094" cy="3.53705" r="3.15619" fill="currentColor"/>
@@ -68,9 +68,10 @@
 
 
   
-    .section-{{ section.id }} .offer-notice span{
+    .section-{{ section.id }} .offer-notice span.benner{
       padding: 0 7px; 
       font-weight: 400;
+      font-family: var(--font-heading-family);
          }
     @media screen and (min-width: 750px) {
   

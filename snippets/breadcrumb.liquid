@@ -6,10 +6,11 @@
  .breadcrumb{padding-top:{{settings.breadcrumb_padding_top}}px;padding-bottom:{{settings.breadcrumb_padding_bottom}}px;margin-bottom:{{settings.breadcrumb_margin_bottom}}px;position: relative;z-index: 1;}  
  .breadcrumb .breadcrumb_title{margin:0;  
   {% render 'globalcolor' , color: settings.color_scheme_font_breadcome %}
-
+  font-family: var(--font-heading-family);
   font-size: 40px;
 font-style: normal;
-font-weight: 800;
+font-weight: 400;
+color: var(--color-primary-one) !important;
 }
 
 
@@ -51,16 +52,14 @@ font-weight: 800;
     <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a> 
     <span aria-hidden="true" class="breadcrumb__sep">&#47;</span>
     {% if collection.handle %}
-    {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
-    {{ collection.title | link_to: url }}  
+   
     {% endif %}
     {% else %}
-    {% capture url %}/collections/all{% endcapture %}
-    <a href="{{ url }}">{{ 'general.breadcrumbs.all' | t }}</a>
+    
     {% endif %}
 
     <span aria-hidden="true" class="breadcrumb__sep">&#47;</span>
-    <span>{{ product.title }}</span>
+
 
 
     {% elsif template contains 'collection' and collection.handle %}
@@ -68,18 +67,16 @@ font-weight: 800;
     <h1 class="breadcrumb_title">{{ 'general.breadcrumbs.all_collections' | t }}</h1>
     {% else %}
     <h1 class="breadcrumb_title">{{ 'general.breadcrumbs.collection' | t }}</h1>
-    <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
 
-    <span aria-hidden="true" class="breadcrumb__sep">&#47;</span>
+
+
     {% if current_tags %}
-    {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
-    {{ collection.title | link_to: url }}
-    <span aria-hidden="true" class="breadcrumb__sep">&#47;</span>
-    <span>{{ current_tags | join: " + " }}</span>
+
     {% else %}
-    <span>{{ collection.title }}</span>
+
 
     {% endif %}  
+
     {% endif %}
     {% elsif template == 'blog' %}
     <h1 class="breadcrumb_title">{{ blog.title }}</h1>

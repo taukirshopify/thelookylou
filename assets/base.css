@@ -625,7 +625,7 @@ body,
 }
 
 ::selection {
-  background-color: rgba(var(--color-foreground), 1); color: var(--gradient-base-background-1);
+  background-color: rgba(var(--color-foreground), 1); color: var(--color-primary-one) ;
 }
 
 .text-body {
@@ -2030,7 +2030,7 @@ button.shopify-payment-button__button--unbranded {
 
 @media only screen and (min-width: 1100px) {
   .slideshow__text-wrapper .slideshow__text h2.banner__heading {
-    margin-right: 33%; 
+    margin-right: 21%; 
 
     line-height: 1.2;
 }

@@ -51,6 +51,9 @@ content: "";
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .section-{{ section.id }}  .image-with-text__media {
+    border-radius:30px;
+}
 {%- endstyle -%}
   
 <div class="image-with-text section-{{ section.id }}  color-{{ section.settings.color_scheme }}  {{ section.settings.custom_class_name }} image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}

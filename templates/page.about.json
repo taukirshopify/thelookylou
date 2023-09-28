@@ -11,48 +11,6 @@
         "padding_bottom": 40
       }
     },
-    "22a8a68d-a571-421e-ab33-6991a7e3c203": {
-      "type": "image-banneraboutpage",
-      "blocks": {
-        "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Welcome to the",
-            "heading_size": "h1"
-          }
-        },
-        "302ec370-4c2c-4f3b-8a3c-dfb1b2924c47": {
-          "type": "heading",
-          "settings": {
-            "heading": "#lookylou",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "template--20948669366591__22a8a68d-a571-421e-ab33-6991a7e3c203-heading-1",
-        "302ec370-4c2c-4f3b-8a3c-dfb1b2924c47"
-      ],
-      "settings": {
-        "page_full_width": true,
-        "page_full_width_spacing": false,
-        "image": "shopify:\/\/shop_images\/Frame_15043_8329c339-d82b-40d8-a197-70ef185f7332.png",
-        "heading_scale": 50,
-        "heading_scale_mobile": 30,
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "adapt_height_first_image": true,
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme_font": "primary-color01",
-        "color_scheme": "inverse",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true,
-        "custom_class_name": ""
-      }
-    },
     "afe2c6b8-22de-4cfc-9335-93e073bf31e7": {
       "type": "image-with-textaboutus",
       "blocks": {
@@ -70,7 +28,7 @@
         "template--20948669366591__afe2c6b8-22de-4cfc-9335-93e073bf31e7-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Kaitlyn & Chad were taking the 1000th photo of their newborn, cooing and clapping and basically making themselves look like idiots to get their baby to look at the camera. While scrolling through a few hundred unusable (and uncute) photos, Chad happened to mumble something like “They should make something that gets your kid to actually look at the camera…”<br\/><\/p><p>And from that moment forward, Kaitlyn went to work ideating, testing and building what is now The Looky Lou.<\/p>",
+            "text": "<p>Kaitlyn & Chad were taking the 1000th photo of their newborn, cooing and clapping and basically making themselves look like idiots to get their baby to look at the camera. While scrolling through a few hundred unusable (and uncute) photos, Chad happened to mumble something like “They should make something that gets your kid to actually look at the camera…”<br\/><\/p><p>And from that moment forward, Kaitlyn went to work ideating, testing and building what is now The Looky Lou<\/p>",
             "text_style": "body"
           }
         },
@@ -103,15 +61,14 @@
         "content_layout": "no-overlap",
         "before_image": "shopify:\/\/shop_images\/image_29_2.png",
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 0,
+        "padding_bottom": 0,
         "custom_class_name": ""
       }
     }
   },
   "order": [
     "main",
-    "22a8a68d-a571-421e-ab33-6991a7e3c203",
     "afe2c6b8-22de-4cfc-9335-93e073bf31e7"
   ]
 }
