@@ -1393,6 +1393,7 @@ a.button.add-wishlist.button--secondary {
   max-width: 100%;
   font-weight: 700;
   font-size: 1.6rem;
+  font-family: var(--font-heading-family);
   @media screen and (max-width: 750px) {
     font-size: 14px;
   }

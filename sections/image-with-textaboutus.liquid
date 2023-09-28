@@ -157,15 +157,18 @@ content: "";
 .media{
   background: transparent;
 }
-.featuredcollection-bg {
-  width: 100%;
-  height: 100%;
-  background-image: url({{ section.settings.bg-image | img_url:'master' }});
-  background-size: cover;
-  background-attachment: fixed;
-  margin: 0;
-  padding: 0;
-}
+
+{% if section.settings.bg-image != blank %}
+  .featuredcollection-bg{
+    width: 100%;
+    height: 100%;
+    background-image:url({{ section.settings.bg-iamge | img_url:'master' }});
+    background-size: cover;
+    background-attachment:fixed;
+    margin: 0;
+    padding: 0;
+  }
+ {% endif %}
 </style>
 
 {% schema %}

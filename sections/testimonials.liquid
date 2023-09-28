@@ -9,12 +9,33 @@
   }
 
 .testimonials-2 { position: relative; }
-  {% if section.settings.after_image != blank %}
-.testimonials-2:after{ position: absolute; content:''; background-image: url('{{ section.settings.after_image | image_url: width: 250 }}'); 
-   background-repeat: no-repeat; background-size: auto; background-attachment: scroll; background-position: center center; height: 217px;
-    width: 227px; right: 2%; bottom: 0;}
+{% if section.settings.after_image != blank %}
+.testimonials-2:after{ position: absolute; content:''; 
+  
+  background-image: url('{{ section.settings.after_image | image_url: width: 250 }}'); 
+  @media only screen and (max-width: 600px) {
+    background-image: url('{{ section.settings.after_image_mobile | image_url: width: 250 }}'); 
+}
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: scroll;
+    background-position: center right;
+    height: 217px;
+    width: 243px;
+    left: 0;
+    bottom: -5.4%;
+    object-fit: contain;
+  
+  
+  }
   
    {% endif %} 
+
+
+
+
+
+
   
     @media screen and (min-width: 1200px) {
   .testimonials-2 .section-{{ section.id }}-padding { width: var(--page-width); max-width: 75%; }
@@ -76,7 +97,7 @@ assign padding_bottom = padding[1]
  %}
 
 
-<div class="testimonials-2 {{ section.settings.custom_class_name }} color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
+<div class="testimonials-2 {{ section.settings.custom_class_name }} section-{{ section.id }} color-{{ section.settings.color_scheme }} {% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
 <div class="{% if section.settings.page_full_width %} page-full-width {% else %} page-width {% endif %} {% if section.settings.page_full_width_spacing %} page-full-width_spacing {% endif %}section-{{ section.id }}-padding isolate">
 <div class="row">    
   {%- if section.settings.image != blank -%}
@@ -113,7 +134,11 @@ assign padding_bottom = padding[1]
   {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin content-align--{{ section.settings.column_alignment }}">
          {%- if section.settings.sub_heading != blank -%}  
-         <h6 class="sub-heading">{{ section.settings.sub_heading | escape }}</h6>
+         <h6 class="sub-heading-two">
+          <img src="{{ section.settings.sub_heading | img_url:'master' }}" alt="">
+       
+       
+       </h6>
          {%- endif -%} 
          {%- if section.settings.title != blank -%}  
           <h2 class="title {{ section.settings.heading_size }}">
@@ -220,6 +245,27 @@ assign padding_bottom = padding[1]
 
 }
 
+
+.section-{{ section.id }} h2.title{
+  {% render 'globalcolor' , color: section.settings.color_scheme_font %}
+  font-size: {{ section.settings.heading_scale_mobile }}px !important; 
+  }
+
+  @media screen and (min-width: 750px) {
+
+    .section-{{ section.id }} h2.title{
+      {% render 'globalcolor' , color: section.settings.color_scheme_font %}
+      font-size:{{ section.settings.heading_scale }}px !important; 
+      }
+
+  }
+
+
+  .section-{{ section.id }} .sub-heading-two {
+
+  
+  }
+
 </style>
 
 {% schema %}
@@ -268,11 +314,85 @@ assign padding_bottom = padding[1]
         ],
         "default": "h1",
         "label": "t:sections.all.heading_size.label"
-      }, {
-        "type": "text",
+      },   
+      {
+        "type": "number",
+        "id": "heading_scale",
+        "label": "Heading font on Desktop",
+        "default": 50
+      },
+      {
+        "type": "number",
+        "id": "heading_scale_mobile",
+        "label": "Heading font on Mobile",
+        "default": 30
+      },  
+      {
+        "type": "select",
+        "id": "color_scheme_font",
+        "options": [
+          {
+            "value": "accent-1",
+            "label": "t:sections.all.colors.accent_1.label"
+          },
+          {
+            "value": "accent-2",
+            "label": "t:sections.all.colors.accent_2.label"
+          },
+          {
+            "value": "primary-color01",
+            "label": "primary color one"
+          },
+          {
+            "value": "primary-color02",
+            "label": "primary color two"
+          },
+          {
+            "value": "primary-color03",
+            "label": "primary color three"
+          },
+          {
+            "value": "primary-color04",
+            "label": "primary color Four"
+          },
+          {
+            "value": "primary-color05",
+            "label": "primary color Five"
+          },
+          {
+            "value": "primary-color06",
+            "label": "primary color Six"
+          },
+          {
+            "value": "primary-color07",
+            "label": "primary color Severn"
+          },
+          {
+            "value": "primary-color08",
+            "label": "primary color Eight"
+          },
+          {
+            "value": "background-1",
+            "label": "t:sections.all.colors.background_1.label"
+          },
+          {
+            "value": "background-2",
+            "label": "t:sections.all.colors.background_2.label"
+          },
+          {
+            "value": "inverse",
+            "label": "t:sections.all.colors.inverse.label"
+          }
+        ],
+        "default": "accent-1",
+        "label": "t:sections.all.colors.label"
+      },
+ {
+        "type": "image_picker",
         "id": "sub_heading",
-        "label": "t:sections.all.sub_heading.label"
-      }, {
+        "label": "Section Image"
+       },
+        {
         "type": "text",
         "id": "description",
         "label": "t:sections.all.description.label"
@@ -342,13 +462,46 @@ assign padding_bottom = padding[1]
             "label": "t:sections.all.colors.accent_2.label"
           },
           {
+            "value": "primary-color01",
+            "label": "primary color one"
+          },
+          {
+            "value": "primary-color02",
+            "label": "primary color two"
+          },
+          {
+            "value": "primary-color03",
+            "label": "primary color three"
+          },
+          {
+            "value": "primary-color04",
+            "label": "primary color Four"
+          },
+          {
+            "value": "primary-color05",
+            "label": "primary color Five"
+          },
+          {
+            "value": "primary-color06",
+            "label": "primary color Six"
+          },
+          {
+            "value": "primary-color07",
+            "label": "primary color Severn"
+          },
+          {
+            "value": "primary-color08",
+            "label": "primary color Eight"
+          },
+          {
             "value": "background-1",
             "label": "t:sections.all.colors.background_1.label"
           },
           {
             "value": "background-2",
             "label": "t:sections.all.colors.background_2.label"
-          }, {
+          },
+          {
             "value": "inverse",
             "label": "t:sections.all.colors.inverse.label"
           }
@@ -359,6 +512,11 @@ assign padding_bottom = padding[1]
       {
         "type": "image_picker",
         "id": "after_image",
+        "label": "t:sections.testimonials-style-2.settings.after_image.label"
+      },
+      {
+        "type": "image_picker",
+        "id": "after_image_mobile",
         "label": "t:sections.testimonials-style-2.settings.after_image.label"
       },
   {
@@ -490,7 +648,7 @@ assign padding_bottom = padding[1]
 "type": "select",
 "id": "star",
 "label": "rating",
-"default": "3",
+"default": "5",
 "options": [
 {
 "value": "0",

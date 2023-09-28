@@ -4,11 +4,13 @@
 .slideshow__text-wrapper .slideshow__text h2.banner__heading {
     color: var(--color-icon);
 }
+
+
 .slideshow__text .banner__text{
     color: var(--color-icon);;
     margin-bottom: 0;
     font-family: var(--font-body-family);
-    font-weight: 700;
+    font-weight: 400;
     font-size: 2rem;
     line-height: 30px
 }

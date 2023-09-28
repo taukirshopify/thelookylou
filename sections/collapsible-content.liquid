@@ -134,15 +134,15 @@
 }
 .section-{{ section.id }} .collapsible-content-wrapper-narrow .h1 {
   {% render 'globalcolor' , color: section.settings.color_scheme_font %}
-  font-weight:700;
+
   font-size: {{ section.settings.heading_scale_mobile }}px;
   }
 
   @media screen and (min-width: 750px) {
 
-    .section-{{ section.id }} h2.image-with-text__heading{
+    .section-{{ section.id }} .collapsible-content-wrapper-narrow .h1 {
       {% render 'globalcolor' , color: section.settings.color_scheme_font %}
-      font-weight:700;
+
       font-size:{{ section.settings.heading_scale }}px; 
       margin-right: 45px;
       }

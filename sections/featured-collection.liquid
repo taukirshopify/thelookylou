@@ -53,15 +53,20 @@
 <style>
 
   .bg-iamge{}
-  .featuredcollection-bg{
-    width: 100%;
-    height: 100%;
-    background-image:url({{ section.settings.bg-iamge | img_url:'master' }});
-    background-size: cover;
-    background-attachment:fixed;
-    margin: 0;
-    padding: 0;
-  }
+
+   {% if section.settings.bg-iamge != blank %}
+    .featuredcollection-bg{
+      width: 100%;
+      height: 100%;
+      background-image:url({{ section.settings.bg-iamge | img_url:'master' }});
+      background-size: cover;
+      background-attachment:fixed;
+      margin: 0;
+      padding: 0;
+    }
+   {% endif %}
+
+
 </style>
 
 <div class="color-{{ section.settings.color_scheme }} isolate  featuredcollection-bg">

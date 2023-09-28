@@ -4,6 +4,7 @@
 .slideshow__text-wrapper .slideshow__text h2.banner__heading {
    margin-bottom: 0;
    color: rgb(var(--color-foreground));
+   font-weight: 400;
 }
 
 .swiper-slide[data-swiper-slide-index="1"] .slideshow__text-wrapper .slideshow__text h2.banner__heading { color: #771929; }
@@ -11,8 +12,8 @@
 
 .slideshow__text .banner__text{
     color: rgb(var(--color-foreground));
-    font-family: var(--font-body-family);
-    font-weight: 700;
+    font-family: var(--font-heading-family);
+    font-weight: 400;
     font-size: 2rem;
     line-height: 30px;     margin: 2rem 0 1rem 0;
     @media only screen and (min-width: 1020px)  {

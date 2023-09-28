@@ -184,13 +184,14 @@
              {% endif %}   
              {% unless section.settings.pagination == 'numbers' %}
             <div id="AjaxinatePagination" class="pagination-method-{{- section.settings.pagination -}}">
-            <div class="custom-page-progress-bar" data-page-items-count='{{collection.products_count }}'>
-            {%- assign productSize = collection.products.size | plus: paginate.current_offset -%}
-            <p>{{ 'general.pagination.count_text' | t:current_count:productSize,total_count:collection.products_count}}</p>
-            <div class="progress-bar">
-            <div class="active-bar" style="width: {{productSize | times:100.0 | divided_by: collection.products_count}}%"></div>
-            </div>
-            </div>
+
+   {% comment %} <div class="custom-page-progress-bar" data-page-items-count='{{collection.products_count }}'>
+               {%- assign productSize = collection.products.size | plus: paginate.current_offset -%}
+                <p>{{ 'general.pagination.count_text' | t:current_count:productSize,total_count:collection.products_count}}</p>
+                <div class="progress-bar">
+                    <div class="active-bar" style="width: {{productSize | times:100.0 | divided_by: collection.products_count}}%"></div>
+                </div>
+            </div>  {% endcomment %}
             
             {% if paginate.next %}
             <div class="load_more_btn"><a class="dt-sc-btn button text-center" href="{{ paginate.next.url }}">{{ 'general.pagination.load_more' | t}}</a></div>

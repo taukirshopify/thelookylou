@@ -63,7 +63,8 @@ footer .footer-block__newsletter .newsletter-form { margin: 0 auto; max-width: 7
 }
 
 .newsletter-form__button { margin:auto 0; width:auto;  z-index: 2;
-  
+  font-family: var(--font-heading-family);
+  font-weight: 400;
    background: var(--color-primary-one);
   color: var(--gradient-base-background-1); font-size: 1.6rem; position: absolute; right: 10px; top: 5px;
     bottom: 5px; padding: 1.3rem 2.5rem 1.3rem 2.5rem; border-radius:10px; height:5rem;
