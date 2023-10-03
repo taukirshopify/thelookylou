@@ -1,4 +1,4 @@
-{% if settings.enable_scroll_to_top %}
+{% comment %} {% if settings.enable_scroll_to_top %}
 <a id="to-top" href="#{{ page_title | handle }}" class="dt-sc-to-top" style="display:block">
   <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -45,4 +45,4 @@ $(window).scroll(function () {
 });
 
 
-</script>
+</script> {% endcomment %}

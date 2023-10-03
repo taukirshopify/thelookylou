@@ -8,6 +8,9 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+
+
+
 .testimonials-2 { position: relative;
 
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -19,6 +22,9 @@
   
   background-image: url('{{ section.settings.after_image | image_url: width: 250 }}'); 
   @media only screen and (max-width: 600px) {
+
+
+    
     background-image: url('{{ section.settings.after_image_mobile | image_url: width: 250 }}'); 
 }
     background-repeat: no-repeat;
@@ -40,8 +46,14 @@
   .testimonials-2 .section-{{ section.id }}-padding { width: var(--page-width); max-width: 90%; }
 
     }
-  
+
   @media screen and (min-width: 750px) {
+
+    .section-{{ section.id }}  .title-wrapper-with-link.content-align--center {
+    align-items: center;
+    margin-bottom: 14%;
+}
+
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -96,7 +108,7 @@ assign padding_bottom = padding[1]
  %}
 
 
-<div class="testimonials-2 {{ section.settings.custom_class_name }} section-{{ section.id }}  color-{{ section.settings.color_scheme }} {% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
+<div class="testimonials-2 section-{{ section.id }} {{ section.settings.custom_class_name }} section-{{ section.id }}  color-{{ section.settings.color_scheme }} {% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
 <div class="{% if section.settings.page_full_width %} page-full-width {% else %} page-width {% endif %} {% if section.settings.page_full_width_spacing %} page-full-width_spacing {% endif %}section-{{ section.id }}-padding isolate">
 <div class="row">    
   {%- if section.settings.image != blank -%}
@@ -200,14 +212,14 @@ assign padding_bottom = padding[1]
         {%- endfor -%}
       </div>
    {% if section.settings.swiper_navigation != blank %}
-            <div class="testimonial-navigation-s2">
+    
               <div class="swiper-button-next">
                 <span></span>
               </div>
               <div class="swiper-button-prev">
                 <span></span>
               </div>
-            </div>
+        
           {% endif %}
     </div>
     {% if section.settings.swiper_pagination != blank %}
@@ -281,6 +293,19 @@ assign padding_bottom = padding[1]
    width: 65%;
   
   }
+
+
+
+
+  .custom-testimonials-style-2 .testimonials-2 .testimonial-navigation-s2 .swiper-button-next {
+
+    right: 0;
+    top: 50%;
+    margin: auto;
+    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+}
+
+
 </style>
 
 

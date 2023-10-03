@@ -298,7 +298,7 @@ body#the-looky-lou {
 
 .swiper .swiper-button-next:after { background: var(--color-primary-one); position: absolute;  content:'';  -webkit-mask-image:url("arrow-next-two.png");  mask-image: url("arrow-next-two.png");  width: 40px; 
  height: 35px;  -webkit-mask-repeat: no-repeat;  -webkit-mask-size: contain;  -webkit-mask-position: center; transition: var(--duration-default); }
-.swiper .swiper-button-next:before { content: ""; position: absolute; border-left: 2px dotted currentcolor; left: -14px; 
+.swiper .swiper-button-next:before { content: ""; position: absolute;  left: -14px; 
     margin: auto; z-index: 1; height: 22px; width: 1px; opacity: .2; }
 .swiper .swiper-button-next:hover:after, .swiper .swiper-button-prev:hover:after { background: var(--gradient-base-background-2); }
 .slideshow .swiper .swiper-button-prev, 
@@ -625,7 +625,7 @@ body,
 }
 
 ::selection {
-  background-color: rgba(var(--color-foreground), 1); color: var(--color-primary-one) ;
+  background-color:var(--color-primary-one) ;  color:  rgba(var(--color-foreground), 1);
 }
 
 .text-body {

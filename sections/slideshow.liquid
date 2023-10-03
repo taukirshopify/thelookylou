@@ -173,8 +173,8 @@
                 </div>
               {%- endif -%}
               {%- if block.settings.button_label != blank -%}
-                <div class="banner__buttons button-two">
-                  <a{% if block.settings.link %} href="{{ block.settings.link_two }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary_two %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label_two | escape }}</a>
+                <div class="banner__buttons button-two" >
+                  <a id="takemeto" {% if block.settings.link %} {% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary_two %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label_two | escape }}</a>
                 </div>
               {%- endif -%}
              </div>
@@ -196,6 +196,32 @@
    </div>
 </slideshow-component>
 
+
+<style>
+
+.button-two a{cursor: pointer;}
+</style>
+
+<script>
+
+
+
+
+    $( '#takemeto' ).on( 'click', function(e){
+      e.preventDefault();
+  
+  
+     
+      // Run a scroll animation to the position of the element which has the same id like the href value.
+      $( 'html, body' ).animate({
+        scrollTop: $(".specification").offset().top
+      }, '300' );
+    
+    
+    });
+  
+
+</script>
 {%- if request.design_mode -%}
   <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}

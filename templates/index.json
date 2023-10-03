@@ -114,7 +114,7 @@
         "vertical_position": "veritcal_center",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 12,
         "padding_bottom": 88,
         "swiper_enable": false,
         "desktop_column": 4,
@@ -272,6 +272,120 @@
             "slide": "MAKE MORE MEMORIES"
           }
         },
+        "d894e3b8-86eb-4fd6-9181-a96f64450da0": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "1ffc6f75-d601-4bb1-8b6f-08ab0ca6cd23": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "85900922-6f7f-419f-83b2-ba6b99dbb364": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "eef651ea-704c-4250-a1f8-0aca7f26b94e": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "52befbc3-12a2-4574-aae5-a48bc28182a4": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "d33accaf-f30d-407f-97b3-72a783e7136e": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "3f32c4c9-3d4b-4882-8c82-0a9be38e7914": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "4f8cee0a-b97c-4360-8271-6214f24ab13c": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "93fc4512-1581-4eb1-b0f7-83c68114bcca": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "34c1a745-0508-4f36-8733-cbb2c98bdfe1": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "7b53db02-a40a-4520-9e20-42a98241bb06": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "e16f82d9-92c5-4e9b-b942-2b75d9c5170f": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "9b97b80c-c385-4dea-b591-8e106bc4cd3a": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "a7fcacdf-c5db-4cef-bb4e-7d78e62f2bbb": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "ef4562fa-acb5-4c04-b6cd-eb6cb46862fe": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "680fbaa1-f24b-4c19-9057-54e457e7a89d": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "cee84b4c-2bd0-479a-85f8-4bb29be55802": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "2009c21a-d090-45d1-ab62-3dbbdb47f590": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
+        "1a20ca95-f110-4edb-b412-4fe7ccbf3498": {
+          "type": "slide",
+          "settings": {
+            "slide": "MAKE MORE MEMORIES"
+          }
+        },
         "a5531cb0-5523-4e9e-af94-96994973f15f": {
           "type": "slide",
           "settings": {
@@ -353,6 +467,25 @@
       },
       "block_order": [
         "c47fa3b8-bae5-44d9-9eac-27aedb9facb5",
+        "d894e3b8-86eb-4fd6-9181-a96f64450da0",
+        "1ffc6f75-d601-4bb1-8b6f-08ab0ca6cd23",
+        "85900922-6f7f-419f-83b2-ba6b99dbb364",
+        "eef651ea-704c-4250-a1f8-0aca7f26b94e",
+        "52befbc3-12a2-4574-aae5-a48bc28182a4",
+        "d33accaf-f30d-407f-97b3-72a783e7136e",
+        "3f32c4c9-3d4b-4882-8c82-0a9be38e7914",
+        "4f8cee0a-b97c-4360-8271-6214f24ab13c",
+        "93fc4512-1581-4eb1-b0f7-83c68114bcca",
+        "34c1a745-0508-4f36-8733-cbb2c98bdfe1",
+        "7b53db02-a40a-4520-9e20-42a98241bb06",
+        "e16f82d9-92c5-4e9b-b942-2b75d9c5170f",
+        "9b97b80c-c385-4dea-b591-8e106bc4cd3a",
+        "a7fcacdf-c5db-4cef-bb4e-7d78e62f2bbb",
+        "ef4562fa-acb5-4c04-b6cd-eb6cb46862fe",
+        "680fbaa1-f24b-4c19-9057-54e457e7a89d",
+        "cee84b4c-2bd0-479a-85f8-4bb29be55802",
+        "2009c21a-d090-45d1-ab62-3dbbdb47f590",
+        "1a20ca95-f110-4edb-b412-4fe7ccbf3498",
         "a5531cb0-5523-4e9e-af94-96994973f15f",
         "0e1d9c6e-1593-4e9f-8324-286807b75e13",
         "3e5e2049-b8ae-4baf-87aa-ab2254581ca8",
@@ -379,7 +512,7 @@
     "47d1b720-d11a-4469-bf18-b7a142bd4ed3": {
       "type": "testimonials",
       "blocks": {
-        "template--20948669301055__47d1b720-d11a-4469-bf18-b7a142bd4ed3-text-2": {
+        "42bc21ae-1498-48fe-ac1b-63b641dab6be": {
           "type": "text",
           "settings": {
             "image": "shopify:\/\/shop_images\/almas_parents_250x_798d3da6-16e9-4f09-bb82-07dcf716011b.png",
@@ -407,7 +540,7 @@
         }
       },
       "block_order": [
-        "template--20948669301055__47d1b720-d11a-4469-bf18-b7a142bd4ed3-text-2",
+        "42bc21ae-1498-48fe-ac1b-63b641dab6be",
         "a6021e09-7ea0-4aaf-baf5-355cbdc2ff79"
       ],
       "settings": {
@@ -415,10 +548,9 @@
         "page_full_width_spacing": false,
         "title": "Our Client Experience",
         "heading_size": "h1",
-        "heading_scale": 30,
+        "heading_scale": 50,
         "heading_scale_mobile": 24,
         "color_scheme_font": "primary-color01",
-        "sub_heading": "shopify:\/\/shop_images\/v_1.png",
         "description": "",
         "button_label": "",
         "button_link": "",
@@ -426,23 +558,22 @@
         "column_alignment": "center",
         "content_alignment": "center",
         "color_scheme": "primary-color04",
-        "after_image": "shopify:\/\/shop_images\/Group_3.png",
-        "padding_top": 80,
-        "padding_bottom": 124,
+        "padding_top": 28,
+        "padding_bottom": 24,
         "custom_class_name": "",
         "desktop_column": 2,
         "tablet_column": 2,
         "mobile_column": 1,
         "centered_slide": false,
         "swiper_pagination": false,
-        "swiper_navigation": false,
+        "swiper_navigation": true,
         "auto_play": 0
       }
     },
     "e5e93aba-16a0-4fd3-9f94-a49691edffb9": {
       "type": "featured-collection",
       "settings": {
-        "page_full_width": true,
+        "page_full_width": false,
         "page_full_width_spacing": true,
         "title": "",
         "heading_size": "h1",
@@ -467,13 +598,13 @@
         "show_rating": false,
         "enable_quick_add": true,
         "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_bottom": 28,
         "custom_class_name": "",
         "swiper_enable": true,
-        "desktop_column": 4,
+        "desktop_column": 3,
         "tablet_column": 3,
         "mobile_column": 1,
-        "centered_slide": false,
+        "centered_slide": true,
         "swiper_pagination": false,
         "swiper_navigation": true,
         "auto_play": 0,
@@ -548,7 +679,7 @@
         "color_scheme_font": "primary-color03",
         "color_scheme_font_body": "accent-1",
         "urltext": "Buy Now",
-        "url": "",
+        "url": "shopify:\/\/products\/looky-lou-test",
         "color_scheme": "primary-color01",
         "video": "shopify:\/\/files\/videos\/2be8cb4a247f49e7b41c2a826ee835c1.HD-1080p-7.2Mbps-16324628.mp4",
         "heading_size": "h1",

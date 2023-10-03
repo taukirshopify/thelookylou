@@ -125,8 +125,13 @@
 
 
 
+      @media screen and (max-width: 1020px) {
+        .section-{{ section.id }}   .banner__buttons.button-two {
+          margin: 0 9px !important;
+         }
+        }
       @media screen and (min-width: 1020px) {
-      
+        
         .specification .specification__text-item .specification__content {
 
           display: inline-block;
@@ -168,6 +173,9 @@
         .specification_block .specification_image-item-list {
           margin-bottom: 0;
       }
+      .section-{{ section.id }}   .banner__buttons.button-two {
+        margin: 0 0;
+       }
       .specification_block {
 
         padding: 0.5rem;
@@ -182,9 +190,7 @@
 
       }
 
-      .section-{{ section.id }}   .banner__buttons.button-two {
-        margin: 0 0px;
-       }
+    
        .specification__media-item.grid__item {
         padding: 0 !important;
        }
@@ -237,7 +243,12 @@
 .video-overlay-play-button.is-hidden {
   display: none;
 }
+@media screen and (max-width: 750px) {
+  .section-{{ section.id }}  a.button.button--primary {
+    margin: 0 auto;
+}
 
+}
 {% comment %} End vidoe css  {% endcomment %}
 </style>
 

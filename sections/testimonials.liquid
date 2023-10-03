@@ -187,14 +187,14 @@ assign padding_bottom = padding[1]
         {%- endfor -%}
       </div>
    {% if section.settings.swiper_navigation != blank %}
-            <div class="testimonial-navigation-s2">
+     
               <div class="swiper-button-next">
                 <span></span>
               </div>
               <div class="swiper-button-prev">
                 <span></span>
               </div>
-            </div>
+     
           {% endif %}
     </div>
     {% if section.settings.swiper_pagination != blank %}
@@ -265,7 +265,53 @@ assign padding_bottom = padding[1]
 
   
   }
+    
+  @media screen and (max-width: 750px) {
 
+    .section-{{ section.id }}  .title-wrapper-with-link {
+
+    margin-bottom: 20%;
+}
+  }
+  @media screen and (max-width: 550px) {
+
+    .section-{{ section.id }}  .title-wrapper-with-link {
+
+    margin-bottom: 25%;
+}
+  }
+  @media screen and (max-width: 450px) {
+
+
+
+    .section-{{ section.id }}  .title-wrapper-with-link {
+
+    margin-bottom: 30%;
+}
+  }
+
+
+  .custom-testimonials-style-2 .testimonials-2 .testimonial-navigation-s2 .swiper-button-prev {
+
+
+    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+}
+
+.custom-testimonials-style-2 .testimonials-2 .testimonial-section {
+  position: relative;
+  margin-top: -25px;
+  padding: 0 5%;
+  @media only screen and (max-width: 600px) {
+    padding: 0;
+  }
+
+}
+@media only screen and (max-width: 600px) {
+.swiper-button-next, .swiper-button-prev {
+ 
+    top: 34% !important;
+    }
+}
 </style>
 
 {% schema %}

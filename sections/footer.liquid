@@ -163,8 +163,15 @@
         <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet{{ footer_grid_class }}">
           {%- for block in section.blocks -%}
             <div class="footer-block grid__item{% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %} {% if block.type == 'newsletter' %}footer-newsletter{% endif %}" {{ block.shopify_attributes }}>
-              {%- if block.settings.heading != blank -%}
-                <h2 class="footer-block__heading {{ block.settings.alignment }}">{{- block.settings.heading | escape -}}</h2>
+              {%- if block.settings.img != blank -%}
+                <h2 class="footer-block__heading {{ block.settings.alignment }}">
+                  
+                  
+           
+                    <img src="{{ block.settings.img | img_url:'master'  }}" alt="">
+                
+                
+                </h2>
               {%- endif -%}
 
               {%- case block.type -%}
@@ -457,10 +464,11 @@
 <style>
 
   
- .footer__content-top h2{
+ .footer__content-top h2, .header__heading a span{
     {% render 'globalcolor' , color: section.settings.color_scheme_font %}
     font-weight:400;
     font-size: {{ section.settings.heading_scale_mobile }}px!important; 
+    text-transform: lowercase;
 }
 
  .footer-block__details-content h2{
@@ -471,11 +479,12 @@
 
 @media screen and (min-width: 750px) {
 
-  .footer__content-top h2{
+  .footer__content-top h2, .header__heading a span{
     font-weight:400;
     font-size:{{ section.settings.heading_scale }}px !important; 
     padding: 0;
     margin: 0;
+    text-transform: lowercase;
     }
     .footer-block__details-content h2{
     font-weight:400;
@@ -506,6 +515,14 @@
  font-weight: 600;
 }
 
+
+  .footer-block__heading  img{
+    height: auto;
+    width: 172px;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
 @media screen and (max-width: 750px) {
   h2.footer-block__heading {
     text-align: center;
@@ -552,12 +569,12 @@
       "type": "link_list",
       "name": "t:sections.footer.blocks.link_list.name",
       "settings": [
+
+
         {
-          "type": "text",
-          "id": "heading",
-          "default": "Quick links",
-          "label": "t:sections.footer.blocks.link_list.settings.heading.label",
-          "info": "t:sections.footer.blocks.link_list.settings.heading.info"
+          "type": "image_picker",
+          "id": "img",
+          "label": "Footer logo"
         },
         {
           "type": "link_list",

@@ -47,15 +47,17 @@ blockquote {   margin: 0;   position: relative;}
 /*navigation and pagination*/
 .custom-testimonials-style-2 .testimonials-2 .testimonial-navigation-s2 .swiper-button-next:after,
 .custom-testimonials-style-2 .testimonials-2 .testimonial-navigation-s2 .swiper-button-prev:after{font-size: 15px; font-weight: 700; color: #000;transition: all 0.3s ease;}
-.custom-testimonials-style-2 .testimonials-2 .testimonial-navigation-s2 .swiper-button-next:before { content: ""; position: absolute; border-left: 2px dotted currentcolor; left: -10px; 
+.custom-testimonials-style-2 .testimonials-2 .testimonial-navigation-s2 .swiper-button-next:before { content: ""; position: absolute;  left: -10px; 
     margin: auto; z-index: 1; height: 20px; width: 1px; opacity: .2; }
 
 .custom-testimonials-style-2 .testimonials-2 .testimonial-navigation-s2 .swiper-button-prev{margin-right: auto; margin: 0;}
 
 .custom-testimonials-style-2 .testimonials-2 .testimonial-navigation-s2 .swiper-button-prev:hover::after,
 .custom-testimonials-style-2 .testimonials-2 .testimonial-navigation-s2 .swiper-button-next:hover::after{ background-color: var(--gradient-base-background-2);}
-.custom-testimonials-style-2 .testimonials-2 .testimonial-navigation-s2 .swiper-button-next{ left:0!important; right: -65px!important; top: auto; bottom: -50px; margin: auto;  }
-.custom-testimonials-style-2 .testimonials-2 .testimonial-navigation-s2 .swiper-button-prev{top: auto; bottom: -50px; left: -65px!important; margin: auto; right: 0!important; }
+
+/* .custom-testimonials-style-2 .testimonials-2 .testimonial-navigation-s2 .swiper-button-next{ left:0!important; right: -65px!important; top: auto; bottom: -50px; margin: auto;  } */
+
+/* .custom-testimonials-style-2 .testimonials-2 .testimonial-navigation-s2 .swiper-button-prev{top: auto;  left: 0; margin: auto;  } */
 .custom-testimonials-style-2 .testimonials-2 .testimonial-section .swiper:hover .testimonial-navigation-s2 .swiper-button-prev,
 .custom-testimonials-style-2 .testimonials-2 .testimonial-navigation-s2 .swiper-button-prev,
 .custom-testimonials-style-2 .testimonials-2 .testimonial-navigation-s2 .swiper-button-next{opacity: 1; width: 50px; }

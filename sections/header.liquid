@@ -70,28 +70,36 @@
     line-height: calc(1 + 0.8 / var(--font-body-scale));
   }
 
+
+  .header__heading-logo {
+    height: auto;
+    width: 172px;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+
+
   @media screen and (min-width: 750px) {
     .list-menu__item--link {
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
     }
 
-    .header__heading-logo {
-      height: auto;
-      width: 80px;
-      padding: 0;
-      margin: 0;
-      line-height: 1;
-  }
+  
 
   }
 
   .header__heading, .header__heading-link {
 
-    width: 110px;
-    height:80px;
-    padding:0;
-}
+    height: 80px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+  }
+
 
 
 
@@ -157,11 +165,11 @@ ul.dt-nav > li:hover > a span, ul.dt-nav li.active > a, ul.dt-nav > li:hover > a
   margin-bottom: 0px;
 }
 
-.header__heading, .header__heading-link {
+{% comment %} .header__heading, .header__heading-link {
   width: 80px;
   height: 80px;
 
-}
+} {% endcomment %}
 
 }
 
@@ -1946,3 +1954,15 @@ ul.dt-nav > li:hover > a span, ul.dt-nav li.active > a, ul.dt-nav > li:hover > a
 ]
 }
 {% endschema %}
+
+
+<script>
+
+  $( document ).ready(function() {
+
+  $(".header-drawer__close").click(function(){
+    $("#shopify-section-header").removeClass("menu-open");
+    $("body").removeClass("overflow-hidden-tablet");
+  });
+});
+</script>

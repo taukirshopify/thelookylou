@@ -659,6 +659,7 @@ class SlideshowComponent extends SliderComponent {
       autoplay: true,
       autoplaySpeed: 5,
       space: 30,
+      
       center: true,
       options: {},
     };    
