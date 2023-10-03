@@ -129,25 +129,15 @@
          <div class="grid-banner-block-image">
           {%- if block.settings.enable_title_link %} <a href="{{ block.settings.block_button_link }}" class="grid-banner-image">{% endif %}
           {% if block.settings.block_image != blank %}
-            <img
-                      class="grid-banner-image"
-                      srcset="{%- if block.settings.block_image.width >= 375 -%}{{ block.settings.block_image | image_url: width: 375 }} 375w,{%- endif -%}
-                      {%- if block.settings.block_image.width >= 550 -%}{{ block.settings.block_image | image_url: width: 550 }} 550w,{%- endif -%}
-                      {%- if block.settings.block_image.width >= 750 -%}{{ block.settings.block_image | image_url: width: 750 }} 750w,{%- endif -%}
-                      {%- if block.settings.block_image.width >= 1100 -%}{{ block.settings.block_image | image_url: width: 1100 }} 1100w,{%- endif -%}
-                      {%- if block.settings.block_image.width >= 1500 -%}{{ block.settings.block_image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                      {%- if block.settings.block_image.width >= 1780 -%}{{ block.settings.block_image | image_url: width: 1780 }} 1780w,{%- endif -%}
-                      {%- if block.settings.block_image.width >= 2000 -%}{{ block.settings.block_image | image_url: width: 2000 }} 2000w,{%- endif -%}
-                      {%- if block.settings.block_image.width >= 3000 -%}{{ block.settings.block_image | image_url: width: 3000 }} 3000w,{%- endif -%}
-                      {%- if block.settings.block_image.width >= 3840 -%}{{ block.settings.block_image | image_url: width: 3840 }} 3840w,{%- endif -%}
-                      {{ block.settings.block_image | image_url: width: 1500 }} {{ block.settings.block_image.width }}w"
-                      sizes="100vw"
-                      src="{{ block.settings.block_image | image_url: width: 1500 }}"
-                      loading="lazy"              
-                      alt="{{ block.settings.block_image.alt | escape }}"
-                      width="{{ block.settings.block_image.width }}"
-                      height="{{ block.settings.block_image.width | divided_by: block.settings.block_image.aspect_ratio | round }}"
-                    >
+            {{  block.settings.block_image| image_url: width: 3840 | image_tag:
+              loading: 'lazy',
+              height: height,
+              sizes: "100vw",
+ format: 'webp',
+ class: 'grid-banner-image',
+              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+            }}
+
             {% else %}
             {{ 'image' | placeholder_svg_tag: 'placeholder_svg' }}
             {% endif %}

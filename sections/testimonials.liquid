@@ -135,7 +135,13 @@ assign padding_bottom = padding[1]
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin content-align--{{ section.settings.column_alignment }}">
          {%- if section.settings.sub_heading != blank -%}  
          <h6 class="sub-heading-two">
-          <img src="{{ section.settings.sub_heading | img_url:'master' }}" alt="">
+          {{ section.settings.sub_heading  | image_url: width: 350 | image_tag:
+            loading: 'lazy',
+            height: height,
+            sizes: "100vw",
+format: 'webp',
+            widths: '350, 550'
+          }}
        
        
        </h6>
