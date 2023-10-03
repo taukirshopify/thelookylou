@@ -265,7 +265,6 @@
         "label": "t:settings_schema.typography.settings.type_header_font.label",
         "info": "t:settings_schema.typography.settings.type_header_font.info"
       },
-
       {
         "type": "number",
         "id": "heading_scale",
@@ -278,7 +277,6 @@
         "label": "Heading font on Mobile",
         "default": 30
       },
-
       {
         "type": "textarea",
         "id": "custom_font_script_1",

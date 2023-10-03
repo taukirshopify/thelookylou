@@ -28,11 +28,12 @@
     {% endif %}
 
     {% render 'meta-tags' %}    
-    <script src="{{ 'jquery.min.js' | asset_url }}"></script>
+    {% render 'javascriptall' %}
+
     <script src="{{ 'axios.min.js' | asset_url }}"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
-    <script  src="{{ 'jquery-cookie-min.js' | asset_url }}"></script>
+
+
     
     {{ content_for_header }}
 
@@ -401,7 +402,7 @@
     </script>
 
 
-    {% render 'javascriptall' %}
+  
   </head>
 
   <body id="{{ page_title | handle }}" class="gradient {% if settings.preloader_enable %}preloader-overflow{% endif %}">
